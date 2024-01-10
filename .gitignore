@@ -1,0 +1,3 @@
+# ignore os arquivos de dados que são estupidamente grandes para subir no git
+data/api/*
+data/crawler/*
