@@ -265,8 +265,15 @@ remove_players_name_pbp <- function(df, df_players_pattern){
     dplyr::filter(game_id == df$game_id[1]) %>% 
     dplyr::pull(players_pattern)
   
-  df %>% 
-    dplyr::mutate(desc = stringr::str_replace_all(description, player_pattern, '[player]')) %>% 
+  hard_patterns1 <- "(Ar\\.|Ca\\.|Co\\.|D\\.|Da\\.|Do\\.|Derr\\.|Dero\\.|Do\\.|Ja\\.|Jal\\.|Jay\\.|Je\\.|Joe\\.|Jos\\.|JR\\.|Jr\\.|Jo\\.|Ju\\.|Ma\\.|Marc|Mark|Mo\\.|Sha\\.|Shaw\\.|Shel\\.|Ti\\.|Ty\\.)(\\s+)(\\[player\\])"
+  hard_patterns2 <- "(Adrian Dantley|Adrian Griffin|Alvin Gentry|Avery Johnson|A\\. Johnson|Badwin|Benson|Bickerstaff|Bogans|Bone|Boone|Bowen|C\\. Johnson|Clemons|Colson|Cousin|Dawson|D\\. Jones|Da\\. Jones|Dotson|Ellenson|Elson|Ferguson|Fesenko|Henson|Hobson|House|Hudson|Jianlian|Jones III|J\\. Jones|Jones\\, Jr\\.|Jones Jr\\.|Kanter|Lawson|Mason|Marc Morris|Morris Sr\\.|Moon|Owens|Pangos|Ponds|Pons|Roberson|Ross|Sessions|Simons|Stevenson|Tillman|Tyson|W\\. Johnson|Jones)"
+  df %>%
+    dplyr::mutate(desc = stringr::str_replace_all(description, "\\([:alpha:]\\.[:alpha:]+?\\)$", "([referee])")) %>% 
+    dplyr::mutate(desc = stringr::str_replace_all(desc, player_pattern, '[player]'),
+                  desc = stringr::str_replace(desc, hard_patterns1, "\\3"),
+                  desc = stringr::str_replace(desc, hard_patterns2, "[player]")) %>% 
+    dplyr::mutate(desc = stringr::str_replace_all(desc, "(76ERS|BOBCATS|BUCKS|BULLS|CAVALIERS|CELTICS|CLIPPERS|GRIZZLIES|HAWKS|HEAT|HORNETS|JAZZ|KINGS|KNICKS|LAKERS|MAGIC|MAVERICKS|NETS|NUGGETS|PACERS|PELICANS|PISTONS|RAPTORS|ROCKETS|SPURS|SUNS|THUNDER|TRAIL\\s+BLAZERS|TIMBERWOLVES|WARRIORS|WIZARDS)\\s+", "[team] "),
+                  desc = stringr::str_replace_all(desc, "(76ers|Bobcats|Bucks|Bulls|Cavaliers|Celtics|Clippers|Grizzlies|Hawks|Heat|Hornets|Jazz|Kings|Knicks|Lakers|Magic|Mavericks|Nets|Nuggets|Pacers|Pelicans|Pistons|Raptors|Rockets|Spurs|Suns|Thunder|Trail\\s+Blazers|Timberwolves|Warriors|Wizards)\\s+", "[team] ")) %>% 
     dplyr::mutate(desc = stringr::str_replace_all(desc, "[0-9]+\\'", "[dist]"), 
                   desc = stringr::str_replace_all(desc, "[0-9]+\\s+(PTS|AST|BLK|STL|PF)", "cnt \\1"), 
                   desc = stringr::str_replace_all(desc, "Off\\:[0-9]+\\s+Def\\:[0-9]+", "Off:cnt Def:cnt"), 
@@ -274,9 +281,12 @@ remove_players_name_pbp <- function(df, df_players_pattern){
                   desc = stringr::str_replace_all(desc, "Reg\\.[0-9]+\\s+Short\\s+[0-9]+", "Reg.cnt Short cnt"), 
                   desc = stringr::str_replace_all(desc, "Full\\s+[0-9]+\\s+Short\\s+[0-9]+", "Full cnt Short cnt"), 
                   desc = stringr::str_replace_all(desc, "[0-9]+\\:[0-9]+\\s+PM\\s+EST", "[hour]"), 
+                  desc = stringr::str_replace_all(desc, "[0-9]+\\:[0-9]+\\s+AM\\s+EST", "[hour]"), 
                   desc = stringr::str_replace_all(desc, "P[0-9]+\\.PN", "Pcnt.PN"), 
-                  desc = stringr::str_replace_all(desc, "T#[0-9]+", "T#cnt")) %>% 
-    dplyr::select(game_id, period, clock, description, desc)
+                  desc = stringr::str_replace_all(desc, "T#[0-9]+", "T#cnt"),
+                  desc = stringr::str_replace_all(desc, "\\(P[0-9]+?\\)", "(Pcnt)")) %>% 
+    dplyr::rename(clean_description = desc) %>% 
+    dplyr::select(game_id, period, clock, description, clean_description)
   
 }
 
@@ -400,11 +410,47 @@ pbp_clean_description <- pbpc_total %>%
                     .f = remove_players_name_pbp, 
                     df_players_pattern = pbp_players_name_pattern,
                     .progress = TRUE) %>% 
-  dplyr::bind_rows() %>% 
-  dplyr::rename(clean_description = desc)
+  dplyr::bind_rows()
 
 future::plan(future::sequential())
 
 save(pbp_clean_description, file = "D:/Mestrado/NBA/nba/data/pbp_clean_description.RData")
 
 rm(pbpc_total)
+
+# x <- pbp_clean_description %>% 
+#   dplyr::mutate(clean_description = stringr::str_squish(clean_description)) %>% 
+#   dplyr::group_by(clean_description) %>% 
+#   dplyr::summarise(n = dplyr::n())
+# 
+# x1 <- x %>% 
+#   dplyr::mutate(aux = 1) %>% 
+#   dplyr::filter(n < 10) %>% 
+#   dplyr::left_join(x %>% 
+#                      dplyr::arrange(desc(n)) %>% 
+#                      dplyr::filter(n > 300) %>% 
+#                      dplyr::select(clean_description, n) %>% 
+#                      dplyr::rename(new_description = clean_description, 
+#                                    new_n = n) %>% 
+#                      dplyr::mutate(aux = 1), 
+#                    by = 'aux', relationship = 'many-to-many') %>% 
+#   dplyr::filter(clean_description != new_description) %>% 
+#   dplyr::mutate(dist = stringdist::stringdist(clean_description, new_description, 
+#                                               method = 'jaccard')) %>% 
+#   dplyr::mutate(wdist = 100 * dist/log10(new_n + 1)) %>% 
+#   dplyr::group_by(clean_description) %>% 
+#   dplyr::arrange(clean_description, wdist) %>% 
+#   dplyr::slice(1:3) %>% 
+#   dplyr::ungroup() %>% 
+#   dplyr::mutate(dist = stringdist::stringdist(clean_description, new_description, 
+#                                               method = 'qgram')) %>% 
+#   dplyr::mutate(wdist = 100 * dist/log10(new_n + 1)) %>% 
+#   dplyr::arrange(clean_description, wdist) %>% 
+#   dplyr::group_by(clean_description) %>% 
+#   dplyr::slice(1) %>% 
+#   dplyr::ungroup() %>% 
+#   dplyr::mutate(dif = new_n - n) %>%
+#   dplyr::select(clean_description, new_description, dist, n, dif) %>% 
+#   dplyr::arrange(dif)
+# 
+
