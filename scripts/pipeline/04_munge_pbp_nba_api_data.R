@@ -1,6 +1,17 @@
-require('tidyverse')
+require(tidyverse)
+require(future)
+require(furrr)
 
-pre_process_pbp <- function(file){
+#' @title pre_process_pbp_api_files
+#'
+#' @description pre-process play-by-play data extracted from nba api and save one RData file for each season
+#' @param file csv file with play-by-play data extracted from nba api
+#'
+#' @return a data frame with play-by-play data pre-processed
+#' @export
+#'
+#' @examples
+pre_process_pbp_api_files <- function(file){
   
   season <- stringr::str_extract(file, "[0-9]{4}_[0-9]{2}") %>% 
     stringr::str_replace(., "_", "-")
@@ -39,75 +50,76 @@ pre_process_pbp <- function(file){
 future::plan(future::multisession(), 
              workers = future::availableCores())
 
-list_pbp <- dir("D:/Mestrado/NBA/data/api", full.names = TRUE) %>% 
-  furrr::future_map(.x = ., .f = pre_process_pbp, .progress = TRUE)
+list_pbp <- dir("D:/Mestrado/NBA/nba/data/api/", full.names = TRUE) %>% 
+  purrr::keep(.p = ~stringr::str_detect(., "[0-9]{4}_[0-9]{2}")) %>%
+  furrr::future_map(.x = ., .f = pre_process_pbp_api_files, .progress = TRUE)
 
 future::plan(future::sequential())
 
 pbpa_2008_09 <- list_pbp[[1]]
-save(pbpa_2008_09, file = "D:/Mestrado/NBA/data/pbpa_2008_09.RData")
+save(pbpa_2008_09, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2008_09.RData")
 rm(pbpa_2008_09)
 
 pbpa_2009_10 <- list_pbp[[2]]
-save(pbpa_2009_10, file = "D:/Mestrado/NBA/data/pbpa_2009_10.RData")
+save(pbpa_2009_10, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2009_10.RData")
 rm(pbpa_2009_10)
 
 pbpa_2010_11 <- list_pbp[[3]]
-save(pbpa_2010_11, file = "D:/Mestrado/NBA/data/pbpa_2010_11.RData")
+save(pbpa_2010_11, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2010_11.RData")
 rm(pbpa_2010_11)
 
 pbpa_2011_12 <- list_pbp[[4]]
-save(pbpa_2011_12, file = "D:/Mestrado/NBA/data/pbpa_2011_12.RData")
+save(pbpa_2011_12, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2011_12.RData")
 rm(pbpa_2011_12)
 
 pbpa_2012_13 <- list_pbp[[5]]
-save(pbpa_2012_13, file = "D:/Mestrado/NBA/data/pbpa_2012_13.RData")
+save(pbpa_2012_13, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2012_13.RData")
 rm(pbpa_2012_13)
 
 pbpa_2013_14 <- list_pbp[[6]]
-save(pbpa_2013_14, file = "D:/Mestrado/NBA/data/pbpa_2013_14.RData")
+save(pbpa_2013_14, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2013_14.RData")
 rm(pbpa_2013_14)
 
 pbpa_2014_15 <- list_pbp[[7]]
-save(pbpa_2014_15, file = "D:/Mestrado/NBA/data/pbpa_2014_15.RData")
+save(pbpa_2014_15, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2014_15.RData")
 rm(pbpa_2014_15)
 
 pbpa_2015_16 <- list_pbp[[8]]
-save(pbpa_2015_16, file = "D:/Mestrado/NBA/data/pbpa_2015_16.RData")
+save(pbpa_2015_16, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2015_16.RData")
 rm(pbpa_2015_16)
 
 pbpa_2016_17 <- list_pbp[[9]]
-save(pbpa_2016_17, file = "D:/Mestrado/NBA/data/pbpa_2016_17.RData")
+save(pbpa_2016_17, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2016_17.RData")
 rm(pbpa_2016_17)
 
 pbpa_2017_18 <- list_pbp[[10]]
-save(pbpa_2017_18, file = "D:/Mestrado/NBA/data/pbpa_2017_18.RData")
+save(pbpa_2017_18, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2017_18.RData")
 rm(pbpa_2017_18)
 
 pbpa_2018_19 <- list_pbp[[11]]
-save(pbpa_2018_19, file = "D:/Mestrado/NBA/data/pbpa_2018_19.RData")
+save(pbpa_2018_19, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2018_19.RData")
 rm(pbpa_2018_19)
 
 pbpa_2019_20 <- list_pbp[[12]]
-save(pbpa_2019_20, file = "D:/Mestrado/NBA/data/pbpa_2019_20.RData")
+save(pbpa_2019_20, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2019_20.RData")
 rm(pbpa_2019_20)
 
 pbpa_2020_21 <- list_pbp[[13]]
-save(pbpa_2020_21, file = "D:/Mestrado/NBA/data/pbpa_2020_21.RData")
+save(pbpa_2020_21, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2020_21.RData")
 rm(pbpa_2020_21)
 
 pbpa_2021_22 <- list_pbp[[14]]
-save(pbpa_2021_22, file = "D:/Mestrado/NBA/data/pbpa_2021_22.RData")
+save(pbpa_2021_22, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2021_22.RData")
 rm(pbpa_2021_22)
 
 pbpa_2022_23 <- list_pbp[[15]]
-save(pbpa_2022_23, file = "D:/Mestrado/NBA/data/pbpa_2022_23.RData")
+save(pbpa_2022_23, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2022_23.RData")
 rm(pbpa_2022_23)
 
 pbpa_2023_24 <- list_pbp[[16]]
-save(pbpa_2023_24, file = "D:/Mestrado/NBA/data/pbpa_2023_24.RData")
+save(pbpa_2023_24, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_2023_24.RData")
 rm(pbpa_2023_24)
 
 pbpa_total <- dplyr::bind_rows(list_pbp) 
-save(pbpa_total, file = "D:/Mestrado/NBA/data/pbpa_total.RData")
+save(pbpa_total, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/api/pbpa_total.RData")
 rm(pbpa_total)

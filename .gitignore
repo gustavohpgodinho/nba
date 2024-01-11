@@ -2,4 +2,4 @@
 data/api/*
 data/crawler/*
 data/crawled_pbp/*
-data/crawled_pbp_season_files/*
+data/pbp_season_files/*

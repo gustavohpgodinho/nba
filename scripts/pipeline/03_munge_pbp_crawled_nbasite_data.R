@@ -318,71 +318,71 @@ future::plan(future::sequential())
 
 
 pbpc_2008_09 <- list_pbp[[1]]
-save(pbpc_2008_09, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2008_09.RData")
+save(pbpc_2008_09, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2008_09.RData")
 rm(pbpc_2008_09)
 
 pbpc_2009_10 <- list_pbp[[2]]
-save(pbpc_2009_10, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2009_10.RData")
+save(pbpc_2009_10, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2009_10.RData")
 rm(pbpc_2009_10)
 
 pbpc_2010_11 <- list_pbp[[3]]
-save(pbpc_2010_11, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2010_11.RData")
+save(pbpc_2010_11, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2010_11.RData")
 rm(pbpc_2010_11)
 
 pbpc_2011_12 <- list_pbp[[4]]
-save(pbpc_2011_12, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2011_12.RData")
+save(pbpc_2011_12, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2011_12.RData")
 rm(pbpc_2011_12)
 
 pbpc_2012_13 <- list_pbp[[5]]
-save(pbpc_2012_13, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2012_13.RData")
+save(pbpc_2012_13, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2012_13.RData")
 rm(pbpc_2012_13)
 
 pbpc_2013_14 <- list_pbp[[6]]
-save(pbpc_2013_14, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2013_14.RData")
+save(pbpc_2013_14, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2013_14.RData")
 rm(pbpc_2013_14)
 
 pbpc_2014_15 <- list_pbp[[7]]
-save(pbpc_2014_15, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2014_15.RData")
+save(pbpc_2014_15, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2014_15.RData")
 rm(pbpc_2014_15)
 
 pbpc_2015_16 <- list_pbp[[8]]
-save(pbpc_2015_16, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2015_16.RData")
+save(pbpc_2015_16, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2015_16.RData")
 rm(pbpc_2015_16)
 
 pbpc_2016_17 <- list_pbp[[9]]
-save(pbpc_2016_17, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2016_17.RData")
+save(pbpc_2016_17, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2016_17.RData")
 rm(pbpc_2016_17)
 
 pbpc_2017_18 <- list_pbp[[10]]
-save(pbpc_2017_18, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2017_18.RData")
+save(pbpc_2017_18, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2017_18.RData")
 rm(pbpc_2017_18)
 
 pbpc_2018_19 <- list_pbp[[11]]
-save(pbpc_2018_19, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2018_19.RData")
+save(pbpc_2018_19, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2018_19.RData")
 rm(pbpc_2018_19)
 
 pbpc_2019_20 <- list_pbp[[12]]
-save(pbpc_2019_20, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2019_20.RData")
+save(pbpc_2019_20, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2019_20.RData")
 rm(pbpc_2019_20)
 
 pbpc_2020_21 <- list_pbp[[13]]
-save(pbpc_2020_21, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2020_21.RData")
+save(pbpc_2020_21, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2020_21.RData")
 rm(pbpc_2020_21)
 
 pbpc_2021_22 <- list_pbp[[14]]
-save(pbpc_2021_22, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2021_22.RData")
+save(pbpc_2021_22, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2021_22.RData")
 rm(pbpc_2021_22)
 
 pbpc_2022_23 <- list_pbp[[15]]
-save(pbpc_2022_23, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2022_23.RData")
+save(pbpc_2022_23, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2022_23.RData")
 rm(pbpc_2022_23)
 
 pbpc_2023_24 <- list_pbp[[16]]
-save(pbpc_2023_24, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_2023_24.RData")
+save(pbpc_2023_24, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2023_24.RData")
 rm(pbpc_2023_24)
 
 pbpc_total <- dplyr::bind_rows(list_pbp) 
-save(pbpc_total, file = "D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_total.RData")
+save(pbpc_total, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_total.RData")
 
 # Part 3: Extract players patterns
 
@@ -399,7 +399,7 @@ future::plan(future::sequential())
 
 save(pbp_players_name_pattern, file = "D:/Mestrado/NBA/nba/data/pbp_players_name_pattern.RData")
 
-load("D:/Mestrado/NBA/nba/data/crawled_pbp_season_files/pbpc_total.RData")
+load("D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_total.RData")
 load("D:/Mestrado/NBA/nba/data/pbp_players_name_pattern.RData")
 
 future::plan(future::multisession(), workers = future::availableCores())
