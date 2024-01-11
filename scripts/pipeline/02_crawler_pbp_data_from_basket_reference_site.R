@@ -6,6 +6,17 @@ require(RSelenium)
 require(wdman)
 require(netstat)
 
+
+#' @title extract_basket_reference_link_game_months
+#'
+#' @description extract the months where the games are played in NBA. We need this to know the link of the games.
+#' @param season season of the NBA that we want to extract the scheduled games.
+#' @param selenium_remote_driver remote driver of the browser.
+#'
+#' @return data frame with the link of the months that we have game in a specific season.
+#' @export
+#'
+#' @examples
 extract_basket_reference_link_game_months <- function(season, selenium_remote_driver){
   
   base_url <- 'https://www.basketball-reference.com'
@@ -27,6 +38,15 @@ extract_basket_reference_link_game_months <- function(season, selenium_remote_dr
   
 }
 
+#' @title get_basket_reference_nba_games
+#'
+#' @description extract the games' information from the link of the games.
+#' @param df data frame with the link with the months where games were played.
+#'
+#' @return data frame with the games' information and the link where play by play data is.
+#' @export
+#'
+#' @examples
 get_basket_reference_nba_games <- function(df){
   
   page_content <- xml2::read_html(df$links)
@@ -64,6 +84,16 @@ get_basket_reference_nba_games <- function(df){
   
 }
 
+
+#' @title get_basket_reference_games_data
+#'
+#' @description concatenate the functions extract_basket_reference_link_game_months and get_basket_reference_nba_games 
+#' @param nba_seasons seasons of the NBA that we want to extract the scheduled games.
+#'
+#' @return data frame with the games' information. with the link where play by play data is.
+#' @export
+#'
+#' @examples
 get_basket_reference_games_data <- function(nba_seasons = 2009:2025){
   
   remote_driver <- RSelenium::rsDriver(browser = 'chrome', chromever = "119.0.6045.105", verbose = FALSE, port = 4564L)
@@ -99,6 +129,16 @@ get_basket_reference_games_data <- function(nba_seasons = 2009:2025){
   
 }
 
+#' @title extract_basket_reference_page_pbp
+#'
+#' @description It's a method to extract the play by play data from the link of the game and save the txt file in a directory.
+#' @param df data with pbp link to extract the data.
+#' @param path_save_files path to save the files.
+#'
+#' @return None. Its a method to save the play by play data.
+#' @export
+#'
+#' @examples
 extract_basket_reference_page_pbp <- function(df, path_save_files){
   
   print(paste0(Sys.time(), "--", df$game_id[1]))
@@ -124,6 +164,16 @@ extract_basket_reference_page_pbp <- function(df, path_save_files){
   
 }
 
+#' @title match_games_nbasite_and_basketreference
+#'
+#' @description Match the games from NBA site and Basket Reference.
+#' @param nbasite_games dataframe with the games from NBA site.
+#' @param basket_reference_games dataframe with the games from Basket Reference.
+#'
+#' @return dataframe with the games from NBA site and Basket Reference matched.
+#' @export
+#'
+#' @examples
 match_games_nbasite_and_basketreference <- function(nbasite_games, basket_reference_games){
   
   df_aux_nba_games <- nbasite_games %>% 
@@ -157,6 +207,16 @@ match_games_nbasite_and_basketreference <- function(nbasite_games, basket_refere
   return(matched_games)
 }
 
+#' @title execute_extraction_basketreference_website_pages
+#'
+#' @description Method to extract the play by play data from the games in basketreference website.
+#' @param basketreference_games the games from basketreference where we find the matched game in NBA site games.
+#' @param files_path the path to save the files with the play by play data.
+#'
+#' @return
+#' @export
+#'
+#' @examples
 execute_extraction_basketreference_website_pages <- function(basketreference_games, files_path){
   
   games_already_crawled <- dir(files_path) %>% 
