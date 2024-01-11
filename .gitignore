@@ -3,3 +3,4 @@ data/api/*
 data/crawler/*
 data/crawled_pbp/*
 data/pbp_season_files/*
+data/pbp.RData
