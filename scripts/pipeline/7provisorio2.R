@@ -206,7 +206,7 @@ assign_specific_modcod_situations <- function(df){
 }
 
 
-obj <- pbp_jogadas %>% 
+obj <- pbp %>% 
   dplyr::group_by(game_id, period, clock) %>%
   dplyr::mutate(n = dplyr::n(),
                 joincod = paste0(cod, collapse = ""),

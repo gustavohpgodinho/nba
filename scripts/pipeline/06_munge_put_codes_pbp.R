@@ -1,5 +1,15 @@
 require(tidyverse)
 
+
+#' @title define_ind_variable
+#'
+#' @description This function creates a variable to identify the type of play to help us put a cod to identify them better.
+#' @param df a dataframe with pbp data
+#'
+#' @return a data frame with the play by play data with a ind column that assign some play's feature
+#' @export
+#'
+#' @examples
 define_ind_variable <- function(df){
   
   df %>% 
@@ -20,6 +30,16 @@ define_ind_variable <- function(df){
     dplyr::mutate(ind = ifelse(tp_event %in% c(12, 13) & ind > 14, 15, ind))
 }
 
+#' @title pre_process_pbp_data
+#'
+#' @description create some some columns like type of person envolved in the play, type of play and categorize some time of shots
+#' @param df dataframe with the play by play data
+#'
+#' @return a dataframe with the play by play data and some columns that help us to undestand better the play.
+#' @details this function should be used only after the function define_ind_variable, because it uses the ind column to create the new columns
+#' @export
+#'
+#' @examples
 pre_process_pbp_data <- function(df){
   
   
@@ -69,6 +89,16 @@ pre_process_pbp_data <- function(df){
   
 }
 
+#' @title define_plays_cod
+#'
+#' @description Finally put the cod in play by play data
+#' @param df get a dataframe with the plays after pass through the function define_ind_variable and pre_process_pbp_data
+#'
+#' @return a dataframe with a cod to each play that happened in the games.
+#' @details this function should be used only after the function define_ind_variable and pre_process_pbp_data because it uses columns created in these functions.
+#' @export
+#'
+#' @examples
 define_plays_cod <- function(df){
   
   # Turnover: Bad Pass (without STEAL) and Out of Bounds - Bad Pass Turnover are grouped at 5(34p)
@@ -339,6 +369,15 @@ define_plays_cod <- function(df){
                   cod = ifelse(tp_event == 9 & tp == '0' & cod == "", '_9(3)', cod))
 }
 
+#' @title execute_pre_process_data
+#'
+#' @description Just put all the previously functions together to put codes in plays.
+#' @param df a dataframe with the plays of nba games
+#'
+#' @return a dataframe with the play by play data categorized by codes
+#' @export
+#'
+#' @examples
 execute_pre_process_data <- function(df){
   
   df %>% 
@@ -351,42 +390,51 @@ execute_pre_process_data <- function(df){
   
 }
 
+#' @title fix_plays_without_team
+#'
+#' @description just a huge function to put the right team in plays that don't have it.
+#' @param df a dataframe with the plays of nba games with the cod column
+#'
+#' @return a dataframe with the play by play data with the plays without team fixed.
+#' @export
+#'
+#' @examples
 fix_plays_without_team <- function(df){
   
   df %>% 
-    dplyr::mutate(location = ifelse(game_id == '0021900620' & action_id ==  81 & cod == '_6(01au)', 'h', location),
-                  location = ifelse(game_id == '0021900691' & action_id ==  76 & cod == '_6(01au)', 'v', location),
-                  location = ifelse(game_id == '0021900703' & action_id == 290 & cod == '_6(01au)', 'h', location),
-                  cod = ifelse(cod == '_6(01au)', '_6(01at)', cod)) %>% 
-    dplyr::mutate(location = ifelse(game_id == "0021900291" & action_id ==  65 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900291" & action_id == 375 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0021900324" & action_id == 192 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900326" & action_id == 489 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900341" & action_id == 247 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900342" & action_id == 316 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0021900361" & action_id == 249 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900361" & action_id == 296 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900379" & action_id == 282 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900387" & action_id == 273 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0021900395" & action_id == 363 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900404" & action_id == 541 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900460" & action_id == 477 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0021900487" & action_id == 255 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900524" & action_id == 399 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900535" & action_id == 159 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900682" & action_id == 113 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0021900757" & action_id == 245 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0021900844" & action_id == 318 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021900883" & action_id == 405 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0021901237" & action_id == 295 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0021901313" & action_id == 123 & cod == '_6(06au)', 'v', location),
-                  location = ifelse(game_id == "0041900177" & action_id == 207 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0022000042" & action_id == 331 & cod == '_6(06au)', 'h', location),
-                  location = ifelse(game_id == "0022000317" & action_id == 258 & cod == '_6(06au)', 'v', location),
-                  cod = ifelse(cod == '_6(06au)', '_6(06at)', cod)) %>% 
-    dplyr::mutate(location = ifelse(game_id == '0041800406' & action_id == 482 & cod == '_6(08au)', 'h', location),
-                  location = ifelse(game_id == '0022000285' & action_id == 462 & cod == '_6(08au)', 'v', location),
-                  cod = ifelse(cod == '_6(08au)', '_6(08at)', cod)) %>% 
+    dplyr::mutate(location = ifelse(game_id == '0021900620' & action_id ==  81 & cod == '_6(01u)', 'h', location),
+                  location = ifelse(game_id == '0021900691' & action_id ==  76 & cod == '_6(01u)', 'v', location),
+                  location = ifelse(game_id == '0021900703' & action_id == 290 & cod == '_6(01u)', 'h', location),
+                  cod = ifelse(cod == '_6(01u)', '_6(01t)', cod)) %>% 
+    dplyr::mutate(location = ifelse(game_id == "0021900291" & action_id ==  65 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900291" & action_id == 375 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0021900324" & action_id == 192 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900326" & action_id == 489 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900341" & action_id == 247 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900342" & action_id == 316 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0021900361" & action_id == 249 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900361" & action_id == 296 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900379" & action_id == 282 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900387" & action_id == 273 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0021900395" & action_id == 363 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900404" & action_id == 541 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900460" & action_id == 477 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0021900487" & action_id == 255 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900524" & action_id == 399 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900535" & action_id == 159 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900682" & action_id == 113 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0021900757" & action_id == 245 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0021900844" & action_id == 318 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021900883" & action_id == 405 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0021901237" & action_id == 295 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0021901313" & action_id == 123 & cod == '_6(06u)', 'v', location),
+                  location = ifelse(game_id == "0041900177" & action_id == 207 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0022000042" & action_id == 331 & cod == '_6(06u)', 'h', location),
+                  location = ifelse(game_id == "0022000317" & action_id == 258 & cod == '_6(06u)', 'v', location),
+                  cod = ifelse(cod == '_6(06u)', '_6(06t)', cod)) %>% 
+    dplyr::mutate(location = ifelse(game_id == '0041800406' & action_id == 482 & cod == '_6(08u)', 'h', location),
+                  location = ifelse(game_id == '0022000285' & action_id == 462 & cod == '_6(08u)', 'v', location),
+                  cod = ifelse(cod == '_6(08u)', '_6(08t)', cod)) %>% 
     dplyr::mutate(location = ifelse(game_id == "0021800001" & action_id == 344 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800002" & action_id == 502 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800003" & action_id == 255 & cod == '_7(1u)', "v", location),
@@ -931,6 +979,14 @@ fix_plays_without_team <- function(df){
   
 }
 
+#' @title build_df_pbp_plays
+#' @description put all the previous functions toghether to build the pbp plays dataframe that we'll use for the analysis
+#' @param df a dataframe with the pbp data
+#'
+#' @return a dataframe with the pre-processed pbp data
+#' @export
+#'
+#' @examples
 build_df_pbp_plays <- function(df){
 
   df %>% 
@@ -952,6 +1008,15 @@ build_df_pbp_plays <- function(df){
   
 }
 
+#' @title build_df_freq_plays
+#' 
+#' @description use the previously functions to pre process pbp data to build a dataframe with the frequency of each play
+#' @param df a dataframe with the pbp data
+#'
+#' @return a dataframe with the frequency of each type of play
+#' @export
+#'
+#' @examples
 build_df_freq_plays <- function(df){
   
   df %>% 
@@ -966,6 +1031,15 @@ build_df_freq_plays <- function(df){
   
 }
 
+#' @title put_grammar_in_pbp
+#' 
+#' @description a huge function to put the proper grammar to each play in nba data using the codes that we put earlier.
+#' @param df a daframe with the pbp data categorized by cods 
+#'
+#' @return a dataframe with the pbp data with the proper grammar in gram column
+#' @export
+#'
+#' @examples
 put_grammar_in_pbp <- function(df){
   
   df %>% 
@@ -2081,24 +2155,4 @@ freq_plays_by_cod <- freq_plays_by_period %>%
 
 save(freq_plays_by_cod, file = "D:/Mestrado/NBA/nba/data/freq_plays_by_cod.RData")
 
-
-#####################
-
-load("D:/Mestrado/NBA/nba/data/pbp_players_name_pattern.RData")
-
-future::plan(future::multisession(), workers = future::availableCores())
-
-pbp_clean_description <- pbptotal %>% 
-  dplyr::group_split(game_id) %>% 
-  furrr::future_map(.x = ., 
-                    .f = remove_players_name_pbp, 
-                    df_players_pattern = pbp_players_name_pattern,
-                    .progress = TRUE) %>% 
-  dplyr::bind_rows()
-
-future::plan(future::sequential())
-
-save(pbp_clean_description, file = "D:/Mestrado/NBA/nba/data/pbp_clean_description.RData")
-
-rm(pbpc_total)
 
