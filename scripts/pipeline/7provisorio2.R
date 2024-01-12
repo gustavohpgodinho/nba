@@ -3,7 +3,7 @@
 #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
 
 require(tidyverse)
-load("D:/Mestrado/NBA/data/pbp_jogadas.RData")
+load("D:/Mestrado/NBA/nba/data/pbp.RData")
 
 put_features_cod <- function(df){
   
