@@ -89,6 +89,109 @@ pre_process_pbp_data <- function(df){
   
 }
 
+define_plays_pcod <- function(df){
+  
+  df %>% 
+    dplyr::mutate(pcod = paste0('p', persons, cod),
+                  pcod = ifelse(pcod == "p450_10(0)", "p454_10(0)", pcod),
+                  pcod = ifelse(pcod == "p452_10(0)", "p454_10(0)", pcod),
+                  pcod = ifelse(pcod == "p453_10(0)", "p455_10(0)", pcod),
+                  pcod = ifelse(pcod == "p542_10(0)", "p454_10(0)", pcod),
+                  pcod = ifelse(pcod == "p544_10(0)", "p454_10(0)", pcod),
+                  pcod = ifelse(pcod == "p543_10(0)", "p455_10(0)", pcod),
+                  pcod = ifelse(pcod == "p545_10(0)", "p455_10(0)", pcod),
+                  
+                  pcod = ifelse(pcod == "p450_10(1)", "p454_10(1)", pcod),
+                  pcod = ifelse(pcod == "p452_10(1)", "p454_10(1)", pcod),
+                  pcod = ifelse(pcod == "p453_10(1)", "p455_10(1)", pcod),
+                  pcod = ifelse(pcod == "p542_10(1)", "p454_10(1)", pcod),
+                  pcod = ifelse(pcod == "p544_10(1)", "p454_10(1)", pcod),
+                  pcod = ifelse(pcod == "p543_10(1)", "p455_10(1)", pcod),
+                  pcod = ifelse(pcod == "p545_10(1)", "p455_10(1)", pcod),
+                  
+                  pcod = ifelse(pcod == "p450_10(2)", "p454_10(2)", pcod),      
+                  pcod = ifelse(pcod == "p452_10(2)", "p454_10(2)", pcod),
+                  pcod = ifelse(pcod == "p453_10(2)", "p455_10(2)", pcod),
+                  pcod = ifelse(pcod == "p542_10(2)", "p454_10(2)", pcod),
+                  pcod = ifelse(pcod == "p544_10(2)", "p454_10(2)", pcod),
+                  pcod = ifelse(pcod == "p543_10(2)", "p455_10(2)", pcod),
+                  pcod = ifelse(pcod == "p545_10(2)", "p455_10(2)", pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_18'), stringr::str_replace(pcod, "(p[0-9]{3})(_.+?)", "p001\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p400\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.a\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p440\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.a\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p550\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p400\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.b\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p405\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.b\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p504\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_3\\(.\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p400\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_3\\(.\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_4\\(0[up]'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p400\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_4\\(0[up]'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_4\\([01]t\\)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p200\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_4\\([01]t\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p300\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_5\\((25|36|37|38|39|40)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p200\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_5\\((25|36|37|38|39|40)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p300\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_5\\((00|12|13|14|15|16|17|18|19|20|21|22|23|24|26|27|28|29|30|31|32|33|34|41|43)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p400\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_5\\((00|12|13|14|15|16|17|18|19|20|21|22|23|24|26|27|28|29|30|31|32|33|34|41|43)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_5\\((01|11|35)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p450\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_5\\((01|11|35)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p540\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(01c'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p601\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(01c'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p701\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|05)p'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p401\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|05)p'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p501\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|06|08|09)t'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p201\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|06|08|09)t'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p301\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\((10|11|12|13|14|15|16|17|19|20|21|22|18)'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p451\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\((10|11|12|13|14|15|16|17|19|20|21|22)'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p541\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4cc'), stringr::str_replace(pcod, "(p[234567][0-9]{2})(_.+?)", "p671\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p4[0-9]{2})(_.+?)", "p471\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p5[0-9]{2})(_.+?)", "p561\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p6[0-9]{2})(_.+?)", "p651\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p7[0-9]{2})(_.+?)", "p741\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pp'), stringr::str_replace(pcod, "(p[0-9]{3})(_.+?)", "p451\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_7\\((0|2|3|4|5|6)'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p401\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_7\\((0|2|3|4|5|6)'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p501\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_7\\(1'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p201\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_7\\(1'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p301\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_8\\(0'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p440\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_8\\(0'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p550\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(0'), stringr::str_replace(pcod, "(p[01][0-9]{2})(_.+?)", "p100\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(0'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p200\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(0'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(1'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p200\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(1'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(2'), stringr::str_replace(pcod, "(p[01][0-9]{2})(_.+?)", "p100\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(2'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p200\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(2'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod),
+                  
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(3'), stringr::str_replace(pcod, "(p[01][0-9]{2})(_.+?)", "p100\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(3'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p200\\2"), pcod),
+                  pcod = ifelse(stringr::str_detect(cod, '_9\\(3'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod))
+  
+}
+
 #' @title define_plays_cod
 #'
 #' @description Finally put the cod in play by play data
@@ -366,8 +469,12 @@ define_plays_cod <- function(df){
                   
                   cod = ifelse(tp_event == 9 & tp == '2' & cod == "", '_9(0)', cod),
                   cod = ifelse(tp_event == 9 & tp == '4' & cod == "", '_9(2)', cod),
-                  cod = ifelse(tp_event == 9 & tp == '0' & cod == "", '_9(3)', cod))
+                  cod = ifelse(tp_event == 9 & tp == '0' & cod == "", '_9(3)', cod)) %>% 
+    define_plays_pcod()
 }
+
+
+
 
 #' @title execute_pre_process_data
 #'
