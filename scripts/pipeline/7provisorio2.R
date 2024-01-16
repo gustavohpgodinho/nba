@@ -7,9 +7,9 @@ load("D:/Mestrado/NBA/nba/data/pbp.RData")
 
 put_features_cod <- function(df){
   
-  df %>% 
+  df1 <- df %>% 
+    dplyr::group_by(joincod, si) %>%
     dplyr::mutate(fullcod = paste0(cod, "[", row, ",", importance, "]")) %>% 
-    dplyr::group_by(joincod) %>%
     dplyr::mutate(fullcod = paste0(fullcod, collapse = '')) %>% 
     dplyr::ungroup() %>% 
     dplyr::mutate(before_cod = stringr::str_extract(fullcod, paste0("^.+\\[", row, "\\,.\\]")),
@@ -28,6 +28,8 @@ put_features_cod <- function(df){
                   next_cod = stringr::str_extract(after_cod, "^_[0-9]+\\(.{1,3}\\)")) %>% 
     dplyr::mutate(last_cod = ifelse(is.na(last_cod), "", last_cod), 
                   next_cod = ifelse(is.na(next_cod), "", next_cod))
+  
+  return(df1)
   
 }
 
@@ -664,6 +666,51 @@ simplify_cod <- function(df){
   
 }
 
+put_nums <- function(df){
+  
+  df %>% 
+    dplyr::mutate(valcod = stringr::str_replace_all(valcod, '(_)(6\\(0)', '\\11\\2'),
+                  valcod = stringr::str_replace_all(valcod, '(_)(3\\(4)', '\\13\\2'),
+                  valcod = stringr::str_replace_all(valcod, '(_3\\(.{1,3}\\))_4', '\\1_14'),
+                  valcod = stringr::str_replace_all(valcod, '(_33\\(.{1,3}\\))_4', '\\1_14')) %>% 
+    dplyr::mutate(modcod = stringr::str_remove_all(valcod, "\\(.{1,3}\\)")) %>% 
+    dplyr::mutate(modcod = stringr::str_remove_all(modcod, '_14')) %>% 
+    dplyr::mutate(sum_foul = stringr::str_count(valcod, "_6\\((1|2)"), 
+                  sum_ft = stringr::str_count(valcod, "_3\\("), 
+                  sum_tech = stringr::str_count(valcod, "_16\\(0"), 
+                  sum_techft = stringr::str_count(valcod, "_33\\("),
+                  sum_offfoul = stringr::str_count(valcod, "_6\\(.{1,3}\\)_5\\((00|13)p"),
+                  sum_offturn = stringr::str_count(valcod, "_5\\((00|13)p"),
+                  sum_shcturn = stringr::str_count(valcod, "_5\\(37t\\)"),
+                  sum_lanturn = stringr::str_count(valcod, "_5\\((19|20)"),
+                  sum_lanevio = stringr::str_count(joincod, "_7\\(6"),
+                  sum_jumpbal = stringr::str_count(valcod, "_10\\(.\\)_4"),
+                  sum_start = stringr::str_count(modcod, "._12"),
+                  sum_end = stringr::str_count(modcod, "_13_"),
+                  sum_turnov = stringr::str_count(modcod, "(_6_5_3|_16_5_33|_3_5_3|_33_5_33)"),
+                  sum_ftfoul = stringr::str_count(modcod, "(_3_6|_33_16)"),
+                  sum_jumpbt = stringr::str_count(valcod, "_5\\(21p\\)_10\\(.\\)"),
+                  sum_doubtu = stringr::str_count(valcod, "_5\\(26p\\)"),
+                  sum_teamtu = stringr::str_count(valcod, "_5\\((39|40)t\\)"),
+                  ) %>% 
+    dplyr::mutate_at(.vars = c('sum_foul', 'sum_ft', 'sum_tech', 'sum_techft', 
+                               'sum_offfoul', 'sum_offturn', 'sum_shcturn',
+                               'sum_lanturn', 'sum_lanevio', 'sum_jumpbal',
+                               'sum_start', 'sum_end', 'sum_turnov', 'sum_ftfoul', 
+                               'sum_jumpbt', 'sum_doubtu', 'sum_teamtu'), 
+                     .funs = function(x){ifelse(x >= 10, 9, x)}) %>% 
+    dplyr::mutate(nums = paste0(sum_foul, sum_ft, sum_tech, sum_techft, 
+                                sum_offfoul, sum_offturn, sum_shcturn,
+                                sum_lanturn, sum_lanevio, sum_jumpbal,
+                                sum_start, sum_end, sum_turnov, sum_ftfoul,
+                                sum_jumpbt, sum_doubtu, sum_teamtu)) %>% 
+    dplyr::select(-c(sum_foul, sum_ft, sum_tech, sum_techft, sum_offfoul, sum_offturn, 
+                     sum_shcturn, sum_lanturn, sum_lanevio, sum_jumpbal, sum_start, 
+                     sum_end, sum_turnov, sum_ftfoul, sum_jumpbt, sum_doubtu, 
+                     sum_teamtu))
+  
+}
+
 tokenizer_plays <- function(df){
   
   obj <- pbp %>% 
@@ -674,6 +721,15 @@ tokenizer_plays <- function(df){
     dplyr::ungroup() %>% 
     dplyr::mutate(importance = 1)
   
+  
+  # obj %>% 
+  #   dplyr::mutate(cod = stringr::str_replace_all(cod, '(_)(6\\(0)', '\\11\\2'),
+  #                 cod = stringr::str_replace_all(cod, '(_)(3\\(4)', '\\13\\2')) %>% 
+  
+  
+  # dplyr::mutate(pcod = ifelse(stringr::str_detect(pcod, "_4\\(") & stringr::str_detect(dplyr::lag(pcod), "_3\\("), stringr::str_replace(pcod, "_4\\(", "_14("), pcod),
+  #               cod = ifelse(stringr::str_detect(cod, "_4\\(") & stringr::str_detect(dplyr::lag(cod), "_3\\("), stringr::str_replace(cod, "_4\\(", "_14("), cod)) %>% 
+    
   obj2 <- obj %>% 
     dplyr::group_by(joincod, row) %>% 
     dplyr::summarise(cod = unique(cod), 
@@ -682,10 +738,136 @@ tokenizer_plays <- function(df){
                      cnt = dplyr::n(), 
                      .groups = 'drop') %>%
     nulling_cods_always_null() %>% 
+    dplyr::mutate(si = 0) %>% 
     put_features_cod() %>% 
-    dplyr::mutate(valcod = stringr::str_replace_all(valcod, '(_)(6\\(0)', '\\11\\2'),
-                  valcod = stringr::str_replace_all(valcod, '(_)(3\\(4)', '\\13\\2')) %>% 
-    dplyr::mutate(modcod = stringr::str_remove_all(valcod, "\\(.{1,3}\\)")) %>% 
+    put_nums() %>% 
+    dplyr::mutate(cod = ifelse(stringr::str_detect(cod, "_4") & stringr::str_detect(before_cod, "_3\\(.{1,3}\\)$"), stringr::str_replace(cod, "_4", "_14"), cod), 
+                  cod = ifelse(stringr::str_detect(cod, "_6\\(0"), stringr::str_replace(cod, "_6", "_16"), cod),
+                  cod = ifelse(stringr::str_detect(cod, "_3\\(40"), stringr::str_replace(cod, "_3", "_33"), cod)) %>% 
+    dplyr::mutate(real_joincod = joincod) %>% 
+    dplyr::group_by(real_joincod) %>% 
+    dplyr::mutate(joincod = paste0(cod, collapse = '')) %>% 
+    dplyr::ungroup() %>% 
+    put_features_cod() %>% 
+    dplyr::mutate(erro = ifelse(modcod %in% c('_3_3_2_4_6', '_3_4_6_3', '_4_2_4_6_3_4_3', '_6_2_4_3_3', '_6_3_10_3', 
+                                              '_6_3_3_4', '_6_3_3_4_2', '_6_4_3_3', '_2_4_6_1_3', '_6_1_3', 
+                                              '_12_16_33_10', '_6_3_16_33_10_3', '_33_6_16', '_6_1_16_33_3',
+                                              '_2_10_10_4', '_3_3_6_6_3_3', '_6_3_6_3', '_16_16_2_4_33_33'), 1, 0))
+  
+  
+  
+  
+  
+  obj2 %>% 
+    dplyr::mutate(i = 0,
+                  importance = ifelse(cod == "_10(0)", 0, importance),
+                  importance = ifelse(stringr::str_detect(cod, "_5\\((00|13)p\\)"), 0, importance),
+                  importance = ifelse(nums %in% c('11000000000000000', '11000001000000000', '11001100000010000', '11110000000000000', 
+                                                  '11220000000000000', '12000000000000000', '12001100000010000', '12110000000000000', 
+                                                  '12220000000000000', '12220000000001000', '13000000000000000', '13110000000000000', 
+                                                  '21000000000000000', '21000000000001000', '22000000000000000', '22001100000000000', 
+                                                  '22001100000001000', '22000000000001000', '23000000000001000', '24000000000001000') & stringr::str_detect(cod, "_3"), 0, importance),
+                  importance = ifelse(nums %in% c('00110000000000000', '00110010000000000', '00110000001000000', '00220000000000000', 
+                                                  '00220000000001000', '10220000000000000', '10221100000000000', '10221100000001000', 
+                                                  '11000000000000000', '11001100000010000', '11000001000000000', '11110000000000000', 
+                                                  '11220000000000000', '12000000000000000', '12001100000010000', '12110000000000000', 
+                                                  '12220000000000000', '12220000000001000', '13000000000000000', '13110000000000000', 
+                                                  '21000000000000000', '21000000000001000', '22000000000000000', '22001100000000000', 
+                                                  '22001100000001000', '22000000000001000', '23000000000001000', '24000000000001000') & stringr::str_detect(cod, "_14"), 0, importance),
+                  importance = ifelse(nums %in% c('00110000000000000', '00110010000000000', '00110000001000000', '00220000000000000', 
+                                                  '00220000000001000', '10110000000000000', '10111100000000000', '10220000000000000', 
+                                                  '10221100000000000', '10221100000001000', '11110000000000000', '11220000000000000', 
+                                                  '12110000000000000', '12220000000000000', '12220000000001000', '13110000000000000') & stringr::str_detect(cod, "_33"), 0, importance),
+                  importance = ifelse(nums %in% c('11110000000000000', '11220000000000000', '12110000000000000', '12220000000000000', 
+                                                  '12220000000001000', '13110000000000000') & stringr::str_detect(modcod, "_6(.+)?_16") & stringr::str_detect(cod, "_16"), 0, importance),
+                  importance = ifelse(nums %in% c('10220000000000000', '10221100000000000', '10221100000001000', '11110000000000000', 
+                                                  '11220000000000000', '12110000000000000', '12220000000000000', '12220000000001000', 
+                                                  '13110000000000000') & stringr::str_detect(modcod, "_16(.+)?_6") & stringr::str_detect(cod, "_6"), 0, importance),
+                  importance = ifelse(nums %in% c('10220000000000000', '10221100000000000', '10221100000001000', '11220000000000000',
+                                                  '12220000000000000', '12220000000001000') & stringr::str_detect(modcod, "_16(.+)?_6") & stringr::str_detect(cod, "_16") & stringr::str_detect(before_cod, "_16"), 0, importance),
+                  importance = ifelse(nums %in% c('00000000010000000') & stringr::str_detect(before_cod, "_10\\(.\\)$") & stringr::str_detect(cod, "_4"), 0, importance),
+                  importance = ifelse(nums %in% c('11000001000000000') & stringr::str_detect(cod, "_5\\((19|20)p\\)$") & stringr::str_detect(modcod, "_3_5"), 0, importance),
+                  importance = ifelse(nums %in% c('10000001000000000') & stringr::str_detect(cod, "_5\\((19|20)p\\)$") & stringr::str_detect(modcod, "_(6|10)_5"), 0, importance),
+                  importance = ifelse(nums %in% c('00220000000000000', '00220000000001000', '10220000000000000', '10221100000000000', 
+                                                  '10221100000001000') & stringr::str_detect(cod, "_16") & stringr::str_detect(last_cod, "_16|_33"), 0, importance),
+                  importance = ifelse(nums %in% c('12000000000001000') & stringr::str_detect(cod, "_6"), 0, importance),
+                  importance = ifelse(nums %in% c('12000000000001000') & stringr::str_detect(cod, "_3") & stringr::str_detect(before_cod, "_3"), 0, importance),
+                  importance = ifelse(nums %in% c('22001100000001000') & stringr::str_detect(cod, "_6") & modcod %in% c('_3_3_6_5_6') & stringr::str_detect(last_cod, "_3"), 0, importance),
+                  importance = ifelse(nums %in% c('22001100000001000') & stringr::str_detect(cod, "_3") & modcod %in% c('_3_3_6_5_6') & last_cod == "", 1, importance),
+                  importance = ifelse(nums %in% c('00110000001000000') & stringr::str_detect(cod, "_16"), 0, importance),
+                  importance = ifelse(nums %in% c('00000010000000000', '00110010000000000') & stringr::str_detect(cod, "_5\\(37") & stringr::str_detect(last_cod, '_(2|4)'), 0, importance),
+                  importance = ifelse(nums %in% c('00000010000000000', '00110010000000000') & stringr::str_detect(cod, "_4\\(") & stringr::str_detect(last_cod, '_2') & stringr::str_detect(next_cod, "_5\\(37"), 0, importance),
+                  i = ifelse(nums == '00000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00000010000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00000001000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00000000010000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00110000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00110010000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00110000001000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00220000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '00220000000001000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10000001000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10001100000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10110000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10111100000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10220000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10221100000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '10221100000001000' & importance == 1, 1, i),
+                  i = ifelse(nums == '11000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '11001100000010000' & importance == 1, 1, i),
+                  i = ifelse(nums == '11000001000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '11110000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '11220000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '12000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '12000000000001000' & importance == 1, 1, i),
+                  i = ifelse(nums == '12001100000010000' & importance == 1, 1, i),
+                  i = ifelse(nums == '12110000000000000' & importance == 1, 1, i), 
+                  i = ifelse(nums == '12220000000000000' & importance == 1, 1, i), 
+                  i = ifelse(nums == '12220000000001000' & importance == 1, 1, i), 
+                  i = ifelse(nums == '13000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '13110000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '20000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '20001100000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '21000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '21000000000001000' & importance == 1, 1, i),
+                  i = ifelse(nums == '22000000000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '22000000000001000' & importance == 1, 1, i),
+                  i = ifelse(nums == '22001100000000000' & importance == 1, 1, i),
+                  i = ifelse(nums == '22001100000001000' & importance == 1, 1, i),
+                  i = ifelse(nums == '23000000000001000' & importance == 1, 1, i),
+                  i = ifelse(nums == '24000000000001000' & importance == 1, 1, i)) %>% 
+    dplyr::group_by(joincod) %>% 
+    dplyr::mutate(si = cumsum(i)) %>% 
+    dplyr::ungroup() %>% 
+    dplyr::mutate(si = ifelse(si == 0, 1, si)) %>% 
+    dplyr::filter(nums %in% c('00000000000000000', '00000010000000000', '00000001000000000', '00000000010000000', '00110000000000000', 
+                              '00110010000000000', '00110000001000000', '00220000000000000', '00220000000001000', '10000000000000000', 
+                              '10001100000000000', '10000001000000000', '10110000000000000', '10111100000000000', '10220000000000000', 
+                              '10221100000000000', '10221100000001000', '11000000000000000', '11001100000010000', '11000001000000000', 
+                              '11110000000000000', '11220000000000000', '12000000000000000', '12000000000001000', '12001100000010000',
+                              '12110000000000000', '12220000000000000', '12220000000001000', '13000000000000000', '13110000000000000', 
+                              '20000000000000000', '20001100000000000', '21000000000000000', '21000000000001000', '22000000000000000', 
+                              '22001100000000000', '22001100000001000', '22000000000001000', '23000000000001000', '24000000000001000')) 
+  
+  
+  obj2 %>% 
+    dplyr::filter(nums == '00110010000000000') %>% 
+    dplyr::select(modcod, joincod, row, cod, si) %>% 
+    dplyr::group_split(modcod)
+  
+  
+  
+  obj2 %>% 
+    dplyr::filter(nums == '00110010000000000') %>% 
+    dplyr::group_by(modcod, valcod) %>% 
+    dplyr::summarise(cnt = sum(cnt), .groups = 'drop') %>% 
+    dplyr::arrange(modcod, desc(cnt)) %>% 
+    print(n = 900)
+  
+  
+  
+  obj2 %>% 
     dplyr::mutate(total_modcod = (row == 1) * cnt) %>% 
     dplyr::group_by(modcod) %>% 
     dplyr::mutate(total_modcod = sum(total_modcod)) %>% 
@@ -717,7 +899,54 @@ tokenizer_plays <- function(df){
                   ind_foul = ifelse(aux >= 0 & 
                                       stringr::str_detect(cod, "6\\(") & 
                                       stringr::str_detect(valcod, "_16\\(0") & 
-                                      stringr::str_detect(valcod, "_33\\(4"), ind_foul + 100, ind_foul))  
+                                      stringr::str_detect(valcod, "_33\\(4"), ind_foul + 100, ind_foul)) %>% 
+    dplyr::mutate(modcod = stringr::str_replace_all(modcod, "_14", "")) %>% 
+    dplyr::group_by(modcod, valcod) %>% 
+    dplyr::ungroup()
+  
+# '_3_3_2_4_6', '_6_2_4_3_3', '_3_4_6_3', '_4_2_4_6_3_4_3', '_4_6_5_3_3', '_6_2_4_3_3', '_6_4_3_3',
+# '_4_6_5_3_3',
+
+obj2 %>% 
+  dplyr::mutate(i = 0,
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_1"), 1, i),
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_2"), 1, i),
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_4"), 1, i),
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_5"), 1, i),
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_7"), 1, i),
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_10\\((1|2)"), 1, i),
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_12"), 1, i),
+                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_13"), 1, i)) %>% 
+  dplyr::group_by(joincod) %>% 
+  dplyr::mutate(si = cumsum(i)) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::rename(old_joincod = joincod) %>% 
+  dplyr::group_by(old_joincod, si) %>% 
+  dplyr::mutate(joincod = paste0(cod, collapse = '')) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::select(old_joincod, joincod, i, si, row, cod, importance, cnt) %>% 
+  dplyr::mutate(valcod = stringr::str_replace_all(valcod, '(_)(6\\(0)', '\\11\\2'),
+                valcod = stringr::str_replace_all(valcod, '(_)(3\\(4)', '\\13\\2'),
+                valcod = stringr::str_replace_all(valcod, '(_3\\(.{1,3}\\))_4', '\\1_14')) %>% 
+  dplyr::mutate(modcod = stringr::str_remove_all(valcod, "\\(.{1,3}\\)"))
+  
+  
+  
+c('_3_3_2_4_6', '_3_4_6_3', '')  
+  
+  obj3 <- obj2 %>% 
+    dplyr::mutate(modcod = stringr::str_replace_all(modcod, "_14", "")) %>% 
+    dplyr::group_by(modcod, valcod, aux) %>% 
+    dplyr::summarise(cnt = sum(cnt), .groups = 'drop') %>% 
+    dplyr::arrange(desc(cnt)) %>% 
+    dplyr::group_by(aux) %>% 
+    dplyr::mutate(n = dplyr::n(),
+                  n = 2000 - n) %>%
+    dplyr::ungroup() %>%
+    dplyr::group_split(n, aux)
+    
+    obj3 %>% 
+    '['(1:5)
   
   
   # REF É O GRUPO QUE DESEJAMOS MOVER A AÇÃO
