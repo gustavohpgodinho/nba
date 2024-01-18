@@ -1,41 +1,32 @@
-
-
-## Extract data from NBA api
-
 import pandas as pd
 import requests
 import time
 import os
-from nba_api.stats.endpoints import leaguegamefinder
-from nba_api.stats.endpoints import playbyplayv2
+from nba_api.stats.endpoints import leaguegamefinder, playbyplayv2
 
-headers  = {
-  "Connection": "keep-alive",
-  "Accept": "application/json, text/plain, */*",
-  "x-nba-stats-token": "true",
-  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
-  "x-nba-stats-origin": "stats",
-  "Sec-Fetch-Site": "same-origin",
-  "Sec-Fetch-Mode": "cors",
-  "Referer": "https://stats.nba.com/",
-  "Accept-Encoding": "gzip, deflate, br",
-  "Accept-Language": "en-US,en;q=0.9"} 
-            
-
-# Functions to execute the extraction of data
+headers = {
+    "Connection": "keep-alive",
+    "Accept": "application/json, text/plain, */*",
+    "x-nba-stats-token": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
+    "x-nba-stats-origin": "stats",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Referer": "https://stats.nba.com/",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9"
+}
 
 def select_columns_from_games_dataframe(df):
-    
     """
-    Select only useful columns from the dataframe extracted from the NBA API in a way that one line represents one game.
+    Select only useful columns from the dataframe extracted from the NBA API.
     
-    Parameters
-    df: dataframe extracted from the NBA API.
+    Parameters:
+    - df: dataframe extracted from the NBA API.
   
-    Returns
-    returned_df; dataframe with only useful columns from each extract game of NBA by GAME_ID.
+    Returns:
+    - returned_df: dataframe with only useful columns from each extracted game of NBA by GAME_ID.
     """
-    
     columns = ["GAME_ID", "GAME_DATE", "SEASON_ID", "MATCHUP", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "PTS"]
     df = df[columns]
     
@@ -64,25 +55,28 @@ def select_columns_from_games_dataframe(df):
     returned_df = pd.concat([df_home_team, df_away_team], axis = 1)
     
     returned_columns = ["SEASON_ID", "GAME_DATE", "MATCHUP", "HOME_TEAM_ID", "AWAY_TEAM_ID", 
-                        "HOME_TEAM_ABBR", "AWAY_TEAM_ABBR", "HOME_TEAM", "HOME_PTS", "AWAY_PTS", "AWAY_TEAM"]
+                        "HOME_TEAM_ABBR", "AWAY_TEAM_ABBR", "HOME_TEAM", "HOME_PTS", "AWAY_PTS", 
+                        "AWAY_TEAM"]
     
     returned_df = returned_df[returned_columns]
     
     return returned_df
-  
+
 def filter_nba_games_by_type(df, type_games = ['Regular Season', "Play-in", "Playoffs"]):
-    
     """
-    Choose only specific types of games to extract pbp data.
+    Choose only specific types of games to extract play-by-play data.
     
-    Parameters
-    df: dataframe extracted from the NBA API.
-    type_games: list of strings with the types of games to extract. If empty, will return all NBA type of games. Options: ['Preseason', 'Regular Season', 'All star', 'Playoffs', 'Play-in']
-  
-    Returns
-    df_return; dataframe with only the type of games passed to function.
+    Parameters:
+    - df: dataframe extracted from the NBA API.
+    - type_games: list of strings with the types of games to extract.
+        If empty, will return all NBA type of games. 
+        Options: ['Preseason', 'Regular Season', 'All star', 'Playoffs', 'Play-in']
+        Default: ['Regular Season', "Play-in", "Playoffs"]
+
+    Returns:
+    - df_return: dataframe with only the specified type of games.
     """
-    
+
     df_return = df\
     .reset_index()\
     .assign(HOME_TEAM_ID = lambda x: [str(i).replace(".0", "") for i in x["HOME_TEAM_ID"]],
@@ -110,38 +104,37 @@ def filter_nba_games_by_type(df, type_games = ['Regular Season', "Play-in", "Pla
     return df_return
 
 def create_seasons_list(start_year = 2008, end_year = 2021):
-    
     """
     Create a list of seasons to be used in the download_games function.
     
-    Parameters
-    start_year: integer to set up the first season to download games data. Default: 2008
-    end_year: integer to set up the last season to download games data. Default: 2021
+    Parameters:
+    - start_year: integer to set up the first season to download games data. Default: 2008
+    - end_year: integer to set up the last season to download games data. Default: 2021
   
-    Returns
-    seasons: list to set up the seasons to download games data. 
+    Returns:
+    - seasons: list to set up the seasons to download games data. 
     """
-    
     seasons = []
     for i in range(start_year, end_year + 1):
         seasons.append(str(i) + "-" + str(i + 1)[2:])
         
     return seasons
 
-def download_games(seasons, show_steps, type_games):    
-    
+def download_games(seasons, show_steps, type_games):
     """
     Connect to the NBA API and download games data.
     
-    Parameters
-    seasons: list to set up the seasons to download games data. 
-    show_steps: boolean to print what season we are extracting games.
-    type_games: list of strings with the types of games to extract. If empty, will return all NBA type of games. Options: ['Preseason', 'Regular Season', 'All star', 'Playoffs', 'Play-in']
-  
-    Returns
-    df: dataframe containing all games data from the seasons passed to function.
-    """
+    Parameters:
+    - seasons: list to set up the seasons to download games data. 
+    - show_steps: boolean to print what season we are extracting games.
+    - type_games: list of strings with the types of games to extract.
+        If empty, will return all NBA type of games. 
+        Options: ['Preseason', 'Regular Season', 'All star', 'Playoffs', 'Play-in']
+        Default: ['Regular Season', "Play-in", "Playoffs"]
 
+    Returns:
+    - df: dataframe containing all games data from the seasons passed to function.
+    """
     games_data = []
     for s in seasons: 
         
@@ -162,20 +155,18 @@ def download_games(seasons, show_steps, type_games):
     df = filter_nba_games_by_type(pd.concat(games_data, axis = 0), type_games = type_games)
     
     return df
-  
+
 def download_play_by_play(df_games):
-    
     """
-    Connect to the NBA API and download the play by play selected games' data.
+    Connect to the NBA API and download the play-by-play selected games' data.
     
-    Parameters
-    df_games: dataframe containing the games that we want to extract the play by play data. This dataframe must contain the column "GAME_ID".
+    Parameters:
+    - df_games: dataframe containing the games that we want to extract the play-by-play data. This dataframe must contain the column "GAME_ID".
   
-    Returns
-    pbp_data: list of dataframes containing the play by play data of the games passed to function.
+    Returns:
+    - pbp_data: list of dataframes containing the play-by-play data of the games passed to function.
     """
-
-
+    
     pbp_data = []
     
     # Just a counter to avoid to make many requests to the API in a short period of time
@@ -196,22 +187,21 @@ def download_play_by_play(df_games):
     
     return pbp_data
 
-def execute_download_data_nba_api(file_to_save_games_nba, path_to_save_pbp, seasons = [], show_steps = True, type_games = []):
-    
+def execute_download_data_nba_api(file_to_save_games_nba, path_to_save_pbp, seasons=[], show_steps=True, type_games=[]):
     """
-    Execute all of the process to extract the games and the play by play of NBA api.
+    Execute all processes to extract the games and the play-by-play of NBA API.
     
-    Parameters
-    file_to_save_games_nba: string with the path to save the games data. It needs to be a csv extension.
-    path_to_save_pbp: string with the path to save the play by play data.
-    seasons: list to set up the seasons to download games data.
-    show_steps: boolean to print what season we are extracting games.
-    type_games: list of strings with the types of games to extract. If empty, will return extract only the following NBA type of games: ['Regular Season', 'Playoffs', 'Play-in']. Options: ['Preseason', 'Regular Season', 'All star', 'Playoffs', 'Play-in']
+    Parameters:
+    - file_to_save_games_nba: string with the path to save the games data. 
+        It needs to be a csv extension.
+    - path_to_save_pbp: string with the path to save the play-by-play data.
+    - seasons: list to set up the seasons to download games data.
+    - show_steps: boolean to print what season we are extracting games.
+    - type_games: list of strings with the types of games to extract.
     
-    Returns
-    
+    Returns:
+    None
     """
-    
     if seasons == []:
         seasons = create_seasons_list(2008, 2023)
     
@@ -222,7 +212,9 @@ def execute_download_data_nba_api(file_to_save_games_nba, path_to_save_pbp, seas
     games_nba = download_games(seasons = seasons, show_steps = show_steps, type_games = type_games)
     
     # Saving the csv file of games nba details
-    games_nba.to_csv(file_to_save_games_nba, index = False, sep = ';')
+    games_nba\
+    .drop(columns = ['level_1'])\
+    .to_csv(file_to_save_games_nba, index = False, sep = ';')
     
     # columns there will be in our pbp data file.
     pbp_data_columns = ['GAME_ID', 'EVENTNUM', 'EVENTMSGTYPE', 'EVENTMSGACTIONTYPE', 'PERIOD', 'WCTIMESTRING', 
@@ -286,7 +278,7 @@ def execute_download_data_nba_api(file_to_save_games_nba, path_to_save_pbp, seas
         
         print("\nExtracted pbp saved in pbpa_complement.csv")
         
-        print("Reading all the pbp past data to save pbp season files:")        
+        print("\nReading all the pbp past data to save pbp season files:")        
         
         pbp_data = list()
         
@@ -322,7 +314,7 @@ def execute_download_data_nba_api(file_to_save_games_nba, path_to_save_pbp, seas
 
 
 # Execute the code
+execute_download_data_nba_api(
+  path_to_save_pbp="D:/Mestrado/NBA/nba/data/api/",
+  file_to_save_games_nba="D:/Mestrado/NBA/nba/data/games_nba.csv")
 
-execute_download_data_nba_api(path_to_save_pbp = "D:/Mestrado/NBA/nba/data/api/", file_to_save_games_nba = "D:/Mestrado/NBA/nba/data/games_nba.csv")
-                              
-                              

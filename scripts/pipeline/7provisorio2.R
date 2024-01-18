@@ -104,8 +104,8 @@ group_plays_around_fouls <- function(df){
   df %>%
     put_features_cod() %>%
     dplyr::mutate(join = importance,
-                  join = ifelse(stringr::str_detect(cod, "_(3|10|11|4|7\\(2|7\\(3|7\\(4|7\\(6)"), 1, join),
-                  join = ifelse(stringr::str_detect(cod, "_5\\(13|_5\\(00|_5\\(37"), 1, join)) %>%
+                  join = ifelse(stringr::str_detect(cod, "_(3|10|11|14|4|7\\(2|7\\(3|7\\(4|7\\(6)"), 1, join),
+                  join = ifelse(stringr::str_detect(cod, "_5\\(00|_5\\(13|_5\\(19|_5\\(20|_5\\(37"), 1, join)) %>%
     dplyr::group_by(joincod) %>%
     dplyr::mutate(sum_join = cumsum(join)) %>%
     dplyr::mutate(ref = ifelse(stringr::str_detect(cod, "_6\\((0|10|11|12|13|14|15|16|17|19|20|21|22)") & importance == 1, sum_join, 1000)) %>% 
@@ -120,6 +120,18 @@ group_plays_around_fouls <- function(df){
 }
 
 group_plays_around_turnovers <- function(df){
+  
+  # REF É O GRUPO QUE DESEJAMOS MOVER A AÇÃO
+  # SUM_JOIN É O GRUPO ATUAL DA AÇÃO
+  # A AÇÃO SÓ PODE MOVER PARA O GRUPO SEGUINTE
+  
+  # MOVA A AÇÃO SE 
+  ## HÁ UMA AÇÃO DE INTERESSE NO GRUPO SEGUINTE (EXEMPLO FALTA), >> (ou seja, se ref == 1000, não há uma ação de interesse no grupo seguinte)
+  ## E ESSA AÇÃO PODE SER MOVIDA (join = 0), 
+  ## E SE O GRUPO FUTURO É SEGUINTE AO GRUPO ATUAL (sum_join + 1) == ref
+  ## E SE O GRUPO ATUAL (sum_join) NÃO É O IDENTIFICADO COMO GRUPO 0 (sum_join != 0, isso já está tratado em outra parte do código)
+  ## E SE EXISTIR UM GRUPO EM si SEGUINTE AO ATUAL DA AÇÃO A SER MOVIDA (ou seja, si < max(si))
+  
   
   df %>% 
     dplyr::mutate(join = 1, 
@@ -740,15 +752,6 @@ tokenizer_plays <- function(df){
     dplyr::ungroup() %>% 
     dplyr::mutate(importance = 1)
   
-  
-  # obj %>% 
-  #   dplyr::mutate(cod = stringr::str_replace_all(cod, '(_)(6\\(0)', '\\11\\2'),
-  #                 cod = stringr::str_replace_all(cod, '(_)(3\\(4)', '\\13\\2')) %>% 
-  
-  
-  # dplyr::mutate(pcod = ifelse(stringr::str_detect(pcod, "_4\\(") & stringr::str_detect(dplyr::lag(pcod), "_3\\("), stringr::str_replace(pcod, "_4\\(", "_14("), pcod),
-  #               cod = ifelse(stringr::str_detect(cod, "_4\\(") & stringr::str_detect(dplyr::lag(cod), "_3\\("), stringr::str_replace(cod, "_4\\(", "_14("), cod)) %>% 
-    
   obj2 <- obj %>% 
     dplyr::group_by(joincod, row) %>% 
     dplyr::summarise(cod = unique(cod), 
@@ -773,11 +776,6 @@ tokenizer_plays <- function(df){
                                               '_12_16_33_10', '_6_3_16_33_10_3', '_33_6_16', '_6_1_16_33_3',
                                               '_2_10_10_4', '_3_3_6_6_3_3', '_6_3_6_3', '_16_16_2_4_33_33', 
                                               '_6_16_16_33_33_3_6_3_3_3', '_3_3_3_4'), 1, 0))
-  
-  
-  
-  
-  
   obj3 <- obj2 %>% 
     dplyr::mutate(i = 0,
                   importance = ifelse(cod == "_10(0)", 0, importance),
@@ -932,249 +930,28 @@ tokenizer_plays <- function(df){
     dplyr::group_by(joincod) %>% 
     dplyr::mutate(si = cumsum(i)) %>% 
     dplyr::ungroup() %>% 
-    dplyr::mutate(si = ifelse(si == 0, 1, si))
-  
-  obj4 <- obj %>% 
-    dplyr::left_join(obj3 %>% 
-                       dplyr::select(real_joincod, row, si),
-                     by = c('joincod' = 'real_joincod', 'row')) %>% 
-    dplyr::group_by(season, game_id, period, clock, si) %>%
-    dplyr::mutate(n = dplyr::n(),
-                  joincod = paste0(cod, collapse = ""),
-                  row = dplyr::row_number()) %>%
-    dplyr::ungroup() %>% 
-    dplyr::mutate(importance = 1)
-  
-  obj5 <- obj4 %>% 
-    dplyr::group_by(joincod, row) %>% 
-    dplyr::summarise(cod = unique(cod), 
-                     n = unique(n), 
-                     importance = unique(importance), 
-                     cnt = dplyr::n(), 
-                     .groups = 'drop') %>%
+    dplyr::mutate(si = ifelse(si == 0, 1, si)) %>% 
+    dplyr::mutate(importance2 = importance) %>% 
     nulling_cods_always_null() %>% 
-    dplyr::mutate(si = 0) %>% 
+    dplyr::mutate(importance = ifelse(cod == "_7(6p)", 1, importance)) %>% 
     put_features_cod() %>% 
-    put_nums() %>% 
-    dplyr::mutate(cod = ifelse(stringr::str_detect(cod, "_4") & stringr::str_detect(before_cod, "_3\\(.{1,3}\\)$"), stringr::str_replace(cod, "_4", "_14"), cod), 
-                  cod = ifelse(stringr::str_detect(cod, "_6\\(0"), stringr::str_replace(cod, "_6", "_16"), cod),
-                  cod = ifelse(stringr::str_detect(cod, "_3\\(40"), stringr::str_replace(cod, "_3", "_33"), cod)) %>% 
-    dplyr::mutate(real_joincod = joincod) %>% 
-    dplyr::group_by(real_joincod) %>% 
-    dplyr::mutate(joincod = paste0(cod, collapse = '')) %>% 
-    dplyr::ungroup() %>% 
-    put_features_cod() %>% 
-    dplyr::mutate(erro = ifelse(modcod %in% c('_3_3_2_4_6', '_3_4_6_3', '_4_2_4_6_3_4_3', '_6_2_4_3_3', '_6_3_10_3', 
-                                              '_6_3_3_4', '_6_3_3_4_2', '_6_4_3_3', '_2_4_6_1_3', '_6_1_3', 
-                                              '_12_16_33_10', '_6_3_16_33_10_3', '_33_6_16', '_6_1_16_33_3',
-                                              '_2_10_10_4', '_3_3_6_6_3_3', '_6_3_6_3', '_16_16_2_4_33_33', 
-                                              '_6_16_16_33_33_3_6_3_3_3', '_3_3_3_4'), 1, 0))
-  
-  
-  obj2 %>% 
-    dplyr::filter(nums == '10000000001000000') %>% 
-    dplyr::group_by(modcod, valcod) %>% 
-    dplyr::summarise(cnt = sum(cnt), .groups = 'drop') %>% 
-    dplyr::arrange(modcod, desc(cnt)) %>% 
-    print(n = 900)
-  
-  
-  
-  obj2 %>% 
-    dplyr::mutate(total_modcod = (row == 1) * cnt) %>% 
-    dplyr::group_by(modcod) %>% 
-    dplyr::mutate(total_modcod = sum(total_modcod)) %>% 
-    dplyr::ungroup() %>% 
-    nulling_cods_should_be_null() %>% 
-    fix_plays_after_and_before_period() %>% 
-    dplyr::mutate(aux = ifelse(importance == 0, -1, 0)) %>% 
-    dplyr::mutate(importance = ifelse(stringr::str_detect(cod, '_18') & 
-                                        stringr::str_detect(dplyr::lag(cod), "_18", negate = TRUE) & 
-                                        stringr::str_detect(next_cod, '_13'), 1, importance)) %>% 
-    dplyr::mutate(aux = ifelse(stringr::str_detect(cod, "_4\\(.t\\)|_4\\(0u") & 
-                                 last_cod == '_3(40w)' & 
-                                 stringr::str_detect(next_cod, "_6\\("), 1, aux),
-                  aux = ifelse(stringr::str_detect(cod, "_6\\(0") & 
-                                 stringr::str_detect(last_cod, '_3\\(') & 
-                                 next_cod == "", 2, aux),
-                  aux = ifelse(stringr::str_detect(next_cod, "_3") & 
-                                 stringr::str_detect(last_cod, "_6") & 
-                                 stringr::str_detect(cod, "_5"), 3, aux)) %>% 
-    dplyr::mutate(importance = ifelse(aux > 0, 0, importance)) %>% 
-    dplyr::mutate(ind_foul = ifelse(aux >= 0 & 
-                                      stringr::str_detect(cod, "6\\(") & 
-                                      stringr::str_detect(valcod, "_6\\((1|2)") & 
-                                      stringr::str_detect(valcod, "_3\\((1|2|3|5|6|7|8|9)"), 1, 0),
-                  ind_foul = ifelse(aux >= 0 & 
-                                      stringr::str_detect(cod, "6\\(") & 
-                                      stringr::str_detect(valcod, "_16\\(0") & 
-                                      stringr::str_detect(valcod, "_33\\(4", negate = T), ind_foul + 10, ind_foul),
-                  ind_foul = ifelse(aux >= 0 & 
-                                      stringr::str_detect(cod, "6\\(") & 
-                                      stringr::str_detect(valcod, "_16\\(0") & 
-                                      stringr::str_detect(valcod, "_33\\(4"), ind_foul + 100, ind_foul)) %>% 
-    dplyr::mutate(modcod = stringr::str_replace_all(modcod, "_14", "")) %>% 
-    dplyr::group_by(modcod, valcod) %>% 
-    dplyr::ungroup()
-  
-# '_3_3_2_4_6', '_6_2_4_3_3', '_3_4_6_3', '_4_2_4_6_3_4_3', '_4_6_5_3_3', '_6_2_4_3_3', '_6_4_3_3',
-# '_4_6_5_3_3',
-
-obj2 %>% 
-  dplyr::mutate(i = 0,
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_1"), 1, i),
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_2"), 1, i),
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_4"), 1, i),
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_5"), 1, i),
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_7"), 1, i),
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_10\\((1|2)"), 1, i),
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_12"), 1, i),
-                i = ifelse(aux == '0000000000000000' & stringr::str_detect(cod, "_13"), 1, i)) %>% 
-  dplyr::group_by(joincod) %>% 
-  dplyr::mutate(si = cumsum(i)) %>% 
-  dplyr::ungroup() %>% 
-  dplyr::rename(old_joincod = joincod) %>% 
-  dplyr::group_by(old_joincod, si) %>% 
-  dplyr::mutate(joincod = paste0(cod, collapse = '')) %>% 
-  dplyr::ungroup() %>% 
-  dplyr::select(old_joincod, joincod, i, si, row, cod, importance, cnt) %>% 
-  dplyr::mutate(valcod = stringr::str_replace_all(valcod, '(_)(6\\(0)', '\\11\\2'),
-                valcod = stringr::str_replace_all(valcod, '(_)(3\\(4)', '\\13\\2'),
-                valcod = stringr::str_replace_all(valcod, '(_3\\(.{1,3}\\))_4', '\\1_14')) %>% 
-  dplyr::mutate(modcod = stringr::str_remove_all(valcod, "\\(.{1,3}\\)"))
-  
-  
-  
-c('_3_3_2_4_6', '_3_4_6_3', '')  
-  
-  obj3 <- obj2 %>% 
-    dplyr::mutate(modcod = stringr::str_replace_all(modcod, "_14", "")) %>% 
-    dplyr::group_by(modcod, valcod, aux) %>% 
-    dplyr::summarise(cnt = sum(cnt), .groups = 'drop') %>% 
-    dplyr::arrange(desc(cnt)) %>% 
-    dplyr::group_by(aux) %>% 
-    dplyr::mutate(n = dplyr::n(),
-                  n = 2000 - n) %>%
-    dplyr::ungroup() %>%
-    dplyr::group_split(n, aux)
-    
-    obj3 %>% 
-    '['(1:5)
-  
-  
-  # REF É O GRUPO QUE DESEJAMOS MOVER A AÇÃO
-  # SUM_JOIN É O GRUPO ATUAL DA AÇÃO
-  # A AÇÃO SÓ PODE MOVER PARA O GRUPO SEGUINTE
-  
-  # MOVA A AÇÃO SE 
-  ## HÁ UMA AÇÃO DE INTERESSE NO GRUPO SEGUINTE (EXEMPLO FALTA), >> (ou seja, se ref == 1000, não há uma ação de interesse no grupo seguinte)
-  ## E ESSA AÇÃO PODE SER MOVIDA (join = 0), 
-  ## E SE O GRUPO FUTURO É SEGUINTE AO GRUPO ATUAL (sum_join + 1) == ref
-  ## E SE O GRUPO ATUAL (sum_join) NÃO É O IDENTIFICADO COMO GRUPO 0 (sum_join != 0, isso já está tratado em outra parte do código)
-  ## E SE EXISTIR UM GRUPO EM si SEGUINTE AO ATUAL DA AÇÃO A SER MOVIDA (ou seja, si < max(si))
-  
-  
-  obj3 <- obj2 %>% 
-    dplyr::rename(realcod = valcod) %>% 
-    put_features_cod() %>% 
-    dplyr::select(-valcod) %>%
-    assign_specific_turnovers_situations() %>% 
-    assign_specific_tech_fouls_situations() %>% 
-    dplyr::mutate(importance = ifelse(aux > 0, 0, importance)) %>% 
-    put_features_cod() %>% 
-    dplyr::mutate(aux = ifelse(stringr::str_detect(cod, "_6") & 
-                                 stringr::str_detect(last_cod, "_6\\(0"), 40, aux)) %>% 
-    assign_specific_modcod_situations() %>% 
-    dplyr::mutate(importance = ifelse(aux > 0, 0, importance),
-                  importance = ifelse(aux %in% c(50, 51, 56, 57), 1, importance)) %>% 
-    dplyr::mutate(aux = ifelse(total_modcod <= 1, -2, aux)) %>% 
-    dplyr::select(-valcod)
-  
-  obj4 <- obj3 %>%
+    dplyr::mutate(importance = importance2) %>% 
+    dplyr::select(-importance2) %>% 
+    dplyr::mutate(i = ifelse(stringr::str_detect(cod, "_14\\(") & after_cod == "", 1, i)) %>% 
     dplyr::group_by(joincod) %>% 
-    dplyr::mutate(si = cumsum(importance)) %>% 
+    dplyr::mutate(si = cumsum(i)) %>% 
     dplyr::ungroup() %>% 
     dplyr::mutate(si = ifelse(si == 0, 1, si)) %>% 
     group_plays_around_jumpball() %>% 
     group_plays_around_fouls() %>% 
     group_plays_around_turnovers()
   
-  obj5 <- obj4 %>% 
-    dplyr::mutate(aux = ifelse(modcod %in% c('_6_1_3', '_3_3_4_6', '_3', 
-                                             '_2_4_6_1_3', '_6_3_10_3_4'), -2, aux)) %>% 
-    dplyr::filter(aux != -2) %>%
-    dplyr::group_by(joincod, cnt, si) %>% 
-    dplyr::mutate(cods = paste0(cod, collapse = "")) %>% 
-    dplyr::mutate(clean_cod = stringr::str_remove_all(cods, "_(7|8|9|11|18)\\(.{1,3}\\)"),
-                  clean_cod = stringr::str_replace_all(clean_cod, "(_3\\(.{1,2}w\\))(_4\\(.{1,3}\\))", "\\1"),
-                  clean_cod = stringr::str_remove_all(clean_cod, "_6\\((4.{1,2}|18a)\\)")) %>% 
-    dplyr::ungroup() %>% 
-    dplyr::group_by(joincod) %>% 
-    dplyr::mutate(maxsi = max(si)) %>% 
-    dplyr::ungroup() %>% 
-    simplify_cod()
+  obj3 %>% dplyr::select(joincod, row, si)
+
   
-  obj6 <- obj5 %>% 
-    dplyr::select(joincod, row, si, codf)
-  
-  obj7 <- obj %>% 
-    dplyr::left_join(obj6, by = c('joincod', 'row')) %>%
-    dplyr::group_by(season, game_id, period, clock, si, codf) %>% 
-    dplyr::summarise(joinpcod = paste0(pcod, collapse = ""), .groups = 'drop')
-  
+
 }
 
-
-obj7 %>% 
-  dplyr::group_by(joinpcod, codf) %>% 
-  dplyr::summarise(n = dplyr::n(), .groups = 'drop')
-
-obj7 %>% 
-  dplyr::mutate(pcodf = NA_character_,
-                pcodf = ifelse(stringr::str_detect(codf, "_1\\("), stringr::str_extract(joinpcod, "p[0-9]{3}_1\\(.{1,3}\\)"), pcodf),
-                
-                pcodf = ifelse(stringr::str_detect(codf, "_2\\("), stringr::str_extract(joinpcod, "p[0-9]{3}_2\\(.{1,3}\\)"), pcodf),
-                
-                pcodf = ifelse(codf %in% c('_10', "_12(0)_10(0)", "_12(1)_10(0)"), stringr::str_extract(joinpcod, "p[0-9]{3}_10\\(.\\)"), pcodf),
-                
-                pcodf = ifelse(codf %in% c('_12(0)', '_12(1)', '_12(2)', '_12(3)', '_12(4)'), stringr::str_extract(joinpcod, "p[0-9]{3}_12\\(.\\)"), pcodf),
-                pcodf = ifelse(codf %in% c("_12(0)_7(4p)", "_12(0)_7(4p)"), stringr::str_extract(joinpcod, "p[0-9]{3}_7\\(4p\\)"), pcodf),
-                
-                pcodf = ifelse(codf %in% c('_13(0)', '_13(1)', '_13(2)', '_13(3)', '_13(4)'), stringr::str_extract(joinpcod, "p[0-9]{3}_13\\(.\\)"), pcodf),
-                
-                pcodf = ifelse(codf %in% c('_4(0p)', '_4(0t)', '_4(1t)'), stringr::str_extract(joinpcod, "p[0-9]{3}_4\\(.{1,3}\\)"), pcodf),
-                
-                pcodf = ifelse(codf %in% c('_5(01p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(11p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(12p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(14p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(15p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(16p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(17p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(18p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(22p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(23p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(24p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(26p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(27p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(28p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(29p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(30p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(31p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(32p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(33p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(34p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(35p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(41p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(43p)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                
-                pcodf = ifelse(codf %in% c('_5(25t)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(36t)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(37t)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(38t)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(39t)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-                pcodf = ifelse(codf %in% c('_5(40t)'), stringr::str_extract(joinpcod, "p[0-9]{3}_5\\(.{1,3}\\)"), pcodf),
-  )
 
 
 

@@ -2,14 +2,20 @@ require(tidyverse)
 require(future)
 require(furrr)
 
-#' @title transform_pbp_text_file_into_dataframe
+#' Transform Play-by-Play Text File into DataFrame
 #'
-#' @param df it is a dataframe with the game_id and text columns and broke this in a tidy dataframe
+#' This function takes a DataFrame with 'game_id' and 'text' columns, breaks it into a tidy DataFrame,
+#' and returns one row for each action number in the game.
 #'
-#' @return a tidy dataframe withe one row for each action number in the game
+#' @param df A DataFrame with 'game_id' and 'text' columns.
+#' 
+#' @return A tidy DataFrame with one row for each action number in the game.
 #' @export
 #'
 #' @examples
+#' df_example <- data.frame(game_id = c(123), text = c('actionNumber:1, description:First Action'))
+#' transform_pbp_text_file_into_dataframe(df_example)
+#'
 transform_pbp_text_file_into_dataframe <- function(df){
   
   df$text %>% 
@@ -29,16 +35,22 @@ transform_pbp_text_file_into_dataframe <- function(df){
 
 }
 
-#' @title read_pbp_text_file_and_save_rdata
+#' Read Play-by-Play Text File and Save as RData
 #'
-#' @description It's a method to read the dataframe and use the function transform_pbp_text_file_into_dataframe to build the dataframe and save the RData file.
-#' @param df it is a dataframe with the game_id and text columns and broke this in a tidy dataframe
-#' @param file_path it is the path to save the dataframe in RData files
+#' This function reads a DataFrame with 'game_id' and 'text' columns, breaks it into a tidy DataFrame,
+#' uses the function `transform_pbp_text_file_into_dataframe` to process the text data, 
+#' and saves the resulting DataFrame as an RData file.
 #'
-#' @return
+#' @param df A DataFrame with 'game_id' and 'text' columns.
+#' @param file_path The path to save the resulting DataFrame in RData files.
+#'
+#' @return None
 #' @export
 #'
 #' @examples
+#' df_example <- data.frame(file = c('path/to/file.txt'), stringsAsFactors = FALSE)
+#' read_pbp_text_file_and_save_rdata(df_example, file_path = 'path/to/save/')
+#'
 read_pbp_text_file_and_save_rdata <- function(df, file_path){
   
   tryCatch(expr = {
@@ -69,32 +81,39 @@ read_pbp_text_file_and_save_rdata <- function(df, file_path){
 
 }
 
-#' @title build_pbp_dataframe_by_season
+#' @title Build Play-by-Play DataFrame by Season
 #'
-#' @description get the RData files of the play by play of each game and build a play by play dataframe with all games of the season
-#' @param season season to build the dataframe
-#' @param games a dataframe with the games details. It needs to have the GAME_ID column.
-#' @param path_pbp_by_games_file A path where the pbp data of each game is saved.
+#' @description 
+#' This function compiles RData files containing play-by-play data for each game in a given season.
+#' It builds a tidy play-by-play dataframe with all games of the specified season.
 #'
-#' @return
+#' @param season The season for which to build the dataframe.
+#' @param games A dataframe with game details, including the GAME_ID column.
+#' @param path_pbp_by_games_file The path where the play-by-play data of each game is saved.
+#'
+#' @return A tidy dataframe containing play-by-play information for all games in the specified season.
 #' @export
 #'
 #' @examples
+#' games_data <- readr::read_delim(file = "path/to/games_data.csv", delim = ';', show_col_types = FALSE)
+#' pbp_data <- build_pbp_dataframe_by_season(season = 2021, games = games_data, path_pbp_by_games_file = "path/to/pbp_files/")
+#'
 build_pbp_dataframe_by_season <- function(season, games, path_pbp_by_games_file){
   
+  # Filter games for the specified season
   games_ <- games %>% 
     dplyr::filter(SEASON == season) %>% 
     dplyr::select(GAME_ID, SEASON)
   
+  # Load RData files for each game, merging with game details
   df_ <- dir(path = path_pbp_by_games_file, full.names = TRUE) %>% 
     data.frame(file = ., stringsAsFactors = FALSE) %>% 
     dplyr::as_tibble() %>% 
     dplyr::mutate(GAME_ID = stringr::str_extract(string = file, pattern = "[0-9]{10}")) %>% 
     dplyr::inner_join(games_, by = 'GAME_ID') %>% 
-    plyr::alply(.data = ., .margins = 1, .fun = function(df){
+    plyr::alply(.margins = 1, .fun = function(df) {
       
-      xx <- load(df$file) 
-      
+      xx <- load(df$file)
       xx <- get(xx)
       
       xx <- xx %>% 
@@ -104,14 +123,14 @@ build_pbp_dataframe_by_season <- function(season, games, path_pbp_by_games_file)
       
     }, .progress = 'time') %>% 
     dplyr::bind_rows() %>% 
-    dplyr::mutate_all(.funs = function(x){ifelse(x == "", NA_character_, x)}) %>% 
+    dplyr::mutate_all(.funs = function(x) ifelse(x == "", NA_character_, x)) %>% 
     dplyr::group_by(game_id, actionNumber) %>% 
     dplyr::mutate(n = dplyr::n()) %>% 
     dplyr::ungroup() %>% 
     dplyr::group_split(n) %>% 
-    plyr::llply(.data = ., .fun = function(df){
+    plyr::llply(.fun = function(df) {
       
-      if(df$n[1] == 1){
+      if (df$n[1] == 1) {
         
         df %>% 
           dplyr::rename(personId1 = personId, 
@@ -120,7 +139,7 @@ build_pbp_dataframe_by_season <- function(season, games, path_pbp_by_games_file)
                         teamId1 = teamId, 
                         teamTricode1 = teamTricode)
         
-      } else if(df$n[1] == 2){
+      } else if (df$n[1] == 2) {
         
         df %>% 
           dplyr::group_by(game_id, actionNumber) %>% 
@@ -138,18 +157,16 @@ build_pbp_dataframe_by_season <- function(season, games, path_pbp_by_games_file)
           tidyr::separate(teamTricode, c('teamTricode1', 'teamTricode2'), sep = ";") %>% 
           dplyr::filter(!is.na(actionType))
         
-      } else{
+      } else {
         
         print('error')
         df
+        
       }
-      
     }, .progress = 'time') %>% 
     dplyr::bind_rows() %>% 
-    dplyr::select(-n) %>% 
     dplyr::mutate_at(.vars = c('period', 'actionNumber'), .funs = as.numeric) %>% 
     dplyr::mutate(season = season) %>% 
-    dplyr::arrange(game_id, period, actionNumber) %>% 
     dplyr::select(season, game_id, actionId, actionNumber, actionType, subType, 
                   clock, period, description, location, personId1, personId2, 
                   playerName1, playerName2, playerNameI1, playerName2, teamId1, 
@@ -157,33 +174,38 @@ build_pbp_dataframe_by_season <- function(season, games, path_pbp_by_games_file)
                   shotDistance, xLegacy, yLegacy, scoreHome, scoreAway, 
                   pointsTotal, videoAvailable) %>% 
     dplyr::mutate_at(.vars = c('personId1', 'personId2', 'teamId1', 'teamId2'), 
-                     .funs = function(x){ifelse(x == 0, NA_character_, x)}) %>% 
+                     .funs = function(x) ifelse(x == 0, NA_character_, x)) %>% 
     dplyr::mutate(shotDistance = ifelse(isFieldGoal == 0, NA_character_, shotDistance),
                   xLegacy = ifelse(isFieldGoal == 0, NA_character_, xLegacy),
                   yLegacy = ifelse(isFieldGoal == 0, NA_character_, yLegacy)) %>% 
     dplyr::mutate_at(.vars = c('shotDistance', 'xLegacy', 'yLegacy', 'scoreHome',
                                'scoreAway', 'pointsTotal', 'videoAvailable'), 
-                     .funs = as.numeric)
+                     .funs = as.numeric) %>% 
+    dplyr::arrange(game_id, period, actionNumber)
   
   return(df_) 
 }
 
 
-#' @title extract_players_name_pattern
+#' @title Extract Players' Name Pattern
 #'
-#' @description get the pattern of the players name in play by play data
-#' @param df a dataframe with play by play data
+#' @description 
+#' Extracts the pattern of players' names from play-by-play data.
 #'
-#' @return a dataframe with the names of players that appear in the play by play data
+#' @param df A dataframe with play-by-play data.
+#'
+#' @return A dataframe with the names of players that appear in the play-by-play data.
 #' @export
 #'
 #' @examples
+#' pbp_data <- readr::read_delim(file = "path/to/pbp_data.csv", delim = ',', show_col_types = FALSE)
+#' players_pattern <- extract_players_name_pattern(pbp_data)
+#'
 extract_players_name_pattern <- function(df){
   
   df %>% 
     dplyr::select(-game_id) %>% 
     unlist() %>% 
-    unname() %>% 
     na.omit() %>% 
     unique() %>% 
     data.frame(name = ., stringsAsFactors = FALSE) %>% 
@@ -201,16 +223,20 @@ extract_players_name_pattern <- function(df){
 }
 
 
-#' save_pbp_game_data_file
+#' Save Play-by-Play Game Data Files
 #'
-#' @description It's a method to get the pbp missing data, read them and save RData dataframe files for each game
-#' @param path_pbp_crawled_games path that saves the pbp nba site RData files. 
-#' @param pbp_text_files  path that saves the pbp text nba site files.
+#' @description 
+#' This method retrieves missing play-by-play data, reads them, and saves RData dataframe files for each game.
+#'
+#' @param path_pbp_crawled_games Path to save the crawled play-by-play RData files.
+#' @param path_pbp_text_files Path to the play-by-play text files.
 #'
 #' @return
 #' @export
 #'
 #' @examples
+#' save_pbp_game_data_file(path_pbp_crawled_games = "path/to/crawled_games", path_pbp_text_files = "path/to/pbp_text_files")
+#'
 save_pbp_game_data_file <- function(path_pbp_crawled_games, path_pbp_text_files){
   
   games_already_crawled <- dir(path_pbp_crawled_games) %>% 
@@ -223,7 +249,7 @@ save_pbp_game_data_file <- function(path_pbp_crawled_games, path_pbp_text_files)
     dplyr::mutate(ind_season = stringr::str_sub(string = game_id, start = 1, end = 5)) %>% 
     dplyr::filter(!game_id %in% games_already_crawled)
   
-  print(paste0(nrow(missing_games), " to extract the play by play data"))
+  print(paste0(nrow(missing_games), " games to extract the play-by-play data"))
   
   while(nrow(missing_games) > 0){
     
@@ -237,11 +263,13 @@ save_pbp_game_data_file <- function(path_pbp_crawled_games, path_pbp_text_files)
       dplyr::mutate(ind_season = stringr::str_sub(string = game_id, start = 1, end = 5)) %>% 
       dplyr::filter(!game_id %in% games_already_crawled)
     
+    
     future::plan(future::multisession(), workers = future::availableCores())
     
     missing_games %>% 
       dplyr::group_split(game_id) %>% 
-      furrr::future_map(.x = ., .f = read_pbp_text_file_and_save_rdata, file_path = path_pbp_crawled_games, .progress = TRUE)
+      furrr::future_map(.x = ., .f = read_pbp_text_file_and_save_rdata, 
+                        file_path = path_pbp_crawled_games, .progress = TRUE)
     
     future::plan(future::sequential())
     
@@ -251,10 +279,13 @@ save_pbp_game_data_file <- function(path_pbp_crawled_games, path_pbp_text_files)
 
 
 # Part 1: Extract the pbp data that is missing
-games_nba <- readr::read_delim(file = "D:/Mestrado/NBA/nba/data/games_nba.csv", 
-                               delim = ';', show_col_types = FALSE) %>% 
-  dplyr::mutate_at(.vars = c('HOME_TEAM_ID', 'AWAY_TEAM_ID'), .funs = as.character) %>% 
-  dplyr::mutate_at(.vars = c('HOME_PTS', 'AWAY_PTS'), .funs = as.integer)
+# Read NBA games data
+games_nba <- readr::read_delim(
+  file = "D:/Mestrado/NBA/nba/data/games_nba.csv",
+  delim = ';',
+  show_col_types = FALSE) %>% 
+  dplyr::mutate(dplyr::across(.cols = c(HOME_TEAM_ID, AWAY_TEAM_ID), .fns = as.character),
+                dplyr::across(.cols = c(HOME_PTS, AWAY_PTS), .fns = as.integer))
 
 save_pbp_game_data_file(path_pbp_crawled_games = "D:/Mestrado/NBA/nba/data/crawled_pbp/crawled_pbp_nbasite/",
                         path_pbp_text_files = "D:/Mestrado/NBA/nba/data/crawler/html_nba_site/")
@@ -267,91 +298,40 @@ season_list <- games_nba %>%
 
 future::plan(future::multisession(), workers = future::availableCores())
 
-list_pbp <- furrr::future_map(.x = season_list, 
-                              .f = build_pbp_dataframe_by_season, 
-                              games = games_nba, 
-                              path_pbp_by_games_file = "D:/Mestrado/NBA/nba/data/crawled_pbp/crawled_pbp_nbasite/", 
-                              .progress = TRUE)
+list_pbp <- furrr::future_map(
+  .x = season_list, 
+  .f = build_pbp_dataframe_by_season, 
+  games = games_nba, 
+  path_pbp_by_games_file = "D:/Mestrado/NBA/nba/data/crawled_pbp/crawled_pbp_nbasite/", 
+  .progress = TRUE
+  )
 
 future::plan(future::sequential())
 
 
-pbpc_2008_09 <- list_pbp[[1]]
-save(pbpc_2008_09, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2008_09.RData")
-rm(pbpc_2008_09)
+# Save individual seasons
+pbpc_files <- map2(list_pbp, season_list, ~ {
+  
+  pbpc_season <- .x
+  
+  save(pbpc_season, file = sprintf("D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_%s.RData", .y))
+  
+  rm(pbpc_season)
+  
+})
 
-pbpc_2009_10 <- list_pbp[[2]]
-save(pbpc_2009_10, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2009_10.RData")
-rm(pbpc_2009_10)
-
-pbpc_2010_11 <- list_pbp[[3]]
-save(pbpc_2010_11, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2010_11.RData")
-rm(pbpc_2010_11)
-
-pbpc_2011_12 <- list_pbp[[4]]
-save(pbpc_2011_12, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2011_12.RData")
-rm(pbpc_2011_12)
-
-pbpc_2012_13 <- list_pbp[[5]]
-save(pbpc_2012_13, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2012_13.RData")
-rm(pbpc_2012_13)
-
-pbpc_2013_14 <- list_pbp[[6]]
-save(pbpc_2013_14, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2013_14.RData")
-rm(pbpc_2013_14)
-
-pbpc_2014_15 <- list_pbp[[7]]
-save(pbpc_2014_15, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2014_15.RData")
-rm(pbpc_2014_15)
-
-pbpc_2015_16 <- list_pbp[[8]]
-save(pbpc_2015_16, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2015_16.RData")
-rm(pbpc_2015_16)
-
-pbpc_2016_17 <- list_pbp[[9]]
-save(pbpc_2016_17, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2016_17.RData")
-rm(pbpc_2016_17)
-
-pbpc_2017_18 <- list_pbp[[10]]
-save(pbpc_2017_18, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2017_18.RData")
-rm(pbpc_2017_18)
-
-pbpc_2018_19 <- list_pbp[[11]]
-save(pbpc_2018_19, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2018_19.RData")
-rm(pbpc_2018_19)
-
-pbpc_2019_20 <- list_pbp[[12]]
-save(pbpc_2019_20, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2019_20.RData")
-rm(pbpc_2019_20)
-
-pbpc_2020_21 <- list_pbp[[13]]
-save(pbpc_2020_21, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2020_21.RData")
-rm(pbpc_2020_21)
-
-pbpc_2021_22 <- list_pbp[[14]]
-save(pbpc_2021_22, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2021_22.RData")
-rm(pbpc_2021_22)
-
-pbpc_2022_23 <- list_pbp[[15]]
-save(pbpc_2022_23, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2022_23.RData")
-rm(pbpc_2022_23)
-
-pbpc_2023_24 <- list_pbp[[16]]
-save(pbpc_2023_24, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_2023_24.RData")
-rm(pbpc_2023_24)
-
-pbpc_total <- dplyr::bind_rows(list_pbp) 
+# Save total
+pbpc_total <- dplyr::bind_rows(list_pbp)
 save(pbpc_total, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_total.RData")
 
 # Part 3: Extract players patterns
-
 future::plan(future::multisession(), workers = future::availableCores())
 
 pbp_players_name_pattern <- pbpc_total %>% 
   dplyr::select(game_id, playerNameI1, playerName1, playerName2) %>% 
   dplyr::distinct() %>% 
   dplyr::group_split(game_id) %>% 
-  furrr::future_map(.x = ., .f = extract_players_name_pattern, .progress = TRUE) %>% 
+  furrr::future_map(.f = extract_players_name_pattern, .progress = TRUE) %>% 
   dplyr::bind_rows()
 
 future::plan(future::sequential())
