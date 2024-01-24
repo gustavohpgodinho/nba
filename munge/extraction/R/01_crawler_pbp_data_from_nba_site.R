@@ -176,18 +176,16 @@ extract_nba_play_by_play_pages  <- function(nba_games, files_path){
   }
 }
 
+FILE_GAMES <- "D:/Mestrado/NBA/nba/data/processed/games_nba.csv"
+FOLDER_SAVE_TXT_FILES <- "D:/Mestrado/NBA/nba/data/raw/html_nba_site/"
 
 # Read NBA games data
-games_nba <- readr::read_delim(
-  file = "D:/Mestrado/NBA/nba/data/games_nba.csv",
-  delim = ';',
-  show_col_types = FALSE) %>% 
+games_nba <- readr::read_delim(file = FILE_GAMES, delim = ';', show_col_types = FALSE) %>% 
   dplyr::mutate(dplyr::across(.cols = c(HOME_TEAM_ID, AWAY_TEAM_ID), .fns = as.character),
                 dplyr::across(.cols = c(HOME_PTS, AWAY_PTS), .fns = as.integer))
 
 # Extract play-by-play pages
-extract_nba_play_by_play_pages(nba_games = games_nba, 
-                               files_path = "D:/Mestrado/NBA/nba/data/crawler/html_nba_site/")
+extract_nba_play_by_play_pages(nba_games = games_nba, files_path = FOLDER_SAVE_TXT_FILES)
 
 
 # games_already_crawled <- dir("D:/Mestrado/NBA/nba/data/crawler/html_nba_site/") %>% 

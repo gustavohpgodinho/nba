@@ -1103,7 +1103,8 @@ build_df_pbp_plays <- function(df){
                   tp_subaction = stringr::str_trim(tp_subaction)) %>% 
     dplyr::select(season, game_id, num_event, action_id, period, 
                   clock, tp_event, tp_action, tp_subevent, 
-                  tp_subaction, persons, location, ind, description) %>% 
+                  tp_subaction, persons, location, ind, 
+                  xlegacy, ylegacy, shot_distance, description) %>% 
     dplyr::mutate(action_id = as.integer(action_id)) %>% 
     dplyr::arrange(season, game_id, period, desc(clock), action_id) %>% 
     pre_process_pbp_data() %>% 
@@ -2171,8 +2172,9 @@ put_grammar_in_pbp <- function(df){
   
 }
 
-
-load("D:/Mestrado/NBA/nba/data/pbp_season_files/concatenate_data/pbptotal.RData")
+FOLDER_PROCESSED_DATA <- "D:/Mestrado/NBA/nba/data/processed/"
+FILE_PBP_TOTAL <- paste0(FOLDER_PROCESSED_DATA, "pbp_season_files/concatenate_data/pbptotal.RData")
+load(FILE_PBP_TOTAL)
 
 future::plan(future::multisession(), workers = future::availableCores())
 
@@ -2218,7 +2220,7 @@ df_freqandcod_pbp$cv <- df_freqandcod_pbp[, seasons] %>%
 df_freqandcod_pbp <- df_freqandcod_pbp %>% 
   dplyr::mutate_at(.vars = seasons, .funs = round, digits = 2)
 
-save(df_freqandcod_pbp, file = "D:/Mestrado/NBA/nba/data/df_freqandcod_pbp.RData")
+save(df_freqandcod_pbp, file = paste0(FOLDER_PROCESSED_DATA, "df_freqandcod_pbp.RData"))
 
 #####################
 
@@ -2233,7 +2235,7 @@ pbp <- pbptotal %>%
 
 future::plan(future::sequential())
 
-save(pbp, file = "D:/Mestrado/NBA/nba/data/pbp.RData")
+save(pbp, file = paste0(FOLDER_PROCESSED_DATA, "pbp.RData"))
 
 ####################
 
@@ -2247,7 +2249,7 @@ freq_plays_by_period <- pbptotal %>%
 
 future::plan(future::sequential())
 
-save(freq_plays_by_period, file = "D:/Mestrado/NBA/nba/data/freq_plays_by_period.RData")
+save(freq_plays_by_period, file = paste0(FOLDER_PROCESSED_DATA, "freq_plays_by_period.RData"))
 
 ####################
 
@@ -2260,6 +2262,6 @@ freq_plays_by_cod <- freq_plays_by_period %>%
   dplyr::mutate(season = paste0('s', season)) %>% 
   tidyr::spread(season, n)
 
-save(freq_plays_by_cod, file = "D:/Mestrado/NBA/nba/data/freq_plays_by_cod.RData")
+save(freq_plays_by_cod, file = paste0(FOLDER_PROCESSED_DATA, "freq_plays_by_cod.RData"))
 
 

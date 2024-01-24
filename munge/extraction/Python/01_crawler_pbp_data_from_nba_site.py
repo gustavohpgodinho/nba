@@ -1,12 +1,14 @@
 
 
+# Import libraries
 import os
 import numpy as np
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor
-from tqdm import tqdm
+
+
+# 01_crawler_pbp_data_from_nba_site.py
 
 def extract_nba_game_page(df, path_save_files):
     """
@@ -63,18 +65,19 @@ def extract_nba_play_by_play_pages(nba_games, files_path):
     Returns:
     None
     """
-    
     # Identify games that have already been crawled
     games_already_crawled = set([filename.replace(".txt", "") for filename in os.listdir(files_path)])
 
     # Identify games that are missing
     missing_games = nba_games[~nba_games["GAME_ID"].isin(games_already_crawled)]
-    missing_games["row"] = np.random.rand(len(missing_games))
+    missing_games.loc[:, "row"] = np.random.rand(len(missing_games))
     missing_games = missing_games.sort_values(by="row", ascending=False)
-
+    missing_games['link'] = ["https://www.nba.com/game/cle-vs-bos-" + str(GAME_ID) + "/play-by-play?period=All" for GAME_ID in missing_games['GAME_ID']]
+        
     if not missing_games.empty:
       print(f"\nExtracting play-by-play pages for the " + str(missing_games.shape[0]) + " games:")
-            
+    else:
+      print(f"\nAll play-by-play pages have already been extracted.")
     # Loop until all missing games are extracted
     while not missing_games.empty:
         # Identify games that have already been crawled (again)
@@ -82,7 +85,7 @@ def extract_nba_play_by_play_pages(nba_games, files_path):
 
         # Identify games that are missing (again)
         missing_games = nba_games[~nba_games["GAME_ID"].astype(str).isin(games_already_crawled)]
-        missing_games["row"] = np.random.rand(len(missing_games))
+        missing_games.loc[:, "row"] = np.random.rand(len(missing_games))
         missing_games = missing_games.sort_values(by="row", ascending=False)
         missing_games['link'] = ["https://www.nba.com/game/cle-vs-bos-" + str(GAME_ID) + "/play-by-play?period=All" for GAME_ID in missing_games['GAME_ID']]
         
@@ -96,11 +99,14 @@ def extract_nba_play_by_play_pages(nba_games, files_path):
 # extract_nba_play_by_play_pages(nba_games_example, files_path_example)
 
 
+PATH_SAVED_GAMES_FILE = "D:/Mestrado/NBA/nba/data/processed/games_nba.csv"
+PATH_SAVE_PBP_HTML_FILES = "D:/Mestrado/NBA/nba/data/raw/html_nba_site/"
+
 # Read NBA games data
 dtypes = {'GAME_ID': str, 'HOME_TEAM_ID': str, 'AWAY_TEAM_ID': str, 'HOME_PTS': int, 'AWAY_PTS': int}
 
-games_nba = pd.read_csv("D:/Mestrado/NBA/nba/data/games_nba.csv", delimiter = ';', dtype = dtypes)
+games_nba = pd.read_csv(PATH_SAVED_GAMES_FILE, delimiter = ';', dtype = dtypes)
 
 # Extract play-by-play pages
-extract_nba_play_by_play_pages(nba_games = games_nba, files_path = "D:/Mestrado/NBA/nba/data/crawler/html_nba_site/")
+extract_nba_play_by_play_pages(nba_games = games_nba, files_path = PATH_SAVE_PBP_HTML_FILES)
 

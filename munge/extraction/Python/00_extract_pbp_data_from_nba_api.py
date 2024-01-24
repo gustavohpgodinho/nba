@@ -4,18 +4,8 @@ import time
 import os
 from nba_api.stats.endpoints import leaguegamefinder, playbyplayv2
 
-headers = {
-    "Connection": "keep-alive",
-    "Accept": "application/json, text/plain, */*",
-    "x-nba-stats-token": "true",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
-    "x-nba-stats-origin": "stats",
-    "Sec-Fetch-Site": "same-origin",
-    "Sec-Fetch-Mode": "cors",
-    "Referer": "https://stats.nba.com/",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Accept-Language": "en-US,en;q=0.9"
-}
+
+# 00_extract_pbp_data_from_nba_api.py
 
 def select_columns_from_games_dataframe(df):
     """
@@ -313,8 +303,22 @@ def execute_download_data_nba_api(file_to_save_games_nba, path_to_save_pbp, seas
             .to_csv(path_to_save_pbp + "pbpa_" + s.replace("-", "_") + ".csv", index = False, sep = ';')
 
 
+headers = {
+    "Connection": "keep-alive",
+    "Accept": "application/json, text/plain, */*",
+    "x-nba-stats-token": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
+    "x-nba-stats-origin": "stats",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Referer": "https://stats.nba.com/",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9"
+}
+
+PATH_SAVE_PBP_FILES = "D:/Mestrado/NBA/nba/data/temp/api/"
+PATH_SAVE_GAMES_FILE = "D:/Mestrado/NBA/nba/data/processed/games_nba.csv"
+
 # Execute the code
-execute_download_data_nba_api(
-  path_to_save_pbp="D:/Mestrado/NBA/nba/data/api/",
-  file_to_save_games_nba="D:/Mestrado/NBA/nba/data/games_nba.csv")
+execute_download_data_nba_api(path_to_save_pbp = PATH_SAVE_PBP_FILES, file_to_save_games_nba = PATH_SAVE_GAMES_FILE)
 

@@ -1,6 +1,5 @@
 # ignore os arquivos de dados que são estupidamente grandes para subir no git
-data/api/*
-data/crawler/*
-data/crawled_pbp/*
-data/pbp_season_files/*
-data/pbp.RData
+data/raw/*
+data/temp/*
+data/processed/pbp_season_files/*
+data/processed/pbp.RData

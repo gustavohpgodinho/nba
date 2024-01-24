@@ -278,17 +278,20 @@ save_pbp_game_data_file <- function(path_pbp_crawled_games, path_pbp_text_files)
 }
 
 
+FOLDER_PROCESSED_DATA <- "D:/Mestrado/NBA/nba/data/processed/"
+FILE_GAMES <- paste0(FOLDER_PROCESSED_DATA, "games_nba.csv")
+FOLDER_SAVE_PBP_RDATA <- "D:/Mestrado/NBA/nba/data/temp/pbp_nbasite/rdata/"
+FOLDER_GET_PBP_TEXT_FILES <- "D:/Mestrado/NBA/nba/data/raw/html_nba_site/"
+FOLDER_SAVE_PBP_SEASON_FILES <- paste0(FOLDER_PROCESSED_DATA, "pbp_season_files/crawled_nbasite/")
+
+
 # Part 1: Extract the pbp data that is missing
 # Read NBA games data
-games_nba <- readr::read_delim(
-  file = "D:/Mestrado/NBA/nba/data/games_nba.csv",
-  delim = ';',
-  show_col_types = FALSE) %>% 
+games_nba <- readr::read_delim(file = FILE_GAMES, delim = ';', show_col_types = FALSE) %>% 
   dplyr::mutate(dplyr::across(.cols = c(HOME_TEAM_ID, AWAY_TEAM_ID), .fns = as.character),
                 dplyr::across(.cols = c(HOME_PTS, AWAY_PTS), .fns = as.integer))
 
-save_pbp_game_data_file(path_pbp_crawled_games = "D:/Mestrado/NBA/nba/data/crawled_pbp/crawled_pbp_nbasite/",
-                        path_pbp_text_files = "D:/Mestrado/NBA/nba/data/crawler/html_nba_site/")
+save_pbp_game_data_file(path_pbp_crawled_games = FOLDER_SAVE_PBP_RDATA, path_pbp_text_files = FOLDER_GET_PBP_TEXT_FILES)
 
 
 # Part 2: Group pbp data by season
@@ -302,19 +305,18 @@ list_pbp <- furrr::future_map(
   .x = season_list, 
   .f = build_pbp_dataframe_by_season, 
   games = games_nba, 
-  path_pbp_by_games_file = "D:/Mestrado/NBA/nba/data/crawled_pbp/crawled_pbp_nbasite/", 
-  .progress = TRUE
-  )
+  path_pbp_by_games_file = FOLDER_SAVE_PBP_RDATA,
+  .progress = TRUE)
 
 future::plan(future::sequential())
 
 
 # Save individual seasons
-pbpc_files <- map2(list_pbp, season_list, ~ {
+pbpc_files <- purrr::map2(.x = list_pbp, .y = season_list, ~ {
   
   pbpc_season <- .x
   
-  save(pbpc_season, file = sprintf("D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_%s.RData", .y))
+  save(pbpc_season, file = sprintf("%spbpc_%s.RData", FOLDER_SAVE_PBP_SEASON_FILES, .y))
   
   rm(pbpc_season)
   
@@ -322,7 +324,7 @@ pbpc_files <- map2(list_pbp, season_list, ~ {
 
 # Save total
 pbpc_total <- dplyr::bind_rows(list_pbp)
-save(pbpc_total, file = "D:/Mestrado/NBA/nba/data/pbp_season_files/crawled_nbasite/pbpc_total.RData")
+save(pbpc_total, file = paste0(FOLDER_SAVE_PBP_SEASON_FILES, "pbpc_total.RData"))
 
 # Part 3: Extract players patterns
 future::plan(future::multisession(), workers = future::availableCores())
@@ -336,5 +338,5 @@ pbp_players_name_pattern <- pbpc_total %>%
 
 future::plan(future::sequential())
 
-save(pbp_players_name_pattern, file = "D:/Mestrado/NBA/nba/data/pbp_players_name_pattern.RData")
+save(pbp_players_name_pattern, file = paste0(FOLDER_PROCESSED_DATA, "pbp_players_name_pattern.RData"))
 

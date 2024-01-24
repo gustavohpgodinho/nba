@@ -276,29 +276,31 @@ execute_extraction_basketreference_website_pages <- function(basketreference_gam
 # selenium_object <- wdman::selenium(retcommand = TRUE, check = FALSE)
 # binman::list_versions("chromedriver")
  
+PATH_SAVE_GAMES_BR_RDATA <- "D:/Mestrado/NBA/nba/data/basket_reference_games_nba.RData"
+FILE_GAMES <- "D:/Mestrado/NBA/nba/data/processed/games_nba.csv"
+FILE_SAVE_MATCH_GAMES_BETWEEN_SOURCES <- "D:/Mestrado/NBA/nba/data/match_games_nbasite_to_basket_reference.RData"
+FOLDER_SAVE_TXT_FILES_BR_SITE <- "D:/Mestrado/NBA/nba/data/crawler/html_basket_reference_site/"
 
 basket_reference_games_nba <- get_basket_reference_games_data()
 
-save(basket_reference_games_nba, file = "D:/Mestrado/NBA/nba/data/basket_reference_games_nba.RData")
+save(basket_reference_games_nba, file = PATH_SAVE_GAMES_BR_RDATA)
 
-games_nba <- readr::read_delim(file = "D:/Mestrado/NBA/nba/data/games_nba.csv", 
-                               delim = ';', show_col_types = FALSE) %>% 
+games_nba <- readr::read_delim(file = FILE_GAMES, delim = ';', show_col_types = FALSE) %>% 
   dplyr::mutate_at(.vars = c('HOME_TEAM_ID', 'AWAY_TEAM_ID'), .funs = as.character) %>% 
   dplyr::mutate_at(.vars = c('HOME_PTS', 'AWAY_PTS'), .funs = as.integer)
 
 match_games_nbasite_to_basket_reference <- match_games_nbasite_and_basketreference(nbasite_games = games_nba, 
                                                                                    basket_reference_games = basket_reference_games_nba)
 
-save(match_games_nbasite_to_basket_reference, file = "D:/Mestrado/NBA/nba/data/match_games_nbasite_to_basket_reference.RData")
+save(match_games_nbasite_to_basket_reference, file = FILE_SAVE_MATCH_GAMES_BETWEEN_SOURCES)
 
 
-load("D:/Mestrado/NBA/nba/data/basket_reference_games_nba.RData")
-load("D:/Mestrado/NBA/nba/data/match_games_nbasite_to_basket_reference.RData")
+load(PATH_SAVE_GAMES_BR_RDATA)
+load(FILE_SAVE_MATCH_GAMES_BETWEEN_SOURCES)
 
 basket_reference_games_nba %>% 
   dplyr::inner_join(match_games_nbasite_to_basket_reference, by = c('game_id' = 'BR_ID')) %>%
-  execute_extraction_basketreference_website_pages(basketreference_games = .,
-                                                   files_path = "D:/Mestrado/NBA/nba/data/crawler/html_basket_reference_site/")
+  execute_extraction_basketreference_website_pages(basketreference_games = ., files_path = FOLDER_SAVE_TXT_FILES_BR_SITE)
   
 
 
