@@ -3,4 +3,5 @@ data/raw/*
 data/temp/*
 data/processed/pbp_season_files/*
 data/processed/pbp.RData
+data/processed/pbp_tokenized.RData
 .Rproj.user

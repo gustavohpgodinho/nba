@@ -89,6 +89,15 @@ pre_process_pbp_data <- function(df){
   
 }
 
+#' @title define_plays_pcod
+#'
+#' @description PUT DOCUMENTATION IN THIS FUNCITON
+#' @param df 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 define_plays_pcod <- function(df){
   
   df %>% 
@@ -472,9 +481,6 @@ define_plays_cod <- function(df){
                   cod = ifelse(tp_event == 9 & tp == '0' & cod == "", '_9(3)', cod)) %>% 
     define_plays_pcod()
 }
-
-
-
 
 #' @title execute_pre_process_data
 #'
@@ -2234,6 +2240,22 @@ pbp <- pbptotal %>%
   dplyr::select(-c(p, ind, tp))
 
 future::plan(future::sequential())
+
+fouls_count <- c("_6(10a)", "_6(10p)", "_6(11a)", "_6(11p)", "_6(12a)", "_6(12p)", 
+                 "_6(14a)", "_6(14p)", "_6(15a)", "_6(15p)", "_6(16a)", "_6(17a)",
+                 "_6(17p)", "_6(19a)", "_6(19p)", "_6(20a)", "_6(20p)", "_6(21a)",
+                 "_6(21p)", "_6(22a)", "_6(22p)")
+
+pbp <- pbp %>% 
+  dplyr::mutate(cntfouls1 = ifelse(cod %in% fouls_count, 1, 0),
+                cntfouls2 = cntfouls1 * stringr::str_detect(clock, "(02\\:00\\:00|^01\\:|^00\\:)")) %>% 
+  dplyr::group_by(game_id, period, location) %>% 
+  dplyr::mutate(cntfouls1 = cumsum(cntfouls1),
+                cntfouls2 = cumsum(cntfouls2)) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::mutate(cntfouls1 = ifelse(cod %in% fouls_count, cntfouls1, 0),
+                cntfouls2 = ifelse(cod %in% fouls_count, cntfouls2, 0))
+
 
 save(pbp, file = paste0(FOLDER_PROCESSED_DATA, "pbp.RData"))
 
