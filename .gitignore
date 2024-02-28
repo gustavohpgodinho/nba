@@ -4,4 +4,13 @@ data/temp/*
 data/processed/pbp_season_files/*
 data/processed/pbp.RData
 data/processed/pbp_tokenized.RData
+data/processed/list_all_seasons_data_tokens.RData
+data/processed/list_all_seasons_tokens.RData
+data/processed/list_last6_seasons_data_tokens.RData
+data/processed/list_last6_seasons_tokens.RData
+data/processed/list_last2_seasons_data_tokens.RData
+data/processed/list_last2_seasons_tokens.RData
+data/processed/pbp_python.csv
+data/processed/pbpa_total_python.csv
+data/processed/pbpc_total_python.csv
 .Rproj.user

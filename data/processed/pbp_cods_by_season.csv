@@ -1,0 +1,907 @@
+cod;gram;cnt;s09;s10;s11;s12;s13;s14;s15;s16;s17;s18;s19;s20;s21;s22;s23;s24
+_1(1);[player] [dist] Driving Dunk (cnt PTS);5259;42.59;48.78;275.36;281.19;245.05;250.19;11.44;22.8;25.21;468.75;507.62;489.06;429.55;426.3;451.52;445.05
+_1(1);[player] Putback Dunk (cnt PTS);4386;448.67;394.05;95.35;114.53;124.05;119.79;421.82;458.21;465.24;12.2;18.29;20.12;207.51;204.84;212.88;159.34
+_1(1);[player] [dist] Putback Dunk (cnt PTS);4156;59.32;49.54;393.59;355.68;347.03;318.42;3.81;6.84;12.99;435.21;352.9;363.08;157.98;167.04;195.45;173.99
+_1(1);[player] [dist] Running Dunk (cnt PTS);3928;1.52;1.52;25.17;27.93;38.81;33.36;0.76;31.16;24.45;380.34;435.98;452.32;422.72;470.14;528.79;529.3
+_1(1);[player] Driving Dunk (cnt PTS);3198;315.59;279.73;34.32;71.69;83.71;91.74;306.64;433.13;474.41;58.69;54.12;61.24;67.46;57.45;47.73;62.27
+_1(1);[player] [dist] Dunk (cnt PTS);3194;48.67;55.64;385.2;371.51;334.86;325.25;6.1;3.04;7.64;253.81;176.83;147.86;134.93;108.09;120.45;124.54
+_1(1);[player] Dunk (cnt PTS);3072;473.76;422.26;86.19;110.8;136.23;110.69;394.36;277.36;252.86;25.15;20.58;14.87;15.37;9.83;9.85;7.33
+_1(1);[player] Tip Dunk Shot (cnt PTS);2666;NA;NA;NA;NA;NA;NA;NA;183.13;208.56;2.29;0.76;NA;430.4;461.07;550.76;562.27
+_1(1);[player] [dist] Tip Dunk Shot (cnt PTS);1678;NA;NA;NA;NA;NA;NA;NA;4.56;4.58;227.9;504.57;534.56;18.79;26.46;20.45;18.32
+_1(1);[player] Running Dunk (cnt PTS);1595;39.54;38.11;11.44;13.97;13.7;8.34;44.24;348.78;328.5;38.87;59.45;61.24;72.59;59.71;68.18;62.27
+_1(1);[player] Slam Dunk (cnt PTS);1030;245.63;188.26;41.19;43.76;47.95;43.21;182.3;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Slam Dunk (cnt PTS);1023;48.67;48.02;199.08;186.22;156.77;172.1;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Driving Slam Dunk (cnt PTS);717;38.78;30.49;116.7;129.42;119.48;131.92;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] Driving Slam Dunk (cnt PTS);680;110.27;106.71;20.59;29.8;35.01;40.94;180.02;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] Putback Slam Dunk (cnt PTS);516;88.97;86.13;18.31;23.28;25.11;28.05;127.38;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Putback Slam Dunk (cnt PTS);480;22.05;15.24;87.72;102.42;82.19;72.78;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Reverse Dunk (cnt PTS);157;2.28;4.57;19.83;17.69;19.03;14.4;1.53;3.04;NA;6.1;10.67;4.37;7.69;6.05;4.55;5.49
+_1(1);[player] Reverse Dunk (cnt PTS);149;23.57;20.58;4.58;7.45;5.33;3.79;17.54;12.16;10.7;0.76;1.52;0.87;0.85;1.51;3.03;1.83
+_1(1);[player] Running Slam Dunk (cnt PTS);104;13.69;14.48;3.05;11.17;5.33;6.07;27.46;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Running Slam Dunk (cnt PTS);92;1.52;5.34;9.92;25.14;17.5;15.16;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Driving Reverse Dunk Shot (cnt PTS);71;NA;NA;NA;NA;NA;NA;NA;NA;0.76;10.67;10.67;9.62;3.42;10.58;9.09;1.83
+_1(1);[player] Reverse Slam Dunk (cnt PTS);70;20.53;12.2;2.29;2.79;3.04;5.31;7.63;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Reverse Slam Dunk (cnt PTS);67;3.8;1.52;14.49;7.45;12.94;12.13;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] Driving Reverse Dunk Shot (cnt PTS);42;NA;NA;NA;NA;NA;NA;NA;12.16;13.75;0.76;0.76;1.75;0.85;1.51;0.76;NA
+_1(1);[player] [dist] Cutting Dunk Shot (cnt PTS);39;NA;NA;NA;NA;NA;NA;NA;0.76;NA;2.29;3.05;4.37;1.71;5.29;10.61;5.49
+_1(1);[player] [dist] Running Reverse Dunk Shot (cnt PTS);37;NA;NA;NA;NA;NA;NA;NA;NA;0.76;5.34;4.57;7.87;0.85;5.29;2.27;5.49
+_1(1);[player] Cutting Dunk Shot (cnt PTS);18;NA;NA;NA;NA;NA;NA;NA;2.28;4.58;NA;1.52;0.87;3.42;1.51;NA;NA
+_1(1);[player] Running Reverse Dunk Shot (cnt PTS);17;NA;NA;NA;NA;NA;NA;NA;3.8;4.58;NA;0.76;0.87;NA;1.51;NA;3.66
+_1(1);[player] Alley Oop Dunk (cnt PTS);7;3.04;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Putback Reverse Dunk (cnt PTS);5;NA;NA;NA;0.93;0.76;2.27;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1);[player] [dist] Alley Oop Dunk (cnt PTS);2;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;NA;NA;NA
+_1(1);[player] Running Alley Oop Dunk Shot (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Dunk (cnt PTS) ([player] cnt AST);19020;288.21;326.22;1860.41;1860.34;1969.56;1741.47;18.31;31.91;45.07;1322.41;1296.49;1149.61;912.04;989.42;890.15;849.82
+_1(1a);[player] Dunk (cnt PTS) ([player] cnt AST);17393;2210.65;2133.38;501.14;589.39;734.4;605;2209;1922.49;1670.74;145.58;135.67;131.23;127.24;121.69;103.03;102.56
+_1(1a);[player] [dist] Cutting Dunk Shot (cnt PTS) ([player] cnt AST);16918;NA;NA;NA;NA;NA;NA;NA;34.19;38.96;1765.24;2166.16;2293.96;1969.26;2034.01;2211.36;2062.27
+_1(1a);[player] [dist] Alley Oop Dunk (cnt PTS) ([player] cnt AST);13431;118.63;141.01;760.49;770.95;746.58;761.18;30.51;34.19;35.14;1088.41;1182.93;1217.85;1139.2;1139.83;1030.3;1053.11
+_1(1a);[player] Alley Oop Dunk (cnt PTS) ([player] cnt AST);7982;678.33;652.44;157.89;185.29;214.61;214.56;1014.49;1042.55;1057.3;147.1;134.91;162.73;159.69;160.24;121.21;113.55
+_1(1a);[player] [dist] Running Dunk (cnt PTS) ([player] cnt AST);7790;6.08;16.77;95.35;95.9;105.02;81.12;2.29;53.95;49.66;604.42;763.72;705.16;817.25;965.99;1228.03;1265.57
+_1(1a);[player] [dist] Driving Dunk (cnt PTS) ([player] cnt AST);6826;45.63;85.37;280.7;283.05;313.55;347.99;18.31;30.4;16.04;567.07;656.25;636.05;568.74;605.44;666.67;635.53
+_1(1a);[player] Cutting Dunk Shot (cnt PTS) ([player] cnt AST);5832;NA;NA;NA;NA;NA;NA;NA;1193.01;1637.89;232.47;287.35;270.34;263.88;281.18;234.85;249.08
+_1(1a);[player] [dist] Slam Dunk (cnt PTS) ([player] cnt AST);5367;241.06;221.8;1005.34;1000.93;929.98;855.95;11.44;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] Slam Dunk (cnt PTS) ([player] cnt AST);5143;1125.48;905.49;202.9;200.19;208.52;219.86;1090.77;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] Driving Dunk (cnt PTS) ([player] cnt AST);3701;304.94;310.21;48.05;42.83;81.43;89.46;364.61;534.95;553.86;64.79;90.7;89.24;83.69;72.56;74.24;98.9
+_1(1a);[player] Running Dunk (cnt PTS) ([player] cnt AST);3271;131.56;113.57;26.7;40.97;30.44;29.57;132.72;592.71;661.57;76.98;89.94;113.74;118.7;160.24;132.58;175.82
+_1(1a);[player] [dist] Running Alley Oop Dunk Shot (cnt PTS) ([player] cnt AST);1461;NA;NA;NA;NA;NA;NA;NA;6.84;4.58;83.08;92.99;127.73;147.74;238.85;297.73;342.49
+_1(1a);[player] [dist] Driving Slam Dunk (cnt PTS) ([player] cnt AST);1163;80.61;60.98;191.46;156.42;197.87;222.14;3.81;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] Driving Slam Dunk (cnt PTS) ([player] cnt AST);954;123.19;114.33;32.04;38.18;50.23;60.65;315.03;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Reverse Dunk (cnt PTS) ([player] cnt AST);828;10.65;19.05;59.5;54;58.6;47.76;1.53;3.8;3.06;54.12;60.98;63.87;49.53;77.1;61.36;67.77
+_1(1a);[player] Reverse Dunk (cnt PTS) ([player] cnt AST);592;67.68;60.21;13.73;15.83;20.55;18.2;64.84;73.71;67.99;7.62;9.15;8.75;6.83;8.31;10.61;3.66
+_1(1a);[player] [dist] Running Slam Dunk (cnt PTS) ([player] cnt AST);457;13.69;21.34;65.6;69.83;95.89;92.49;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] Running Alley Oop Dunk Shot (cnt PTS) ([player] cnt AST);445;NA;NA;NA;NA;NA;NA;NA;93.47;100.08;10.67;12.2;15.75;27.33;34.01;38.64;27.47
+_1(1a);[player] Running Slam Dunk (cnt PTS) ([player] cnt AST);425;59.32;51.83;12.97;18.62;26.64;25.78;131.96;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Reverse Slam Dunk (cnt PTS) ([player] cnt AST);130;9.13;6.1;26.7;19.55;17.5;22.74;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Driving Reverse Dunk Shot (cnt PTS) ([player] cnt AST);121;NA;NA;NA;NA;NA;NA;NA;NA;NA;11.43;18.29;24.5;11.96;11.34;14.39;10.99
+_1(1a);[player] Reverse Slam Dunk (cnt PTS) ([player] cnt AST);107;19.01;22.1;6.1;2.79;4.57;6.07;21.36;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Running Reverse Dunk Shot (cnt PTS) ([player] cnt AST);80;NA;NA;NA;NA;NA;NA;NA;NA;NA;6.86;6.1;13.12;9.39;11.34;13.64;7.33
+_1(1a);[player] Driving Reverse Dunk Shot (cnt PTS) ([player] cnt AST);65;NA;NA;NA;NA;NA;NA;NA;9.88;22.15;4.57;3.05;2.62;0.85;2.27;2.27;5.49
+_1(1a);[player] Running Reverse Dunk Shot (cnt PTS) ([player] cnt AST);41;NA;NA;NA;NA;NA;NA;NA;9.12;9.93;1.52;3.05;NA;NA;5.29;2.27;NA
+_1(1a);[player] Putback Dunk (cnt PTS) ([player] cnt AST);12;0.76;0.76;0.76;NA;1.52;NA;NA;3.8;1.53;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Putback Dunk (cnt PTS) ([player] cnt AST);11;0.76;NA;1.53;1.86;3.81;NA;NA;NA;NA;NA;NA;0.87;NA;NA;NA;NA
+_1(1a);[player] Tip Dunk Shot (cnt PTS) ([player] cnt AST);3;NA;NA;NA;NA;NA;NA;NA;1.52;0.76;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Putback Slam Dunk (cnt PTS) ([player] cnt AST);2;NA;NA;NA;0.93;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(1a);[player] [dist] Tip Dunk Shot (cnt PTS) ([player] cnt AST);2;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA
+_1(1a);[player] Putback Slam Dunk (cnt PTS) ([player] cnt AST);1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2);[player] [dist] Hook Shot (cnt PTS);9760;501.9;575.46;565.22;501.86;492.39;563.31;593.44;734.8;631.02;612.04;505.34;358.71;333.9;278.91;258.33;232.6
+_1(2);[player] [dist] Turnaround Hook Shot (cnt PTS);6883;152.09;157.01;211.29;216.95;202.44;257.01;308.16;437.69;415.58;435.21;564.79;407.7;508.97;450.49;481.06;426.74
+_1(2);[player] [dist] Driving Hook Shot (cnt PTS);3995;67.68;86.13;91.53;74.49;111.11;119.03;97.64;299.39;392.67;303.35;325.46;241.47;245.09;244.9;287.12;298.53
+_1(2);[player] [dist] Jump Hook Shot (cnt PTS);2964;301.9;403.2;305.11;336.13;315.83;335.86;319.6;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2);[player] [dist] Running Hook Shot (cnt PTS);1794;205.32;199.7;218.15;205.77;184.93;196.36;192.22;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_1(2);[player] [dist] Turnaround Bank Hook Shot (cnt PTS);689;13.69;16.77;18.31;17.69;29.68;36.39;34.32;34.19;30.56;48.02;62.5;43.74;39.28;43.08;43.18;62.27
+_1(2);[player] [dist] Hook Bank Shot (cnt PTS);657;33.46;24.39;38.14;35.38;21.31;34.87;33.56;43.31;42.78;32.77;51.07;31.5;19.64;36.28;21.97;29.3
+_1(2);[player] [dist] Driving Bank Hook Shot (cnt PTS);648;4.56;1.52;4.58;6.52;5.33;11.37;13.73;28.88;41.25;36.59;60.98;45.49;56.36;61.98;102.27;58.61
+_1(2);[player] [dist] Jump Bank Hook Shot (cnt PTS);134;12.93;19.05;11.44;12.1;19.79;19.71;9.15;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2);[player] [dist] Running Bank Hook Shot (cnt PTS);90;6.08;5.34;15.26;9.31;12.18;12.13;9.92;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2);[player] Hook Shot (cnt PTS);63;8.37;10.67;0.76;1.86;NA;3.03;2.29;3.04;6.88;2.29;1.52;NA;1.71;1.51;3.79;1.83
+_1(2);[player] Turnaround Hook Shot (cnt PTS);31;0.76;3.05;NA;NA;NA;NA;NA;6.08;3.06;1.52;2.29;1.75;1.71;2.27;1.52;NA
+_1(2);[player] Driving Hook Shot (cnt PTS);21;3.04;0.76;NA;NA;NA;NA;NA;3.04;4.58;NA;1.52;1.75;NA;0.76;NA;1.83
+_1(2);[player] Jump Hook Shot (cnt PTS);16;2.28;4.57;0.76;0.93;0.76;NA;3.05;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2);[player] Running Hook Shot (cnt PTS);9;1.52;3.81;NA;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2);[player] Hook Bank Shot (cnt PTS);3;0.76;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA
+_1(2);[player] Driving Bank Hook Shot (cnt PTS);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;0.76;NA;NA
+_1(2);[player] Turnaround Bank Hook Shot (cnt PTS);2;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.87;NA;NA;NA;NA
+_1(2);[player] Running Bank Hook Shot (cnt PTS);1;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] [dist] Hook Shot (cnt PTS) ([player] cnt AST);12499;530.04;567.84;556.06;524.21;575.34;617.89;718.54;905.78;859.43;781.25;775.91;554.68;534.59;520.79;483.33;558.61
+_1(2a);[player] [dist] Turnaround Hook Shot (cnt PTS) ([player] cnt AST);6234;106.46;121.95;166.29;137.8;171.99;188.78;221.21;360.18;354.47;389.48;519.82;441.82;441.5;486.02;559.09;492.67
+_1(2a);[player] [dist] Jump Hook Shot (cnt PTS) ([player] cnt AST);2949;299.62;341.46;273.84;283.05;379;361.64;357.74;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] [dist] Driving Hook Shot (cnt PTS) ([player] cnt AST);2348;19.01;14.48;27.46;33.52;59.36;48.52;50.34;142.1;192.51;183.69;207.32;190.73;163.96;185.94;212.88;247.25
+_1(2a);[player] [dist] Running Hook Shot (cnt PTS) ([player] cnt AST);1057;112.55;101.37;97.64;102.42;150.68;119.79;136.54;0.76;1.53;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] [dist] Hook Bank Shot (cnt PTS) ([player] cnt AST);756;19.77;22.1;30.51;33.52;30.44;32.6;35.09;54.71;45.84;38.11;54.88;43.74;47.82;34.01;45.45;56.78
+_1(2a);[player] [dist] Turnaround Bank Hook Shot (cnt PTS) ([player] cnt AST);542;7.6;9.91;15.26;8.38;16.74;19.71;22.12;22.8;16.81;30.49;57.93;38.5;50.38;31.75;55.3;49.45
+_1(2a);[player] [dist] Driving Bank Hook Shot (cnt PTS) ([player] cnt AST);389;1.52;1.52;NA;1.86;4.57;5.31;3.05;14.44;24.45;28.2;32.77;33.25;27.33;40.82;63.64;49.45
+_1(2a);[player] [dist] Jump Bank Hook Shot (cnt PTS) ([player] cnt AST);80;6.84;8.38;6.86;8.38;11.42;12.13;8.39;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] Hook Shot (cnt PTS) ([player] cnt AST);72;2.28;9.15;NA;NA;NA;3.03;7.63;9.88;9.93;0.76;6.1;0.87;1.71;1.51;0.76;3.66
+_1(2a);[player] [dist] Running Bank Hook Shot (cnt PTS) ([player] cnt AST);52;3.04;3.81;8.39;3.72;4.57;6.82;9.92;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] Turnaround Hook Shot (cnt PTS) ([player] cnt AST);28;0.76;1.52;NA;NA;NA;NA;0.76;3.8;6.88;1.52;0.76;1.75;2.56;NA;1.52;NA
+_1(2a);[player] Driving Hook Shot (cnt PTS) ([player] cnt AST);17;1.52;0.76;NA;NA;0.76;NA;0.76;3.04;3.82;0.76;0.76;NA;NA;0.76;NA;NA
+_1(2a);[player] Jump Hook Shot (cnt PTS) ([player] cnt AST);11;4.56;1.52;NA;NA;NA;NA;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] Running Hook Shot (cnt PTS) ([player] cnt AST);7;3.8;NA;NA;0.93;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] Driving Bank Hook Shot (cnt PTS) ([player] cnt AST);5;0.76;NA;NA;NA;NA;NA;NA;0.76;2.29;NA;NA;NA;NA;NA;NA;NA
+_1(2a);[player] Turnaround Bank Hook Shot (cnt PTS) ([player] cnt AST);4;NA;NA;NA;NA;NA;NA;0.76;NA;1.53;NA;NA;NA;NA;NA;0.76;NA
+_1(2a);[player] Hook Bank Shot (cnt PTS) ([player] cnt AST);3;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;0.76;NA
+_1(3);[player] [dist] Driving Layup (cnt PTS);78872;1005.32;1153.96;4380.63;4076.35;4068.49;4445.79;4358.5;4311.55;4448.43;4828.51;4764.48;4697.29;4682.32;4365.08;4522.73;4232.6
+_1(3);[player] [dist] Layup (cnt PTS);35250;694.3;794.97;3183.83;3299.81;3079.15;3155.42;3035.85;1791.79;1704.35;1733.23;1343.75;1011.37;1022.2;910.81;626.52;690.48
+_1(3);[player] [dist] Putback Layup (cnt PTS);18844;212.17;204.27;784.13;722.53;817.35;753.6;735.32;1040.27;1262.8;1289.63;1441.31;1541.56;1123.83;1166.29;1162.88;1282.05
+_1(3);[player] [dist] Driving Finger Roll Layup (cnt PTS);18112;157.41;157.01;427.15;466.48;498.48;498.1;501.91;901.98;941.94;1210.37;1349.85;1629.05;1472.25;1609.22;1715.15;1666.67
+_1(3);[player] Driving Layup (cnt PTS);15453;4183.27;4166.16;341.72;369.65;377.47;331.31;355.45;332.83;365.16;192.07;201.98;166.23;163.96;144.37;128.79;120.88
+_1(3);[player] [dist] Running Layup (cnt PTS);14761;91.25;114.33;207.48;236.5;296.8;263.84;321.89;1017.48;980.14;1091.46;1243.14;1251.97;1224.59;1157.97;1485.61;1395.6
+_1(3);[player] Layup (cnt PTS);11435;3193.92;3156.25;382.91;386.41;405.63;365.43;386.73;151.22;140.57;51.07;44.21;24.5;36.72;32.5;15.91;21.98
+_1(3);[player] [dist] Tip Layup Shot (cnt PTS);10903;NA;NA;NA;NA;NA;NA;NA;1365.5;1320.09;1675.3;1883.38;1868.77;110.16;145.88;132.58;139.19
+_1(3);[player] [dist] Tip Shot (cnt PTS);8933;182.51;207.32;1419.53;1287.71;1352.36;1312.36;1273.07;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3);[player] [dist] Driving Reverse Layup (cnt PTS);8466;68.44;94.51;361.56;318.44;317.35;366.19;376.81;447.57;569.14;578.51;585.37;658.79;614.86;513.98;555.3;540.29
+_1(3);[player] Tip Layup Shot (cnt PTS);7964;NA;NA;NA;NA;NA;NA;NA;239.36;207.03;7.62;5.34;3.5;1695.13;1591.84;1718.94;1826.01
+_1(3);[player] Putback Layup (cnt PTS);5771;489.73;644.05;98.4;125.7;101.22;94.77;135.01;151.98;145.91;60.21;59.45;73.49;635.35;642.48;721.21;741.76
+_1(3);[player] Tip Shot (cnt PTS);4912;1179.47;1409.3;209.76;236.5;222.98;251.71;273.07;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3);[player] [dist] Reverse Layup (cnt PTS);3951;67.68;79.27;327.23;309.12;274.73;297.95;263.92;226.44;213.14;218.75;179.88;153.11;163.96;148.9;131.06;109.89
+_1(3);[player] [dist] Running Finger Roll Layup (cnt PTS);3662;6.84;6.1;12.97;16.76;29.68;25.78;41.19;187.69;182.58;252.29;302.59;411.2;337.32;377.17;495.45;459.71
+_1(3);[player] [dist] Finger Roll Layup (cnt PTS);2622;54.75;63.26;169.34;173.18;143.84;168.31;135.77;168.69;163.48;158.54;136.43;121.61;101.62;130.76;123.48;97.07
+_1(3);[player] Driving Finger Roll Layup (cnt PTS);1740;323.19;351.37;25.17;33.52;30.44;42.46;48.05;50.91;61.88;56.4;66.31;69.12;55.51;48.37;56.82;62.27
+_1(3);[player] Driving Reverse Layup (cnt PTS);1290;266.92;305.64;33.56;26.07;21.31;29.57;27.46;36.47;55;35.82;35.82;35;29.04;27.21;21.21;20.15
+_1(3);[player] Running Layup (cnt PTS);1234;157.41;118.9;12.2;17.69;23.59;21.99;22.12;99.54;90.91;61.74;59.45;77.87;46.11;43.84;75;69.6
+_1(3);[player] Reverse Layup (cnt PTS);1027;293.54;279.73;40.43;27;31.96;22.74;25.93;8.36;12.22;8.38;6.86;7.87;8.54;7.56;6.06;3.66
+_1(3);[player] [dist] Running Reverse Layup (cnt PTS);945;3.8;3.05;21.36;23.28;19.03;15.16;32.04;71.43;51.18;64.79;70.88;77.87;80.27;74.83;100.76;76.92
+_1(3);[player] Finger Roll Layup (cnt PTS);418;110.27;99.09;11.44;17.69;11.42;15.16;13.73;6.08;9.17;6.1;5.34;1.75;5.98;3.02;2.27;9.16
+_1(3);[player] Running Finger Roll Layup (cnt PTS);294;15.97;14.48;NA;NA;2.28;1.52;7.63;25.08;18.33;19.05;19.05;35;24.77;12.85;22.73;29.3
+_1(3);[player] [dist] Cutting Layup Shot (cnt PTS);179;NA;NA;NA;NA;NA;NA;NA;14.44;10.7;17.53;13.72;10.5;16.23;23.43;24.24;20.15
+_1(3);[player] [dist] Running Tip Shot (cnt PTS);134;1.52;1.52;8.39;9.31;19.79;29.57;33.56;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3);[player] Running Reverse Layup (cnt PTS);85;10.65;7.62;0.76;1.86;2.28;3.03;3.81;3.8;3.82;2.29;6.1;6.12;2.56;4.54;6.06;1.83
+_1(3);[player] Running Tip Shot (cnt PTS);41;9.13;6.86;3.05;2.79;0.76;3.03;6.1;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3);[player] [dist] Cutting Finger Roll Layup Shot (cnt PTS);29;NA;NA;NA;NA;NA;NA;NA;7.6;1.53;3.81;1.52;1.75;2.56;2.27;0.76;1.83
+_1(3);[player] Cutting Layup Shot (cnt PTS);13;NA;NA;NA;NA;NA;NA;NA;1.52;1.53;1.52;NA;1.75;0.85;0.76;1.52;1.83
+_1(3);[player] [dist] Running Alley Oop Layup Shot (cnt PTS);3;NA;NA;NA;NA;NA;NA;NA;1.52;NA;0.76;NA;NA;NA;NA;NA;NA
+_1(3);[player] Alley Oop Layup (cnt PTS);2;NA;1.52;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3);[player] Cutting Finger Roll Layup Shot (cnt PTS);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;0.85;NA;NA;NA
+_1(3);[player] [dist] Alley Oop Layup (cnt PTS);1;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3a);[player] [dist] Layup (cnt PTS) ([player] cnt AST);69595;1330.8;1647.87;6007.63;6286.78;6347.03;6228.96;5958.05;3484.04;3103.9;2940.55;2652.44;2111.11;2063.19;2071.05;1648.48;1752.75
+_1(3a);[player] [dist] Driving Layup (cnt PTS) ([player] cnt AST);37803;418.25;548.02;1526.32;1382.68;1608.83;1830.17;1913.81;1722.64;1596.64;2160.82;2679.88;2649.17;2731.85;2563.11;2880.3;3448.72
+_1(3a);[player] [dist] Cutting Layup Shot (cnt PTS) ([player] cnt AST);28900;NA;NA;NA;NA;NA;NA;NA;1952.89;2284.95;2794.21;2881.1;2898.51;2862.51;2786.85;2993.94;2910.26
+_1(3a);[player] Layup (cnt PTS) ([player] cnt AST);20832;5438.78;5817.84;709.38;723.46;753.42;709.63;713.2;343.47;320.86;102.9;96.8;68.24;87.11;62.74;41.67;49.45
+_1(3a);[player] [dist] Running Layup (cnt PTS) ([player] cnt AST);15207;119.39;179.88;288.33;322.16;353.88;370.74;385.96;912.61;883.88;975.61;1051.83;1021;1236.55;1309.9;1671.97;1935.9
+_1(3a);[player] [dist] Reverse Layup (cnt PTS) ([player] cnt AST);12300;171.1;208.08;792.52;864.99;833.33;809.7;769.64;659.57;652.41;701.98;618.9;589.68;577.28;569.92;603.03;562.27
+_1(3a);[player] [dist] Driving Finger Roll Layup (cnt PTS) ([player] cnt AST);9352;44.11;57.16;147.98;155.49;181.89;220.62;251.72;352.58;386.55;561.74;807.93;888.89;844.58;907.79;1036.36;1203.3
+_1(3a);[player] [dist] Alley Oop Layup (cnt PTS) ([player] cnt AST);7203;66.16;103.66;385.2;312.85;321.16;305.53;348.59;407.29;391.9;522.1;520.58;461.94;478.22;448.22;406.06;408.42
+_1(3a);[player] Driving Layup (cnt PTS) ([player] cnt AST);5081;1132.32;1282.77;105.26;117.32;130.14;143.29;139.59;128.42;161.19;75.46;108.99;85.74;96.5;100.53;71.97;75.09
+_1(3a);[player] [dist] Driving Reverse Layup (cnt PTS) ([player] cnt AST);4804;30.42;64.79;143.4;133.15;154.49;165.28;189.17;220.36;235.29;303.35;391.01;397.2;377.46;361.3;412.88;459.71
+_1(3a);[player] [dist] Cutting Finger Roll Layup Shot (cnt PTS) ([player] cnt AST);4006;NA;NA;NA;NA;NA;NA;NA;243.92;305.58;312.5;407.77;461.94;386.85;428.57;438.64;390.11
+_1(3a);[player] [dist] Running Finger Roll Layup (cnt PTS) ([player] cnt AST);2789;4.56;12.2;32.8;21.42;28.92;35.63;45;112.46;135.22;141.77;199.7;233.6;251.92;325.77;399.24;483.52
+_1(3a);[player] Reverse Layup (cnt PTS) ([player] cnt AST);2656;622.05;702.74;91.53;85.66;70.78;75.82;86.96;56.99;58.82;35.82;35.06;33.25;31.6;28.72;21.21;20.15
+_1(3a);[player] [dist] Finger Roll Layup (cnt PTS) ([player] cnt AST);2418;34.22;49.54;153.32;167.6;146.12;153.9;160.18;157.29;153.55;146.34;141.77;114.61;95.64;86.17;89.39;111.72
+_1(3a);[player] [dist] Running Reverse Layup (cnt PTS) ([player] cnt AST);1780;5.32;21.34;38.9;23.28;35.01;41.7;51.87;85.87;93.2;107.47;118.9;114.61;151.15;195.01;230.3;179.49
+_1(3a);[player] Cutting Layup Shot (cnt PTS) ([player] cnt AST);1525;NA;NA;NA;NA;NA;NA;NA;152.74;185.64;167.68;136.43;161.85;131.51;120.94;101.52;89.74
+_1(3a);[player] Running Layup (cnt PTS) ([player] cnt AST);1511;212.93;135.67;17.54;33.52;31.96;27.29;26.7;116.26;78.69;71.65;71.65;51.62;80.27;82.39;90.91;100.73
+_1(3a);[player] Alley Oop Layup (cnt PTS) ([player] cnt AST);1328;273.76;286.59;42.72;41.9;39.57;34.87;38.14;48.63;54.24;25.15;24.39;33.25;26.47;26.46;22.73;16.48
+_1(3a);[player] Driving Finger Roll Layup (cnt PTS) ([player] cnt AST);693;139.92;102.9;2.29;6.52;8.37;9.86;18.31;31.16;21.39;17.53;38.87;29.75;24.77;34.01;27.27;53.11
+_1(3a);[player] Driving Reverse Layup (cnt PTS) ([player] cnt AST);565;103.42;104.42;10.68;12.1;10.65;12.89;15.26;14.44;23.68;14.48;25.91;19.25;25.62;16.63;18.18;23.81
+_1(3a);[player] Finger Roll Layup (cnt PTS) ([player] cnt AST);514;132.32;112.04;12.2;22.35;15.98;10.61;21.36;17.48;18.33;6.86;7.62;4.37;6.83;3.78;4.55;NA
+_1(3a);[player] [dist] Running Alley Oop Layup Shot (cnt PTS) ([player] cnt AST);506;NA;NA;NA;NA;NA;NA;NA;20.52;29.79;31.25;33.54;22.75;58.07;77.85;87.88;76.92
+_1(3a);[player] Running Finger Roll Layup (cnt PTS) ([player] cnt AST);254;12.93;19.05;4.58;NA;1.52;3.03;6.86;15.2;18.33;14.48;18.29;14;16.23;16.63;26.52;21.98
+_1(3a);[player] Cutting Finger Roll Layup Shot (cnt PTS) ([player] cnt AST);213;NA;NA;NA;NA;NA;NA;NA;23.56;30.56;18.29;21.34;15.75;22.2;15.87;13.64;12.82
+_1(3a);[player] Running Reverse Layup (cnt PTS) ([player] cnt AST);157;18.25;18.29;2.29;3.72;4.57;6.07;0.76;10.64;6.11;8.38;6.86;6.12;11.1;7.56;7.58;9.16
+_1(3a);[player] Running Alley Oop Layup Shot (cnt PTS) ([player] cnt AST);46;NA;NA;NA;NA;NA;NA;NA;1.52;0.76;4.57;5.34;0.87;9.39;6.05;4.55;7.33
+_1(3a);[player] [dist] Putback Layup (cnt PTS) ([player] cnt AST);43;1.52;0.76;1.53;3.72;4.57;6.07;3.81;4.56;4.58;1.52;NA;NA;NA;NA;0.76;NA
+_1(3a);[player] [dist] Tip Shot (cnt PTS) ([player] cnt AST);16;0.76;1.52;3.05;2.79;0.76;3.03;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3a);[player] [dist] Tip Layup Shot (cnt PTS) ([player] cnt AST);4;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;1.52;NA;NA;NA;NA;NA;NA
+_1(3a);[player] Putback Layup (cnt PTS) ([player] cnt AST);4;1.52;NA;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3a);[player] Tip Shot (cnt PTS) ([player] cnt AST);4;1.52;1.52;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(3a);[player] [dist] Running Tip Shot (cnt PTS) ([player] cnt AST);1;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] [dist] Jump Shot (cnt PTS);71435;7546.77;7072.41;6621.66;6158.29;5260.27;5366.19;5088.48;3391.34;3025.97;2146.34;1127.29;893.26;892.4;570.67;395.45;391.94
+_1(4);[player] [dist] Pullup Jump Shot (cnt PTS);50647;1286.69;1477.13;1584.29;1583.8;1732.88;1899.92;1787.95;3077.51;3512.61;3500.76;3388.72;3192.48;3504.7;3376.42;3475.76;2961.54
+_1(4);[player] [dist] Driving Floating Jump Shot (cnt PTS);17343;NA;NA;NA;NA;NA;NA;NA;683.89;932.77;1175.3;1569.36;1919.51;2058.92;1993.2;2450;2097.07
+_1(4);[player] [dist] Step Back Jump Shot (cnt PTS);16642;353.61;435.98;447.75;523.28;580.67;785.44;773.46;1104.1;1049.66;1081.55;1091.46;1089.24;1115.29;1086.17;1111.36;934.07
+_1(4);[player] [dist] Fadeaway Jumper (cnt PTS);16621;1049.43;996.95;938.22;922.72;821.16;750.57;718.54;765.2;760.89;715.7;793.45;738.41;864.22;866.97;904.55;954.21
+_1(4);[player] [dist] Floating Jump Shot (cnt PTS);15069;491.25;621.19;693.36;833.33;805.18;782.41;832.19;1185.41;957.22;857.47;775.15;773.4;778.82;625.85;553.03;575.09
+_1(4);[player] [dist] Turnaround Jump Shot (cnt PTS);14317;828.9;852.13;848.97;827.75;780.82;743.75;737.6;780.4;758.59;726.37;618.14;605.42;631.94;613.76;598.48;576.92
+_1(4);[player] [dist] Turnaround Fadeaway (cnt PTS);10643;320.91;328.51;295.96;341.71;366.06;347.23;370.71;481.76;570.66;673.02;681.4;657.04;771.14;830.69;892.42;954.21
+_1(4);[player] [dist] Running Jump Shot (cnt PTS);9624;1176.43;1047.26;926.01;962.76;831.05;862.77;772.69;297.11;245.23;134.15;80.03;42.87;38.43;41.57;37.12;38.46
+_1(4);[player] [dist] Driving Floating Bank Jump Shot (cnt PTS);6496;NA;NA;NA;NA;NA;NA;NA;201.37;275.02;626.52;665.4;763.78;661.83;696.9;885.61;800.37
+_1(4);[player] [dist] Jump Bank Shot (cnt PTS);6067;456.27;483.23;522.5;460.89;425.42;429.87;422.58;417.17;331.55;176.83;159.3;144.36;129.8;71.05;70.45;82.42
+_1(4);[player] [dist] Running Bank Shot (cnt PTS);2865;292.02;336.13;327.23;310.99;281.58;348.75;340.96;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] [dist] Driving Jump Shot (cnt PTS);2508;111.03;146.34;322.65;275.61;311.26;370.74;417.24;2.28;2.29;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] [dist] Driving Bank Shot (cnt PTS);1865;56.27;51.83;99.16;99.63;128.61;137.23;174.68;369.3;321.62;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] [dist] Turnaround Bank Shot (cnt PTS);1639;114.07;110.52;127.38;128.49;124.05;136.47;122.04;120.82;129.87;NA;NA;NA;NA;NA;107.58;119.05
+_1(4);[player] [dist] Turnaround Fadeaway Bank Jump Shot (cnt PTS);1174;NA;NA;NA;NA;NA;NA;NA;17.48;18.33;198.17;165.4;153.11;161.4;165.53;40.91;23.81
+_1(4);[player] [dist] Running Pull-Up Jump Shot (cnt PTS);997;NA;NA;NA;NA;NA;NA;NA;57.75;97.78;86.13;89.18;79.62;66.61;91.46;145.45;148.35
+_1(4);[player] [dist] Fadeaway Bank Shot (cnt PTS);676;44.87;44.97;50.34;54;55.56;35.63;44.24;55.47;52.71;NA;NA;NA;NA;NA;58.33;67.77
+_1(4);[player] [dist] Pullup Bank Shot (cnt PTS);650;29.66;41.16;45;42.83;38.05;50.04;37.38;96.5;122.23;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] [dist] Step Back Bank Jump Shot (cnt PTS);179;NA;NA;NA;NA;NA;NA;NA;17.48;16.81;19.82;7.62;18.37;21.35;12.09;21.21;14.65
+_1(4);[player] [dist] No Shot (cnt PTS);39;NA;NA;NA;NA;NA;NA;NA;NA;29.79;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Floating Jump Shot (cnt PTS);25;0.76;2.29;NA;NA;NA;NA;NA;NA;NA;1.52;0.76;1.75;2.56;3.78;4.55;3.66
+_1(4);[player] Driving Floating Jump Shot (cnt PTS);20;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;2.29;1.52;4.37;1.71;2.27;0.76;3.66
+_1(4);[player] Driving Floating Bank Jump Shot (cnt PTS);16;NA;NA;NA;NA;NA;NA;NA;NA;0.76;2.29;2.29;0.87;3.42;0.76;0.76;3.66
+_1(4);[player] [dist] Shot (cnt PTS);14;NA;NA;NA;NA;NA;NA;NA;3.8;6.88;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Jump Shot (cnt PTS);11;2.28;1.52;NA;NA;NA;NA;NA;NA;NA;NA;1.52;NA;0.85;1.51;0.76;NA
+_1(4);[player] Driving Jump Shot (cnt PTS);6;2.28;0.76;NA;NA;0.76;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Jump Bank Shot (cnt PTS);5;0.76;1.52;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;0.76;NA;NA
+_1(4);[player] Running Jump Shot (cnt PTS);5;0.76;0.76;NA;NA;NA;0.76;0.76;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Turnaround Jump Shot (cnt PTS);5;1.52;0.76;NA;NA;0.76;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA
+_1(4);[player] No Shot (cnt PTS);4;NA;NA;NA;NA;NA;NA;NA;NA;3.06;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Running Bank Shot (cnt PTS);4;1.52;1.52;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Shot (cnt PTS);2;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Fadeaway Bank Shot (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_1(4);[player] Fadeaway Jumper (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_1(4);[player] Pullup Jump Shot (cnt PTS);1;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Step Back Jump Shot (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA
+_1(4);[player] Turnaround Bank Shot (cnt PTS);1;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4);[player] Turnaround Fadeaway (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA
+_1(4a);[player] [dist] Jump Shot (cnt PTS) ([player] cnt AST);127643;10880.61;10664.63;11518.69;10821.23;10245.05;9546.63;9130.43;7168.69;5846.45;4047.26;2671.49;1956.26;1708.8;1476.95;1325;1380.95
+_1(4a);[player] [dist] Pullup Jump Shot (cnt PTS) ([player] cnt AST);23907;367.3;419.21;498.09;467.41;636.99;598.94;718.54;1165.65;1346.07;1762.2;1961.13;1813.65;2080.27;1965.99;2060.61;2086.08
+_1(4a);[player] [dist] Floating Jump Shot (cnt PTS) ([player] cnt AST);13244;175.67;223.32;304.35;293.3;414.76;460.96;546.91;851.06;779.98;792.68;905.49;940.51;1128.95;1123.96;1031.06;956.04
+_1(4a);[player] [dist] Driving Floating Jump Shot (cnt PTS) ([player] cnt AST);10574;NA;NA;NA;NA;NA;NA;NA;247.72;365.93;621.95;1012.2;1166.23;1272.42;1353.74;1575;1706.96
+_1(4a);[player] [dist] Turnaround Jump Shot (cnt PTS) ([player] cnt AST);8413;527;500.76;514.11;405.96;437.6;406.37;346.3;451.37;443.85;393.29;405.49;405.07;408.2;392.29;381.06;369.96
+_1(4a);[player] [dist] Fadeaway Jumper (cnt PTS) ([player] cnt AST);6344;323.19;397.1;357.74;326.82;309.74;257.77;286.04;296.35;279.6;300.3;365.09;308.84;290.35;313.68;372.73;415.75
+_1(4a);[player] [dist] Step Back Jump Shot (cnt PTS) ([player] cnt AST);4684;101.9;166.92;177.73;139.66;227.55;178.17;220.44;285.71;236.82;277.44;320.12;293.96;292.91;293.27;311.36;324.18
+_1(4a);[player] [dist] Jump Bank Shot (cnt PTS) ([player] cnt AST);4619;284.41;320.88;401.22;345.44;341.7;338.13;343.25;303.19;240.64;166.92;147.87;117.24;88.81;84.66;57.58;53.11
+_1(4a);[player] [dist] Running Jump Shot (cnt PTS) ([player] cnt AST);4064;358.17;344.51;353.93;337.06;356.93;395;382.91;174.77;135.98;76.98;54.88;37.62;32.45;46.11;54.55;51.28
+_1(4a);[player] [dist] Driving Floating Bank Jump Shot (cnt PTS) ([player] cnt AST);3479;NA;NA;NA;NA;NA;NA;NA;62.31;97.02;243.14;363.57;385.83;400.51;405.9;538.64;578.75
+_1(4a);[player] [dist] Turnaround Fadeaway (cnt PTS) ([player] cnt AST);3275;120.91;134.15;93.06;123.84;120.24;95.53;116.7;149.7;174.94;205.79;236.28;209.1;200.68;222.22;253.79;254.58
+_1(4a);[player] [dist] Running Bank Shot (cnt PTS) ([player] cnt AST);934;62.36;84.6;92.3;90.32;115.68;120.55;161.71;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] [dist] Driving Jump Shot (cnt PTS) ([player] cnt AST);913;38.02;44.21;114.42;72.63;121.77;162.24;152.56;2.28;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] [dist] Turnaround Bank Shot (cnt PTS) ([player] cnt AST);754;50.95;60.21;41.95;47.49;54.03;59.14;54.16;72.95;66.46;NA;NA;NA;NA;NA;53.79;51.28
+_1(4a);[player] [dist] Driving Bank Shot (cnt PTS) ([player] cnt AST);648;12.93;13.72;27.46;20.48;35.77;48.52;65.6;142.86;129.87;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] [dist] Turnaround Fadeaway Bank Jump Shot (cnt PTS) ([player] cnt AST);535;NA;NA;NA;NA;NA;NA;NA;6.84;7.64;86.89;80.03;71.74;78.57;77.85;7.58;18.32
+_1(4a);[player] [dist] Running Pull-Up Jump Shot (cnt PTS) ([player] cnt AST);343;NA;NA;NA;NA;NA;NA;NA;15.96;20.63;25.91;25.15;25.37;21.35;41.57;60.61;71.43
+_1(4a);[player] [dist] Pullup Bank Shot (cnt PTS) ([player] cnt AST);247;15.21;13.72;11.44;15.83;8.37;15.16;22.88;40.27;48.13;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] [dist] Fadeaway Bank Shot (cnt PTS) ([player] cnt AST);227;9.89;17.53;16.78;18.62;16.74;14.4;17.54;18.24;16.04;NA;NA;NA;NA;NA;20.45;23.81
+_1(4a);[player] [dist] Step Back Bank Jump Shot (cnt PTS) ([player] cnt AST);47;NA;NA;NA;NA;NA;NA;NA;5.32;2.29;5.34;4.57;4.37;3.42;3.78;3.03;10.99
+_1(4a);[player] [dist] No Shot (cnt PTS) ([player] cnt AST);33;NA;NA;NA;NA;NA;NA;NA;NA;25.21;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] No Shot (cnt PTS) ([player] cnt AST);22;NA;NA;NA;NA;NA;NA;NA;NA;16.81;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] Shot (cnt PTS) ([player] cnt AST);15;NA;NA;NA;NA;NA;NA;NA;3.8;7.64;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] Driving Floating Bank Jump Shot (cnt PTS) ([player] cnt AST);14;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;3.05;1.75;1.71;2.27;1.52;NA
+_1(4a);[player] [dist] Shot (cnt PTS) ([player] cnt AST);12;NA;NA;NA;NA;NA;NA;NA;2.28;6.88;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] Jump Shot (cnt PTS) ([player] cnt AST);12;3.04;3.81;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;0.76;NA;NA
+_1(4a);[player] Driving Floating Jump Shot (cnt PTS) ([player] cnt AST);11;NA;NA;NA;NA;NA;NA;NA;NA;0.76;1.52;0.76;1.75;0.85;1.51;1.52;NA
+_1(4a);[player] Running Jump Shot (cnt PTS) ([player] cnt AST);8;2.28;1.52;NA;NA;0.76;NA;NA;NA;NA;NA;NA;0.87;NA;NA;NA;1.83
+_1(4a);[player] Floating Jump Shot (cnt PTS) ([player] cnt AST);4;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;1.51;NA;1.83
+_1(4a);[player] Turnaround Jump Shot (cnt PTS) ([player] cnt AST);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;0.85;NA;NA;NA
+_1(4a);[player] Driving Bank Shot (cnt PTS) ([player] cnt AST);1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(4a);[player] Running Pull-Up Jump Shot (cnt PTS) ([player] cnt AST);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_1(5);[player] [dist] 3PT Jump Shot (cnt PTS);27562;1657.03;1633.38;1545.39;1698.32;1653.73;1918.88;1817.7;1580.55;1673.8;1570.88;1329.27;1102.36;998.29;759.64;440.91;386.45
+_1(5);[player] [dist] 3PT Pullup Jump Shot (cnt PTS);18784;117.87;156.25;137.3;166.67;286.91;374.53;353.93;765.2;984.72;1249.24;1587.65;1870.52;1921.43;1984.13;2011.36;1912.09
+_1(5);[player] [dist] 3PT Step Back Jump Shot (cnt PTS);9416;31.18;50.3;46.53;62.38;79.15;143.29;152.56;225.68;291.83;453.51;747.71;1082.24;1146.03;1203.33;1201.52;1238.1
+_1(5);[player] [dist] 3PT Running Pull-Up Jump Shot (cnt PTS);2142;NA;NA;NA;NA;NA;NA;NA;50.91;91.67;109.76;154.73;241.47;236.55;283.45;369.7;351.65
+_1(5);[player] 3PT Jump Shot (cnt PTS);1500;85.17;84.6;64.84;60.52;73.06;73.54;99.16;85.87;64.17;93.75;76.22;76.99;64.9;75.59;67.42;56.78
+_1(5);[player] 3PT Step Back Jump Shot (cnt PTS);605;2.28;7.62;2.29;7.45;6.85;5.31;17.54;15.2;15.28;37.35;60.21;81.36;59.78;79.37;54.55;62.27
+_1(5);[player] [dist] 3PT Running Jump Shot (cnt PTS);477;6.08;9.15;6.1;7.45;10.65;9.86;6.1;30.4;58.82;47.26;41.92;30.62;37.57;35.53;17.42;42.12
+_1(5);[player] [dist] 3PT Jump Bank Shot (cnt PTS);340;17.49;22.87;16.78;15.83;20.55;24.26;21.36;22.8;18.33;19.82;21.34;12.25;11.1;7.56;8.33;9.16
+_1(5);[player] [dist] 3PT Fadeaway Jumper (cnt PTS);198;11.41;11.43;3.05;5.59;6.09;9.86;12.97;12.16;12.22;6.86;15.24;15.75;8.54;9.07;12.88;3.66
+_1(5);[player] 3PT Pullup Jump Shot (cnt PTS);180;0.76;2.29;1.53;NA;3.04;1.52;3.05;3.8;10.7;9.91;19.05;25.37;22.2;15.12;14.39;23.81
+_1(5);[player] [dist] 3PT Turnaround Jump Shot (cnt PTS);74;NA;2.29;NA;1.86;4.57;3.79;3.81;0.76;2.29;3.81;5.34;2.62;7.69;5.29;11.36;5.49
+_1(5);[player] [dist] 3PT Step Back Bank Jump Shot (cnt PTS);50;NA;NA;NA;NA;NA;NA;NA;NA;0.76;2.29;3.81;9.62;9.39;7.56;6.06;1.83
+_1(5);[player] 3PT Fadeaway Jumper (cnt PTS);42;NA;1.52;0.76;1.86;0.76;2.27;NA;0.76;2.29;1.52;7.62;2.62;3.42;3.78;1.52;5.49
+_1(5);[player] [dist] 3PT Pullup Bank Shot (cnt PTS);32;NA;1.52;NA;NA;0.76;3.79;4.58;6.08;7.64;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] [dist] 3PT Floating Jump Shot (cnt PTS);25;NA;1.52;NA;0.93;NA;NA;1.53;3.04;3.82;1.52;0.76;0.87;2.56;0.76;1.52;1.83
+_1(5);[player] 3PT Turnaround Jump Shot (cnt PTS);20;NA;NA;0.76;NA;NA;0.76;0.76;0.76;1.53;1.52;1.52;2.62;1.71;2.27;1.52;NA
+_1(5);[player] [dist] 3PT Running Bank Shot (cnt PTS);17;1.52;2.29;3.05;1.86;2.28;2.27;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] [dist] 3PT Turnaround Fadeaway (cnt PTS);15;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;0.76;1.52;NA;1.71;2.27;2.27;3.66
+_1(5);[player] [dist] 3PT Turnaround Fadeaway Bank Jump Shot (cnt PTS);9;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.76;2.29;NA;0.85;1.51;NA;1.83
+_1(5);[player] [dist] 3PT Driving Floating Bank Jump Shot (cnt PTS);7;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.52;0.76;NA;0.85;1.51;0.76;NA
+_1(5);[player] [dist] 3PT Driving Floating Jump Shot (cnt PTS);7;NA;NA;NA;NA;NA;NA;NA;0.76;NA;1.52;NA;0.87;0.85;NA;1.52;NA
+_1(5);[player] [dist] 3PT Fadeaway Bank Shot (cnt PTS);4;NA;NA;NA;1.86;0.76;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] [dist] 3PT Turnaround Bank Shot (cnt PTS);4;NA;NA;NA;0.93;NA;NA;NA;1.52;NA;NA;NA;NA;NA;NA;NA;1.83
+_1(5);[player] 3PT Jump Bank Shot (cnt PTS);4;NA;NA;0.76;NA;NA;1.52;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] 3PT Running Jump Shot (cnt PTS);4;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;1.71;NA;NA;1.83
+_1(5);[player] 3PT Turnaround Fadeaway (cnt PTS);4;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;1.75;0.85;NA;NA;NA
+_1(5);[player] [dist] 3PT No Shot (cnt PTS);2;NA;NA;NA;NA;NA;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] 3PT Floating Jump Shot (cnt PTS);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;0.76;NA;NA
+_1(5);[player] [dist] 3PT Driving Bank Shot (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] [dist] 3PT Driving Jump Shot (cnt PTS);1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] [dist] 3PT Putback Layup (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_1(5);[player] 3PT Running Pull-Up Jump Shot (cnt PTS);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_1(5a);[player] [dist] 3PT Jump Shot (cnt PTS) ([player] cnt AST);222178;8740.68;8399.39;8484.36;8312.85;9315.83;10125.85;10206.71;10981.76;12757.83;12630.34;13153.96;13951.88;14221.18;13662.13;13189.39;13862.64
+_1(5a);[player] 3PT Jump Shot (cnt PTS) ([player] cnt AST);55582;2411.41;2110.52;2229.6;2067.97;2380.52;2314.63;2367.66;2237.84;2209.32;3276.68;3445.12;3650.04;3878.74;3834.47;3578.03;3749.08
+_1(5a);[player] [dist] 3PT Pullup Jump Shot (cnt PTS) ([player] cnt AST);12267;142.21;207.32;174.68;189.94;270.17;313.87;476.74;573.71;587.47;715.7;1022.87;1000.87;1127.24;1065;1222.73;1261.9
+_1(5a);[player] [dist] 3PT Running Jump Shot (cnt PTS) ([player] cnt AST);5081;0.76;1.52;1.53;0.93;5.33;1.52;5.34;126.14;216.96;188.26;233.23;407.7;529.46;684.81;1043.94;1256.41
+_1(5a);[player] [dist] 3PT Step Back Jump Shot (cnt PTS) ([player] cnt AST);4459;31.94;70.12;65.6;52.14;71.54;60.65;76.28;125.38;150.5;210.37;358.23;433.95;454.31;499.62;576.52;642.86
+_1(5a);[player] [dist] 3PT Running Pull-Up Jump Shot (cnt PTS) ([player] cnt AST);1384;NA;NA;NA;NA;NA;NA;NA;31.91;38.96;67.07;108.99;149.61;163.11;174.6;257.58;232.6
+_1(5a);[player] 3PT Running Jump Shot (cnt PTS) ([player] cnt AST);1280;NA;0.76;NA;NA;NA;0.76;0.76;18.24;21.39;44.97;56.4;107.61;149.44;175.36;281.06;349.82
+_1(5a);[player] 3PT Pullup Jump Shot (cnt PTS) ([player] cnt AST);1068;28.9;58.69;37.38;31.66;48.71;62.93;77.8;79.79;51.95;54.12;67.84;56.87;62.34;43.84;50.76;45.79
+_1(5a);[player] [dist] 3PT Jump Bank Shot (cnt PTS) ([player] cnt AST);891;16.73;27.44;22.12;33.52;29.68;39.42;42.72;45.59;53.48;60.98;57.93;69.99;67.46;63.49;50;47.62
+_1(5a);[player] 3PT Step Back Jump Shot (cnt PTS) ([player] cnt AST);813;3.04;13.72;16.78;5.59;20.55;12.89;21.36;31.91;32.09;51.83;67.84;90.11;87.96;77.1;78.03;71.43
+_1(5a);[player] [dist] 3PT Fadeaway Jumper (cnt PTS) ([player] cnt AST);282;4.56;6.1;2.29;3.72;6.85;6.07;12.2;19.76;14.51;18.29;28.2;22.75;20.5;24.94;21.21;20.15
+_1(5a);[player] [dist] 3PT Turnaround Jump Shot (cnt PTS) ([player] cnt AST);166;6.08;3.05;2.29;0.93;2.28;1.52;9.15;12.92;9.93;16.77;11.43;11.37;13.66;12.09;12.88;7.33
+_1(5a);[player] 3PT Fadeaway Jumper (cnt PTS) ([player] cnt AST);162;2.28;1.52;0.76;4.66;3.81;3.03;2.29;7.6;3.82;12.2;15.24;16.62;17.08;21.92;12.12;7.33
+_1(5a);[player] 3PT Running Pull-Up Jump Shot (cnt PTS) ([player] cnt AST);83;NA;NA;NA;NA;NA;NA;NA;1.52;0.76;6.86;9.15;5.25;6.83;9.07;13.64;27.47
+_1(5a);[player] [dist] 3PT Floating Jump Shot (cnt PTS) ([player] cnt AST);42;NA;NA;NA;0.93;0.76;1.52;1.53;3.04;6.88;3.81;3.81;1.75;4.27;2.27;0.76;3.66
+_1(5a);[player] 3PT Jump Bank Shot (cnt PTS) ([player] cnt AST);38;1.52;NA;0.76;2.79;2.28;1.52;2.29;2.28;NA;1.52;3.05;1.75;2.56;5.29;2.27;NA
+_1(5a);[player] 3PT Turnaround Jump Shot (cnt PTS) ([player] cnt AST);31;NA;NA;1.53;0.93;0.76;1.52;2.29;0.76;2.29;2.29;2.29;2.62;2.56;2.27;1.52;1.83
+_1(5a);[player] [dist] 3PT Step Back Bank Jump Shot (cnt PTS) ([player] cnt AST);22;NA;NA;NA;NA;NA;NA;NA;1.52;NA;1.52;1.52;2.62;1.71;2.27;4.55;3.66
+_1(5a);[player] [dist] 3PT Turnaround Fadeaway (cnt PTS) ([player] cnt AST);18;0.76;0.76;0.76;0.93;0.76;NA;1.53;0.76;0.76;3.05;0.76;0.87;1.71;NA;NA;1.83
+_1(5a);[player] [dist] 3PT Pullup Bank Shot (cnt PTS) ([player] cnt AST);17;NA;0.76;0.76;NA;0.76;2.27;0.76;2.28;5.35;NA;NA;NA;NA;NA;NA;NA
+_1(5a);[player] [dist] 3PT Running Bank Shot (cnt PTS) ([player] cnt AST);10;0.76;0.76;1.53;0.93;1.52;0.76;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5a);[player] [dist] 3PT Turnaround Fadeaway Bank Jump Shot (cnt PTS) ([player] cnt AST);10;NA;NA;NA;NA;NA;NA;NA;NA;0.76;2.29;NA;2.62;1.71;0.76;NA;NA
+_1(5a);[player] [dist] 3PT Fadeaway Bank Shot (cnt PTS) ([player] cnt AST);9;NA;NA;NA;NA;0.76;NA;1.53;0.76;NA;NA;NA;NA;NA;NA;3.79;NA
+_1(5a);[player] [dist] 3PT Driving Floating Jump Shot (cnt PTS) ([player] cnt AST);6;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;0.76;NA;NA;1.51;0.76;1.83
+_1(5a);[player] [dist] 3PT Driving Floating Bank Jump Shot (cnt PTS) ([player] cnt AST);5;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.87;NA;0.76;0.76;1.83
+_1(5a);[player] 3PT Turnaround Fadeaway (cnt PTS) ([player] cnt AST);5;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.87;0.85;1.51;0.76;NA
+_1(5a);[player] 3PT Floating Jump Shot (cnt PTS) ([player] cnt AST);4;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;1.75;NA;NA;NA;NA
+_1(5a);[player] [dist] 3PT Shot (cnt PTS) ([player] cnt AST);2;NA;NA;NA;NA;NA;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA
+_1(5a);[player] 3PT Step Back Bank Jump Shot (cnt PTS) ([player] cnt AST);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;NA;0.76;NA
+_1(5a);[player] [dist] 3PT Driving Jump Shot (cnt PTS) ([player] cnt AST);1;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5a);[player] [dist] 3PT Running Bank Hook Shot (cnt PTS) ([player] cnt AST);1;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5a);[player] [dist] 3PT Turnaround Bank Hook Shot (cnt PTS) ([player] cnt AST);1;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_1(5a);[player] [dist] 3PT Turnaround Bank Shot (cnt PTS) ([player] cnt AST);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.83
+_1(5a);[player] 3PT Driving Floating Jump Shot (cnt PTS) ([player] cnt AST);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;NA;NA;NA
+_10(0);Jump Ball [player] vs. [player]: Tip to [player];20452;1028.9;1030.49;1030.51;1044.69;1042.62;1061.41;1037.38;1041.03;1022.92;1032.01;1051.83;1048.12;1032.45;1024.19;1047.73;1018.32
+_10(0);Jump Ball [player] vs. [player]: Tip to;471;41.83;30.49;41.95;30.73;25.11;16.68;25.93;22.8;26.74;13.72;6.86;16.62;17.93;21.16;18.94;25.64
+_10(1);Jump Ball [player] vs. [player]: Tip to [player];11626;539.16;628.81;563.69;621.97;639.27;581.5;585.81;574.47;601.99;602.9;581.55;564.3;625.11;598.64;551.52;576.92
+_10(1);Jump Ball [player] vs. [player]: Tip to;1073;50.19;70.12;56.45;54.93;51.75;74.3;59.5;57.75;59.59;47.26;54.12;46.37;46.97;53.67;40.15;34.8
+_10(2);Jump Ball (CC) [player] vs. [player]: Tip to [player];393;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;76.12;103.33;83.14;37.88;45.79
+_10(2);Coach Challenge;22;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;4.37;5.98;5.29;1.52;1.83
+_11(0);[player] Ejection:Other;570;9.89;2.29;12.97;2.79;11.42;11.37;11.44;3.8;17.57;59.45;55.64;46.37;48.68;71.81;59.09;49.45
+_11(0);[player] Ejection:Second Technical;260;20.53;19.82;31.27;19.55;24.35;18.2;16.78;26.6;24.45;NA;NA;NA;NA;NA;NA;NA
+_11(0);[player] Ejection:First Flagrant Type 2;126;9.89;3.05;13.73;9.31;13.7;10.61;13.73;10.64;12.99;NA;NA;NA;NA;NA;NA;NA
+_11(0);[player] Ejection:No Ejection;4;NA;NA;NA;NA;NA;2.27;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_11(0);[player] Ejection:;2;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;1.83
+_11(0);[player] Ejection:Second Flagrant Type 1;2;NA;NA;NA;NA;NA;1.52;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_11(1);[coach] Ejection:Other;84;1.52;2.29;0.76;0.93;NA;0.76;NA;1.52;2.29;7.62;12.2;9.62;7.69;8.31;7.58;7.33
+_11(1);[coach] Ejection:Second Technical;75;12.17;13.72;4.58;9.31;3.81;3.79;3.05;3.04;5.35;NA;NA;NA;NA;NA;NA;NA
+_11(1);[coach] Ejection:No Ejection;3;NA;NA;NA;0.93;0.76;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_12(0);Start of 1st OT ([hour]);1159;58.56;55.64;66.36;64.25;63.93;66.72;64.07;63.07;55.77;49.54;54.12;65.62;51.24;44.6;63.64;49.45
+_12(0);Start of 2nd OT ([hour]);160;11.41;6.86;7.63;8.38;12.18;10.61;12.97;7.6;6.11;5.34;9.15;6.12;5.98;5.29;7.58;3.66
+_12(0);Start of 3rd OT ([hour]);30;2.28;0.76;3.05;2.79;2.28;2.27;3.05;0.76;0.76;0.76;3.05;NA;NA;1.51;NA;NA
+_12(0);Start of 4th OT ([hour]);5;NA;NA;NA;0.93;NA;NA;NA;0.76;0.76;NA;1.52;NA;NA;NA;NA;NA
+_12(1);Start of 1st Period ([hour]);19708;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000
+_12(2);Start of 2nd Period ([hour]);19708;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000
+_12(3);Start of 3rd Period ([hour]);19708;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000
+_12(4);Start of 4th Period ([hour]);19708;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000
+_13(0);End of 1st OT ([hour]);1158;58.56;55.64;66.36;64.25;63.93;66.72;64.07;62.31;55.77;49.54;54.12;65.62;51.24;44.6;63.64;49.45
+_13(0);End of 2nd OT ([hour]);160;11.41;6.86;7.63;8.38;12.18;10.61;12.97;7.6;6.11;5.34;9.15;6.12;5.98;5.29;7.58;3.66
+_13(0);End of 3rd OT ([hour]);30;2.28;0.76;3.05;2.79;2.28;2.27;3.05;0.76;0.76;0.76;3.05;NA;NA;1.51;NA;NA
+_13(0);End of 4th OT ([hour]);5;NA;NA;NA;0.93;NA;NA;NA;0.76;0.76;NA;1.52;NA;NA;NA;NA;NA
+_13(1);End of 1st Period ([hour]);19709;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000.76;1000;1000;1000;1000;1000
+_13(2);End of 2nd Period ([hour]);19708;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000
+_13(3);End of 3rd Period ([hour]);19708;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000;1000
+_13(4);End of 4th Period ([hour]);19709;1000;1000;1000;1000;1000;1000;1000.76;1000;1000;1000;1000;1000;1000;1000;1000;1000
+_18(0);Support Ruling;10629;3.8;5.34;868.8;762.57;913.24;1104.62;1431.73;1469.6;1673.03;NA;NA;0.87;NA;NA;NA;NA
+_18(0);Instant Replay4th Period ([hour]);2395;85.93;183.69;10.68;13.04;15.98;12.13;12.2;6.84;20.63;410.82;380.34;240.59;163.96;139.08;133.33;108.06
+_18(0);Instant Replay3rd Period ([hour]);2389;134.6;203.51;13.73;10.24;16.74;10.61;16.02;15.2;10.7;324.7;353.66;191.6;175.92;156.46;175;131.87
+_18(0);Instant Replay2nd Period ([hour]);2317;152.09;205.03;18.31;15.83;14.46;9.86;9.15;13.68;20.63;322.41;317.07;190.73;159.69;160.24;137.12;148.35
+_18(0);Instant Replay1st Period ([hour]);1943;143.73;181.4;12.2;13.04;11.42;11.37;12.97;12.16;10.7;251.52;254.57;162.73;122.12;128.5;137.12;119.05
+_18(0);Instant Replay1st OT ([hour]);191;8.37;12.96;0.76;NA;3.81;3.79;NA;3.04;2.29;27.44;27.44;25.37;15.37;6.8;6.06;16.48
+_18(0);Instant Replay2nd OT ([hour]);21;2.28;NA;NA;NA;NA;NA;NA;0.76;NA;1.52;3.81;2.62;5.12;NA;0.76;NA
+_18(0);Instant Replay3rd OT ([hour]);6;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;3.81;NA;NA;0.76;NA;NA
+_18(1);Overturn Ruling;2570;0.76;NA;221.21;204.84;256.47;367.7;292.91;307.75;342.25;NA;NA;NA;NA;NA;NA;NA
+_18(1);Instant Replay4th Period ([hour]);1141;24.33;62.5;2.29;4.66;3.04;3.03;3.05;4.56;3.82;148.63;173.02;153.98;131.51;82.39;77.27;60.44
+_18(1);Instant Replay3rd Period ([hour]);718;21.29;38.11;NA;NA;0.76;1.52;0.76;NA;0.76;73.17;92.99;84.86;86.25;94.48;50;51.28
+_18(1);Instant Replay2nd Period ([hour]);623;18.25;33.54;1.53;NA;0.76;1.52;NA;NA;NA;72.41;80.03;76.99;72.59;86.17;37.88;23.81
+_18(1);Instant Replay1st Period ([hour]);455;17.49;43.45;0.76;1.86;0.76;0.76;NA;NA;0.76;52.59;45.73;53.37;44.41;55.18;28.03;31.14
+_18(1);Instant Replay1st OT ([hour]);58;NA;3.81;1.53;0.93;0.76;NA;NA;NA;0.76;8.38;8.38;7.87;4.27;1.51;6.82;1.83
+_18(1);Instant Replay2nd OT ([hour]);11;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.52;4.57;1.75;0.85;NA;NA;NA
+_18(1);Instant Replay3rd OT ([hour]);2;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA
+_18(2);Instant Replay4th Period ([hour]);183;0.76;3.05;3.05;0.93;0.76;3.79;3.05;4.56;6.88;25.91;16.77;17.5;15.37;22.68;12.88;12.82
+_18(2);Instant Replay3rd Period ([hour]);125;NA;3.05;NA;0.93;NA;NA;3.81;6.84;5.35;17.53;16.77;8.75;7.69;11.34;9.85;12.82
+_18(2);Altercation Ruling;118;NA;NA;1.53;8.38;10.65;8.34;11.44;18.24;32.85;NA;NA;NA;NA;NA;NA;NA
+_18(2);Instant Replay2nd Period ([hour]);114;NA;NA;NA;1.86;NA;1.52;1.53;0.76;6.88;19.05;8.38;16.62;7.69;14.36;7.58;9.16
+_18(2);Instant Replay1st Period ([hour]);49;NA;0.76;NA;NA;NA;NA;NA;0.76;3.82;6.86;5.34;4.37;5.12;3.78;3.79;9.16
+_18(2);Instant Replay1st OT ([hour]);3;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.76;0.87;NA;NA;NA;NA
+_18(2);Instant Replay2nd OT ([hour]);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA
+_18(3);Instant Replay4th Period ([hour]);269;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;50.74;64.9;46.86;32.58;54.95
+_18(3);Instant Replay3rd Period ([hour]);206;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;27.12;50.38;43.08;34.09;25.64
+_18(3);Instant Replay2nd Period ([hour]);190;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;23.62;30.74;49.89;30.3;38.46
+_18(3);Instant Replay1st Period ([hour]);109;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;21;19.64;24.19;15.91;16.48
+_18(3);Instant Replay1st OT ([hour]);14;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;5.25;4.27;2.27;NA;NA
+_18(3);Instant Replay2nd OT ([hour]);4;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.71;0.76;0.76;NA
+_18(4);Instant Replay4th Period ([hour]);519;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;125.11;73.44;83.14;94.7;100.73
+_18(4);Instant Replay3rd Period ([hour]);196;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;52.49;20.5;32.5;31.06;51.28
+_18(4);Instant Replay2nd Period ([hour]);100;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;31.5;12.81;12.85;14.39;23.81
+_18(4);Instant Replay1st Period ([hour]);49;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;14.87;8.54;3.02;7.58;14.65
+_18(4);Instant Replay1st OT ([hour]);23;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;4.37;1.71;5.29;6.82;NA
+_18(5);Instant Replay4th Period ([hour]);868;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;121.61;131.51;151.17;191.67;223.44
+_18(5);Instant Replay3rd Period ([hour]);449;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;71.74;71.73;67.27;81.82;157.51
+_18(5);Instant Replay2nd Period ([hour]);305;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;51.62;54.65;43.08;44.7;120.88
+_18(5);Instant Replay1st Period ([hour]);120;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;25.37;16.23;12.85;18.18;56.78
+_18(5);Instant Replay1st OT ([hour]);29;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.87;7.69;5.29;9.09;NA
+_18(5);Instant Replay2nd OT ([hour]);3;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.87;NA;0.76;NA;1.83
+_18(5);Coach Challenge Overturn Ruling;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_18(6);Instant Replay4th Period ([hour]);519;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;57.74;100.77;104.31;92.42;137.36
+_18(6);Instant Replay3rd Period ([hour]);214;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;29.75;58.07;37.04;25.76;53.11
+_18(6);Instant Replay2nd Period ([hour]);149;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;16.62;26.47;30.23;23.48;51.28
+_18(6);Instant Replay1st Period ([hour]);38;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;3.5;7.69;4.54;6.06;20.15
+_18(6);Instant Replay1st OT ([hour]);27;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;5.25;3.42;2.27;9.09;3.66
+_18(6);Instant Replay3rd OT ([hour]);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.51;NA;NA
+_18(6);Instant Replay2nd OT ([hour]);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_18(7);Instant Replay2nd Period ([hour]);52;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;31.06;20.15
+_18(7);Instant Replay1st Period ([hour]);48;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;21.97;34.8
+_18(7);Instant Replay3rd Period ([hour]);46;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;26.52;20.15
+_18(7);Instant Replay4th Period ([hour]);45;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;21.21;31.14
+_18(7);Instant Replay1st OT ([hour]);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.83
+_2(1);MISS [player] [dist] Dunk;1716;34.22;34.3;201.37;212.29;184.93;181.2;9.15;5.32;6.11;115.85;86.89;69.12;74.3;71.05;49.24;62.27
+_2(1);MISS [player] [dist] Alley Oop Dunk;1586;10.65;16.01;67.12;72.63;79.91;71.27;12.2;16.72;12.99;150.15;146.34;158.36;133.22;148.15;96.97;148.35
+_2(1);MISS [player] Dunk;1419;225.1;191.31;38.14;41.9;35.77;25.02;184.59;176.29;139.8;5.34;3.05;4.37;5.12;6.8;6.82;NA
+_2(1);MISS [player] [dist] Driving Dunk;1287;3.04;6.1;44.24;49.35;37.29;31.08;4.58;5.32;9.17;108.23;127.29;135.61;133.22;118.67;154.55;124.54
+_2(1);MISS [player] Alley Oop Dunk;678;63.12;64.79;12.2;9.31;10.65;7.58;96.87;110.18;102.37;9.15;9.15;7;9.39;4.54;3.79;NA
+_2(1);MISS [player] [dist] Cutting Dunk Shot;548;NA;NA;NA;NA;NA;NA;NA;2.28;2.29;40.4;75.46;67.37;75.15;70.29;75.76;58.61
+_2(1);MISS [player] [dist] Putback Dunk;461;3.8;7.62;39.66;54.93;41.86;40.18;9.15;7.6;6.88;60.21;34.3;26.25;10.25;9.07;9.09;10.99
+_2(1);MISS [player] [dist] Running Dunk;439;NA;2.29;4.58;4.66;9.13;2.27;0.76;4.56;3.06;35.06;35.82;48.12;42.7;55.18;73.48;56.78
+_2(1);MISS [player] Tip Dunk Shot;417;NA;NA;NA;NA;NA;NA;NA;22.8;38.96;0.76;NA;0.87;67.46;84.66;78.03;73.26
+_2(1);MISS [player] Putback Dunk;414;31.18;57.16;6.1;8.38;9.13;8.34;58.73;34.95;41.25;2.29;0.76;NA;16.23;24.94;13.64;12.82
+_2(1);MISS [player] [dist] Tip Dunk Shot;405;NA;NA;NA;NA;NA;NA;NA;5.32;5.35;63.26;104.42;101.49;14.52;12.85;8.33;18.32
+_2(1);MISS [player] Driving Dunk;377;31.94;25.91;1.53;10.24;4.57;6.07;39.66;56.99;77.92;3.81;7.62;5.25;5.12;5.29;5.3;7.33
+_2(1);MISS [player] [dist] Running Alley Oop Dunk Shot;143;NA;NA;NA;NA;NA;NA;NA;0.76;1.53;12.2;4.57;13.12;6.83;22.68;31.06;43.96
+_2(1);MISS [player] [dist] Slam Dunk;134;9.13;9.91;23.65;24.21;23.59;15.92;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] Slam Dunk;123;25.1;20.58;2.29;5.59;6.09;4.55;30.51;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] Cutting Dunk Shot;91;NA;NA;NA;NA;NA;NA;NA;19.76;29.79;6.1;3.81;3.5;1.71;3.78;0.76;1.83
+_2(1);MISS [player] Running Dunk;91;4.56;4.57;0.76;3.72;NA;NA;4.58;12.16;27.5;0.76;0.76;2.62;0.85;2.27;3.03;5.49
+_2(1);MISS [player] [dist] Reverse Dunk;78;0.76;NA;3.05;8.38;9.89;7.58;NA;3.04;0.76;3.05;7.62;1.75;3.42;3.02;7.58;3.66
+_2(1);MISS [player] [dist] Driving Slam Dunk;53;2.28;7.62;9.15;5.59;5.33;11.37;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] Reverse Dunk;53;8.37;9.91;NA;1.86;NA;NA;9.15;3.8;5.35;0.76;0.76;0.87;NA;NA;NA;NA
+_2(1);MISS [player] Driving Slam Dunk;45;6.84;5.34;NA;1.86;3.04;0.76;16.78;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] [dist] Putback Slam Dunk;37;0.76;1.52;6.1;7.45;6.85;3.79;3.05;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] [dist] Driving Reverse Dunk Shot;33;NA;NA;NA;NA;NA;NA;NA;NA;0.76;3.81;3.05;1.75;4.27;6.05;3.79;5.49
+_2(1);MISS [player] Putback Slam Dunk;23;2.28;5.34;2.29;1.86;0.76;0.76;4.58;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] Driving Reverse Dunk Shot;12;NA;NA;NA;NA;NA;NA;NA;3.8;3.06;NA;0.76;0.87;NA;NA;0.76;NA
+_2(1);MISS [player] [dist] Running Slam Dunk;10;NA;NA;1.53;3.72;2.28;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] [dist] Reverse Slam Dunk;8;NA;NA;1.53;NA;1.52;2.27;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] Running Alley Oop Dunk Shot;7;NA;NA;NA;NA;NA;NA;NA;NA;3.82;NA;NA;NA;NA;1.51;NA;NA
+_2(1);MISS [player] Running Slam Dunk;7;2.28;0.76;NA;0.93;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] Reverse Slam Dunk;6;2.28;NA;NA;NA;0.76;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1);MISS [player] [dist] Running Reverse Dunk Shot;5;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;1.51;1.52;NA
+_2(1b);MISS [player] [dist] Dunk [player] BLOCK (cnt BLK);1996;19.01;26.68;153.32;176.91;197.11;158.45;12.97;9.12;8.4;150.15;157.01;125.11;118.7;111.11;115.91;95.24
+_2(1b);MISS [player] [dist] Driving Dunk [player] BLOCK (cnt BLK);1279;1.52;6.1;28.99;36.31;21.31;29.57;4.58;9.12;9.93;89.18;130.34;141.73;140.91;142.86;147.73;173.99
+_2(1b);MISS [player] Dunk [player] BLOCK (cnt BLK);1135;169.58;142.53;16.78;30.73;22.07;16.68;158.66;155.02;135.98;3.81;5.34;2.62;2.56;3.78;3.79;1.83
+_2(1b);MISS [player] [dist] Cutting Dunk Shot [player] BLOCK (cnt BLK);871;NA;NA;NA;NA;NA;NA;NA;3.04;6.88;60.21;80.03;98.86;111.87;127.74;133.33;155.68
+_2(1b);MISS [player] [dist] Running Dunk [player] BLOCK (cnt BLK);325;NA;0.76;2.29;3.72;3.04;3.03;NA;1.52;0.76;17.53;20.58;28.87;32.45;46.86;60.61;78.75
+_2(1b);MISS [player] Driving Dunk [player] BLOCK (cnt BLK);266;31.18;19.05;0.76;5.59;3.04;3.03;28.22;50.15;44.31;3.81;2.29;1.75;2.56;3.78;3.03;3.66
+_2(1b);MISS [player] [dist] Alley Oop Dunk [player] BLOCK (cnt BLK);115;NA;NA;0.76;4.66;1.52;2.27;0.76;2.28;0.76;9.91;11.43;7.87;14.52;13.61;10.61;23.81
+_2(1b);MISS [player] Cutting Dunk Shot [player] BLOCK (cnt BLK);81;NA;NA;NA;NA;NA;NA;NA;13.68;38.96;NA;3.05;2.62;NA;0.76;2.27;1.83
+_2(1b);MISS [player] [dist] Putback Dunk [player] BLOCK (cnt BLK);53;NA;NA;0.76;1.86;1.52;0.76;NA;NA;NA;2.29;6.1;6.12;2.56;9.83;6.82;7.33
+_2(1b);MISS [player] Running Dunk [player] BLOCK (cnt BLK);41;3.8;0.76;0.76;0.93;NA;NA;4.58;9.88;5.35;NA;0.76;0.87;2.56;0.76;0.76;NA
+_2(1b);MISS [player] [dist] Reverse Dunk [player] BLOCK (cnt BLK);39;0.76;NA;0.76;4.66;3.81;1.52;NA;NA;NA;1.52;1.52;3.5;2.56;0.76;6.82;7.33
+_2(1b);MISS [player] [dist] Slam Dunk [player] BLOCK (cnt BLK);31;2.28;1.52;4.58;4.66;7.61;3.03;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] Putback Dunk [player] BLOCK (cnt BLK);28;0.76;0.76;NA;NA;NA;NA;1.53;1.52;4.58;NA;NA;NA;2.56;2.27;4.55;7.33
+_2(1b);MISS [player] Slam Dunk [player] BLOCK (cnt BLK);26;6.08;3.05;0.76;1.86;0.76;0.76;6.86;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] Alley Oop Dunk [player] BLOCK (cnt BLK);24;1.52;0.76;NA;NA;NA;NA;3.81;3.04;6.11;NA;0.76;NA;NA;1.51;0.76;NA
+_2(1b);MISS [player] [dist] Tip Dunk Shot [player] BLOCK (cnt BLK);19;NA;NA;NA;NA;NA;NA;NA;NA;0.76;3.81;4.57;3.5;1.71;NA;NA;1.83
+_2(1b);MISS [player] Reverse Dunk [player] BLOCK (cnt BLK);18;3.04;0.76;NA;NA;NA;NA;2.29;1.52;6.11;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] Tip Dunk Shot [player] BLOCK (cnt BLK);13;NA;NA;NA;NA;NA;NA;NA;NA;2.29;NA;NA;NA;NA;3.02;3.79;1.83
+_2(1b);MISS [player] Driving Slam Dunk [player] BLOCK (cnt BLK);10;0.76;1.52;0.76;NA;NA;NA;4.58;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] [dist] Driving Reverse Dunk Shot [player] BLOCK (cnt BLK);9;NA;NA;NA;NA;NA;NA;NA;0.76;NA;1.52;0.76;0.87;NA;0.76;2.27;NA
+_2(1b);MISS [player] [dist] Driving Slam Dunk [player] BLOCK (cnt BLK);7;0.76;0.76;NA;NA;0.76;2.27;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] [dist] Running Alley Oop Dunk Shot [player] BLOCK (cnt BLK);5;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.71;1.51;NA;1.83
+_2(1b);MISS [player] [dist] Running Reverse Dunk Shot [player] BLOCK (cnt BLK);3;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;1.75;NA;NA;NA;NA
+_2(1b);MISS [player] [dist] Putback Reverse Dunk [player] BLOCK (cnt BLK);1;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] [dist] Putback Slam Dunk [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] [dist] Reverse Slam Dunk [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] [dist] Running Slam Dunk [player] BLOCK (cnt BLK);1;NA;NA;NA;0.93;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(1b);MISS [player] Running Slam Dunk [player] BLOCK (cnt BLK);1;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2);MISS [player] [dist] Hook Shot;24912;1142.21;1222.56;1306.64;1196.46;1244.29;1415.47;1630.82;1858.66;1744.84;1622.71;1430.64;1013.12;836.89;760.39;658.33;767.4
+_2(2);MISS [player] [dist] Turnaround Hook Shot;11651;193.16;205.03;293.67;321.23;328.01;347.99;396.64;629.18;668.45;861.28;1049.54;804.02;880.44;840.51;934.85;882.78
+_2(2);MISS [player] [dist] Driving Hook Shot;6178;65.4;65.55;83.91;92.18;129.38;104.62;131.96;335.11;433.16;500;594.51;470.69;432.11;526.83;612.88;589.74
+_2(2);MISS [player] [dist] Jump Hook Shot;4052;448.67;472.56;484.36;425.51;422.37;446.55;462.24;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2);MISS [player] [dist] Running Hook Shot;2166;209.13;222.56;226.54;245.81;262.56;251.71;274.6;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2);MISS [player] [dist] Driving Bank Hook Shot;731;1.52;1.52;2.29;4.66;3.81;4.55;5.34;22.8;30.56;32.77;58.69;61.24;67.46;84.66;147.73;100.73
+_2(2);MISS [player] [dist] Hook Bank Shot;626;15.21;21.34;12.2;27;22.07;9.1;20.59;53.19;37.43;38.11;55.64;36.75;29.04;46.11;44.7;49.45
+_2(2);MISS [player] [dist] Turnaround Bank Hook Shot;621;4.56;9.15;9.92;14.9;13.7;16.68;12.97;34.95;25.97;38.87;67.84;40.24;48.68;51.4;68.18;65.93
+_2(2);MISS [player] Hook Shot;151;21.29;25.15;1.53;1.86;1.52;1.52;4.58;20.52;19.86;3.05;1.52;2.62;3.42;5.29;0.76;3.66
+_2(2);MISS [player] [dist] Jump Bank Hook Shot;43;4.56;6.1;2.29;2.79;8.37;4.55;4.58;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2);MISS [player] [dist] Running Bank Hook Shot;27;2.28;2.29;NA;1.86;8.37;2.27;3.81;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2);MISS [player] Turnaround Hook Shot;23;2.28;0.76;NA;NA;NA;NA;NA;6.08;3.82;0.76;1.52;0.87;0.85;NA;0.76;NA
+_2(2);MISS [player] Driving Hook Shot;18;NA;1.52;NA;NA;0.76;NA;0.76;1.52;6.11;NA;NA;1.75;0.85;NA;NA;1.83
+_2(2);MISS [player] Jump Hook Shot;16;3.8;5.34;0.76;NA;0.76;NA;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2);MISS [player] Running Hook Shot;10;5.32;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2);MISS [player] Hook Bank Shot;4;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;0.76;0.76;NA
+_2(2);MISS [player] Turnaround Bank Hook Shot;3;0.76;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;NA
+_2(2b);MISS [player] [dist] Hook Shot [player] BLOCK (cnt BLK);2500;89.73;97.56;115.18;112.66;102.74;109.17;124.33;147.42;132.16;215.7;185.21;138.23;125.53;111.87;90.15;137.36
+_2(2b);MISS [player] [dist] Turnaround Hook Shot [player] BLOCK (cnt BLK);948;6.84;16.01;12.97;17.69;19.03;15.92;26.7;38.75;49.66;66.31;82.32;84.86;88.81;83.14;87.88;115.38
+_2(2b);MISS [player] [dist] Driving Hook Shot [player] BLOCK (cnt BLK);633;4.56;9.91;9.15;14.9;17.5;9.86;8.39;28.12;37.43;48.02;64.79;45.49;32.45;55.18;79.55;67.77
+_2(2b);MISS [player] [dist] Jump Hook Shot [player] BLOCK (cnt BLK);240;31.94;30.49;22.88;29.8;24.35;24.26;24.41;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2b);MISS [player] [dist] Running Hook Shot [player] BLOCK (cnt BLK);160;12.17;19.05;16.02;19.55;17.5;24.26;16.78;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2b);MISS [player] Hook Shot [player] BLOCK (cnt BLK);20;5.32;3.81;0.76;0.93;NA;NA;NA;NA;3.06;NA;NA;0.87;NA;NA;0.76;NA
+_2(2b);MISS [player] [dist] Driving Bank Hook Shot [player] BLOCK (cnt BLK);8;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.76;NA;NA;0.76;3.03;1.83
+_2(2b);MISS [player] Turnaround Hook Shot [player] BLOCK (cnt BLK);6;0.76;NA;NA;NA;NA;NA;NA;1.52;0.76;NA;NA;0.87;0.85;NA;NA;NA
+_2(2b);MISS [player] [dist] Hook Bank Shot [player] BLOCK (cnt BLK);4;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;1.52;NA;NA;NA;0.76;NA
+_2(2b);MISS [player] [dist] Turnaround Bank Hook Shot [player] BLOCK (cnt BLK);4;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.87;NA;NA;0.76;1.83
+_2(2b);MISS [player] Jump Hook Shot [player] BLOCK (cnt BLK);2;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2b);MISS [player] Running Hook Shot [player] BLOCK (cnt BLK);2;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2b);MISS [player] [dist] Jump Bank Hook Shot [player] BLOCK (cnt BLK);1;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(2b);MISS [player] Driving Hook Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_2(3);MISS [player] [dist] Layup;74237;1718.63;1794.21;5852.02;6151.77;6341.7;6441.24;6490.47;4898.94;4467.53;3467.99;2878.05;2082.24;2012.81;1738.47;1228.79;1329.67
+_2(3);MISS [player] [dist] Driving Layup;64233;257.79;454.27;1870.33;2006.52;2029.68;2222.14;2186.12;2868.54;3021.39;4706.55;5453.51;5706.91;5482.49;5120.18;4989.39;5245.42
+_2(3);MISS [player] Layup;21754;6941.44;6386.43;525.55;575.42;526.64;463.99;469.11;313.83;285.71;48.78;40.4;27.12;31.6;16.63;16.67;9.16
+_2(3);MISS [player] [dist] Tip Layup Shot;12876;NA;NA;NA;NA;NA;NA;NA;1629.18;1569.9;1754.57;2022.1;1818.9;323.65;379.44;367.42;507.33
+_2(3);MISS [player] [dist] Driving Finger Roll Layup;11241;22.05;32.77;131.96;178.77;178.08;163.76;175.44;399.7;451.49;748.48;982.47;1249.34;1077.71;1249.43;1278.79;1291.21
+_2(3);MISS [player] [dist] Running Layup;11053;57.03;84.6;160.95;176.91;270.93;248.67;309.69;499.24;579.83;769.82;841.46;957.13;876.17;952.38;1300;1373.63
+_2(3);MISS [player] [dist] Tip Shot;10625;182.51;237.04;1585.05;1616.39;1562.4;1570.13;1629.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(3);MISS [player] [dist] Cutting Layup Shot;7660;NA;NA;NA;NA;NA;NA;NA;363.22;433.16;749.24;807.93;883.64;808.71;842.78;815.91;774.73
+_2(3);MISS [player] [dist] Driving Reverse Layup;7138;23.57;56.4;204.42;167.6;204.72;235.78;230.36;341.19;396.49;483.99;592.99;656.17;637.06;526.83;618.18;573.26
+_2(3);MISS [player] [dist] Reverse Layup;7065;100.38;92.23;475.97;463.69;464.23;420.02;446.99;420.21;419.4;458.08;432.93;330.71;329.63;280.42;289.39;278.39
+_2(3);MISS [player] Tip Layup Shot;6945;NA;NA;NA;NA;NA;NA;NA;175.53;148.97;19.82;19.05;14.87;1449.19;1425.55;1546.21;1514.65
+_2(3);MISS [player] Driving Layup;5931;1695.06;1663.87;70.94;70.76;101.22;87.95;97.64;124.62;139.8;76.98;105.18;83.11;87.96;61.22;57.58;58.61
+_2(3);MISS [player] [dist] Putback Layup;5720;21.29;35.82;155.61;176.91;187.98;159.21;170.1;287.99;342.25;408.54;518.29;544.18;437.23;420.26;443.18;463.37
+_2(3);MISS [player] Tip Shot;5156;1367.3;1584.6;167.05;203.91;197.87;206.97;234.94;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(3);MISS [player] [dist] Alley Oop Layup;3744;34.98;35.06;185.35;137.8;149.92;148.6;162.47;215.81;223.83;279.73;293.45;306.21;238.26;249.43;189.39;214.29
+_2(3);MISS [player] [dist] Finger Roll Layup;2010;29.66;26.68;100.69;103.35;89.04;106.14;110.6;164.13;122.23;161.59;110.52;109.36;91.37;103.55;98.48;108.06
+_2(3);MISS [player] [dist] Running Finger Roll Layup;1489;1.52;3.81;7.63;8.38;16.74;8.34;21.36;46.35;48.13;87.65;123.48;177.6;134.07;182.16;228.03;181.32
+_2(3);MISS [player] Reverse Layup;1479;396.96;435.98;30.51;40.97;36.53;28.05;35.85;31.91;44.31;12.2;8.38;4.37;14.52;7.56;5.3;5.49
+_2(3);MISS [player] Putback Layup;1145;95.82;109.76;9.15;19.55;19.79;17.44;19.07;20.52;20.63;13.72;13.72;10.5;143.47;156.46;146.21;179.49
+_2(3);MISS [player] [dist] Running Reverse Layup;980;3.04;6.86;19.83;13.04;19.03;19.71;23.65;52.43;58.06;52.59;65.55;70.87;75.15;91.46;141.67;124.54
+_2(3);MISS [player] [dist] Cutting Finger Roll Layup Shot;706;NA;NA;NA;NA;NA;NA;NA;33.43;33.61;50.3;83.08;85.74;70.03;82.39;85.61;75.09
+_2(3);MISS [player] Running Layup;601;124.71;92.99;6.1;7.45;10.65;8.34;10.68;34.95;33.61;25.15;19.82;18.37;19.64;16.63;26.52;18.32
+_2(3);MISS [player] Driving Reverse Layup;560;128.52;114.33;6.86;13.97;13.7;7.58;9.92;22.04;19.86;16.77;16.77;24.5;12.81;10.58;10.61;10.99
+_2(3);MISS [player] Driving Finger Roll Layup;522;117.11;101.37;4.58;3.72;4.57;3.79;4.58;14.44;19.86;25.91;25.91;27.12;16.23;15.87;12.12;14.65
+_2(3);MISS [player] Alley Oop Layup;496;114.83;119.66;10.68;13.04;14.46;12.13;12.2;14.44;23.68;8.38;9.15;5.25;11.96;4.54;6.06;3.66
+_2(3);MISS [player] Finger Roll Layup;249;79.85;57.93;6.1;7.45;6.85;2.27;6.86;6.84;6.88;NA;2.29;0.87;4.27;0.76;1.52;1.83
+_2(3);MISS [player] [dist] Running Alley Oop Layup Shot;182;NA;NA;NA;NA;NA;NA;NA;6.08;8.4;10.67;12.96;20.12;11.96;17.38;36.36;43.96
+_2(3);MISS [player] Cutting Layup Shot;178;NA;NA;NA;NA;NA;NA;NA;18.24;28.27;16.01;17.53;14.87;17.08;11.34;10.61;12.82
+_2(3);MISS [player] [dist] Running Tip Shot;64;NA;0.76;6.1;7.45;10.65;12.13;12.97;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(3);MISS [player] Running Finger Roll Layup;63;4.56;8.38;NA;NA;2.28;0.76;NA;3.8;3.06;0.76;4.57;7;5.98;2.27;3.03;7.33
+_2(3);MISS [player] Running Reverse Layup;44;7.6;6.1;0.76;NA;0.76;2.27;1.53;2.28;2.29;2.29;1.52;1.75;1.71;0.76;1.52;1.83
+_2(3);MISS [player] Cutting Finger Roll Layup Shot;17;NA;NA;NA;NA;NA;NA;NA;NA;1.53;1.52;2.29;0.87;3.42;NA;2.27;3.66
+_2(3);MISS [player] Running Tip Shot;12;1.52;5.34;NA;NA;NA;NA;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(3);MISS [player] Running Alley Oop Layup Shot;8;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;1.52;0.87;NA;0.76;0.76;1.83
+_2(3b);MISS [player] [dist] Layup [player] BLOCK (cnt BLK);46925;984.79;1060.98;3356.22;3596.83;3821.92;3605.76;3720.82;3243.92;2834.22;2389.48;1993.9;1567.8;1614.01;1421.01;1026.52;1230.77
+_2(3b);MISS [player] [dist] Driving Layup [player] BLOCK (cnt BLK);32539;75.29;169.21;756.67;786.78;859.21;758.91;723.87;1224.16;1411.76;2571.65;2993.14;3165.35;3112.72;2872.26;2873.48;3087.91
+_2(3b);MISS [player] Layup [player] BLOCK (cnt BLK);12485;4017.49;3947.41;225.78;260.71;243.53;223.65;221.21;158.81;146.68;24.39;19.82;15.75;23.06;10.58;15.15;7.33
+_2(3b);MISS [player] [dist] Running Layup [player] BLOCK (cnt BLK);6128;19.01;22.1;61.02;62.38;87.52;71.27;113.65;258.36;321.62;407.77;480.18;548.56;511.53;597.13;837.88;954.21
+_2(3b);MISS [player] [dist] Cutting Layup Shot [player] BLOCK (cnt BLK);4116;NA;NA;NA;NA;NA;NA;NA;156.53;207.79;342.23;384.91;456.69;470.54;473.17;525;534.8
+_2(3b);MISS [player] [dist] Putback Layup [player] BLOCK (cnt BLK);2434;2.28;2.29;25.17;40.04;35.01;40.94;45.77;89.67;108.48;153.96;198.17;257.22;235.7;251.7;296.21;322.34
+_2(3b);MISS [player] [dist] Driving Finger Roll Layup [player] BLOCK (cnt BLK);2412;0.76;2.29;13.73;27.93;19.03;15.92;19.83;73.71;87.85;167.68;211.13;272.09;281.81;265.31;302.27;344.32
+_2(3b);MISS [player] Driving Layup [player] BLOCK (cnt BLK);2208;688.21;683.69;11.44;15.83;24.35;18.2;16.78;37.23;28.27;19.82;29.73;26.25;37.57;24.19;20.45;21.98
+_2(3b);MISS [player] [dist] Reverse Layup [player] BLOCK (cnt BLK);2103;8.37;18.29;131.2;141.53;139.27;134.19;141.11;128.42;132.93;140.24;129.57;98.86;99.06;99.77;73.48;80.59
+_2(3b);MISS [player] [dist] Driving Reverse Layup [player] BLOCK (cnt BLK);1788;11.41;14.48;52.63;43.76;40.33;40.18;47.29;82.07;91.67;129.57;150.91;182.85;146.88;151.93;164.39;137.36
+_2(3b);MISS [player] Putback Layup [player] BLOCK (cnt BLK);398;30.42;28.2;1.53;7.45;3.04;6.82;4.58;12.16;11.46;3.81;3.05;7;49.53;49.13;62.88;69.6
+_2(3b);MISS [player] [dist] Running Finger Roll Layup [player] BLOCK (cnt BLK);386;NA;NA;NA;NA;0.76;NA;1.53;9.88;9.17;22.87;28.96;37.62;36.72;64.25;60.61;71.43
+_2(3b);MISS [player] Reverse Layup [player] BLOCK (cnt BLK);331;95.06;100.61;8.39;3.72;6.09;3.03;6.86;9.12;6.11;3.05;2.29;2.62;2.56;3.02;0.76;NA
+_2(3b);MISS [player] [dist] Tip Layup Shot [player] BLOCK (cnt BLK);298;NA;NA;NA;NA;NA;NA;NA;24.32;22.92;35.06;44.21;35.87;14.52;21.16;21.21;32.97
+_2(3b);MISS [player] [dist] Finger Roll Layup [player] BLOCK (cnt BLK);260;0.76;1.52;7.63;11.17;10.65;6.07;6.86;22.8;20.63;27.44;14.48;21;17.08;14.36;13.64;20.15
+_2(3b);MISS [player] Running Layup [player] BLOCK (cnt BLK);225;44.11;25.15;0.76;0.93;0.76;2.27;2.29;13.68;15.28;9.91;12.2;14.87;14.52;4.54;5.3;20.15
+_2(3b);MISS [player] [dist] Alley Oop Layup [player] BLOCK (cnt BLK);205;NA;0.76;4.58;8.38;3.04;4.55;7.63;15.2;15.28;15.24;19.05;17.5;18.79;14.36;12.88;10.99
+_2(3b);MISS [player] [dist] Running Reverse Layup [player] BLOCK (cnt BLK);205;1.52;NA;6.1;2.79;1.52;3.03;8.39;10.64;9.93;20.58;8.38;15.75;20.5;18.14;21.97;27.47
+_2(3b);MISS [player] Tip Layup Shot [player] BLOCK (cnt BLK);143;NA;NA;NA;NA;NA;NA;NA;4.56;2.29;1.52;0.76;0.87;23.06;28.72;25.76;56.78
+_2(3b);MISS [player] Driving Reverse Layup [player] BLOCK (cnt BLK);142;32.7;29.73;2.29;1.86;1.52;3.79;2.29;4.56;4.58;3.81;2.29;7;5.98;3.02;3.03;3.66
+_2(3b);MISS [player] [dist] Cutting Finger Roll Layup Shot [player] BLOCK (cnt BLK);127;NA;NA;NA;NA;NA;NA;NA;3.04;6.11;9.15;12.2;13.12;15.37;17.38;15.91;18.32
+_2(3b);MISS [player] [dist] Tip Shot [player] BLOCK (cnt BLK);112;2.28;3.05;21.36;13.04;15.22;16.68;16.02;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(3b);MISS [player] Driving Finger Roll Layup [player] BLOCK (cnt BLK);92;18.25;19.05;NA;NA;0.76;NA;2.29;2.28;1.53;6.1;5.34;3.5;5.98;2.27;3.03;1.83
+_2(3b);MISS [player] Cutting Layup Shot [player] BLOCK (cnt BLK);72;NA;NA;NA;NA;NA;NA;NA;6.08;4.58;3.81;12.96;10.5;6.83;8.31;1.52;5.49
+_2(3b);MISS [player] Tip Shot [player] BLOCK (cnt BLK);46;8.37;15.24;2.29;1.86;1.52;1.52;4.58;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(3b);MISS [player] Finger Roll Layup [player] BLOCK (cnt BLK);20;3.8;6.1;0.76;NA;NA;0.76;NA;0.76;NA;0.76;NA;NA;2.56;NA;NA;NA
+_2(3b);MISS [player] Alley Oop Layup [player] BLOCK (cnt BLK);17;2.28;4.57;0.76;NA;NA;NA;NA;NA;0.76;0.76;1.52;0.87;NA;NA;1.52;NA
+_2(3b);MISS [player] [dist] Running Alley Oop Layup Shot [player] BLOCK (cnt BLK);14;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;2.62;2.56;3.02;0.76;3.66
+_2(3b);MISS [player] Running Reverse Layup [player] BLOCK (cnt BLK);9;0.76;0.76;NA;NA;NA;NA;NA;1.52;NA;NA;NA;NA;NA;1.51;1.52;1.83
+_2(3b);MISS [player] Running Finger Roll Layup [player] BLOCK (cnt BLK);8;NA;1.52;NA;NA;NA;NA;NA;0.76;0.76;NA;0.76;NA;1.71;NA;0.76;NA
+_2(3b);MISS [player] Cutting Finger Roll Layup Shot [player] BLOCK (cnt BLK);2;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;0.87;NA;NA;NA;NA
+_2(4);MISS [player] [dist] Jump Shot;369612;32575.67;31692.84;32818.46;32461.82;30035.77;28952.24;27770.4;22132.98;18398.01;10429.88;6569.36;4337.71;4023.06;2946.33;2263.64;2152.01
+_2(4);MISS [player] [dist] Pullup Jump Shot;74334;678.33;907.77;1206.71;1261.64;1388.89;1577.71;1712.43;3547.87;4303.28;6389.48;6669.97;6255.47;6588.39;6724.11;6575;6020.15
+_2(4);MISS [player] [dist] Driving Floating Jump Shot;32434;NA;NA;NA;NA;NA;NA;NA;803.95;1182.58;2184.45;3144.82;3892.39;3989.75;4085.41;4527.27;4274.73
+_2(4);MISS [player] [dist] Floating Jump Shot;28409;339.92;481.71;725.4;813.78;918.57;949.96;1090.01;2040.27;1869.37;2152.44;2095.27;2202.97;2209.22;1944.82;1752.27;1684.98
+_2(4);MISS [player] [dist] Fadeaway Jumper;27036;1186.31;1153.96;1250.19;1328.68;1094.37;1090.22;1026.7;1275.08;1183.35;1528.2;1657.01;1548.56;1515.8;1790.63;1737.88;1941.39
+_2(4);MISS [player] [dist] Turnaround Jump Shot;26101;1355.13;1292.68;1313.5;1391.99;1420.85;1237.3;1257.06;1543.31;1352.18;1454.27;1385.67;1308.84;1244.24;1257.75;1104.55;1203.3
+_2(4);MISS [player] [dist] Step Back Jump Shot;23613;263.12;391.77;482.84;526.07;675.04;853.68;1003.81;1412.61;1352.18;1717.99;1833.08;1839.02;1818.96;1851.85;1771.21;1681.32
+_2(4);MISS [player] [dist] Turnaround Fadeaway Shot;15915;346.77;374.24;375.29;460.89;509.89;448.82;508.01;715.05;770.82;1016.01;1134.15;1148.73;1187.02;1343.92;1489.39;1529.3
+_2(4);MISS [player] [dist] Running Jump Shot;14203;1353.61;1307.93;1321.89;1367.78;1277.78;1433.66;1371.47;503.8;391.14;221.8;152.44;98.86;65.76;77.1;90.91;108.06
+_2(4);MISS [player] [dist] Driving Floating Bank Jump Shot;8385;NA;NA;NA;NA;NA;NA;NA;177.81;275.02;622.71;846.8;1014;922.29;1016.63;1253.79;1142.86
+_2(4);MISS [player] [dist] Jump Bank Shot;7440;469.2;509.15;557.59;553.07;468.04;438.97;451.56;610.94;470.59;324.7;281.25;236.22;172.5;132.28;106.82;75.09
+_2(4);MISS [player] [dist] Driving Jump Shot;3621;77.57;168.45;415.71;375.23;528.16;638.36;617.85;2.28;0.76;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] [dist] Running Bank Shot;1511;105.7;123.48;131.96;173.18;184.93;222.9;239.51;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] [dist] Turnaround Fadeaway Bank Jump Shot;1368;NA;NA;NA;NA;NA;NA;NA;25.84;13.75;194.36;221.8;210.85;163.96;207.11;32.58;36.63
+_2(4);MISS [player] [dist] Turnaround Bank Shot;1158;57.79;70.88;61.78;77.28;82.19;81.12;77.8;125.38;116.88;NA;NA;NA;NA;NA;93.18;122.71
+_2(4);MISS [player] [dist] Running Pull-Up Jump Shot;1152;NA;NA;NA;NA;NA;NA;NA;46.35;69.52;87.65;77.74;93.61;86.25;130.01;220.45;205.13
+_2(4);MISS [player] [dist] Driving Bank Shot;1015;6.84;14.48;22.12;48.42;56.32;46.25;85.43;278.12;223.83;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] [dist] Pullup Bank Shot;431;12.93;13.72;25.93;21.42;28.16;18.95;32.04;80.55;98.55;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] [dist] Fadeaway Bank Shot;416;17.49;22.1;10.68;25.14;21.31;25.02;20.59;37.23;41.25;NA;NA;NA;NA;NA;68.18;76.92
+_2(4);MISS [player] [dist] Step Back Bank Jump Shot;182;NA;NA;NA;NA;NA;NA;NA;8.36;11.46;18.29;22.87;17.5;21.35;21.92;13.64;18.32
+_2(4);MISS [player] [dist] No Shot;56;NA;NA;NA;NA;NA;NA;NA;NA;42.78;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] Jump Shot;40;11.41;6.86;0.76;NA;NA;NA;0.76;0.76;NA;0.76;3.05;3.5;0.85;0.76;1.52;NA
+_2(4);MISS [player] Floating Jump Shot;26;1.52;1.52;NA;NA;NA;NA;NA;NA;NA;1.52;2.29;1.75;2.56;4.54;1.52;7.33
+_2(4);MISS [player] [dist] Shot;20;NA;NA;NA;NA;NA;NA;NA;3.04;12.22;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] Driving Floating Bank Jump Shot;11;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;2.29;0.87;1.71;1.51;0.76;1.83
+_2(4);MISS [player] Running Jump Shot;11;3.8;2.29;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;0.85;NA;0.76;NA
+_2(4);MISS [player] Driving Floating Jump Shot;10;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;1.52;1.75;0.85;NA;1.52;1.83
+_2(4);MISS [player] Turnaround Jump Shot;5;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.76;NA;NA;0.76;1.52;NA
+_2(4);MISS [player] Driving Jump Shot;4;0.76;0.76;NA;NA;0.76;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] Jump Bank Shot;4;1.52;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA
+_2(4);MISS [player] Fadeaway Jumper;3;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;0.76;1.83
+_2(4);MISS [player] No Shot;2;NA;NA;NA;NA;NA;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] Shot;2;NA;NA;NA;NA;NA;NA;NA;1.52;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] Turnaround Fadeaway Shot;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;NA;0.76;NA
+_2(4);MISS [player] Pullup Jump Shot;1;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4);MISS [player] Step Back Jump Shot;1;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] [dist] Jump Shot [player] BLOCK (cnt BLK);39937;2533.08;2589.18;3857.36;3899.44;3610.35;3109.93;3183.07;2787.99;2371.28;1020.58;712.65;495.19;480.79;300.08;173.48;261.9
+_2(4b);MISS [player] [dist] Driving Floating Jump Shot [player] BLOCK (cnt BLK);4071;NA;NA;NA;NA;NA;NA;NA;153.5;178.76;261.43;355.95;426.07;501.28;502.65;597.73;543.96
+_2(4b);MISS [player] [dist] Pullup Jump Shot [player] BLOCK (cnt BLK);2836;11.41;14.48;17.54;21.42;24.35;23.5;34.32;110.94;139.8;230.18;260.67;250.22;276.69;325.77;342.42;333.33
+_2(4b);MISS [player] [dist] Turnaround Jump Shot [player] BLOCK (cnt BLK);2677;104.18;98.32;105.26;132.22;89.8;104.62;92.3;134.5;106.95;165.4;169.21;157.48;179.33;191.23;187.12;197.8
+_2(4b);MISS [player] [dist] Running Jump Shot [player] BLOCK (cnt BLK);1931;171.1;141.01;192.98;161.08;179.6;167.55;172.39;103.34;99.31;29.73;32.77;14;8.54;12.85;12.12;9.16
+_2(4b);MISS [player] [dist] Floating Jump Shot [player] BLOCK (cnt BLK);1674;12.17;13.72;23.65;27;35.01;28.05;36.61;123.1;110.01;139.48;147.87;134.73;136.64;151.17;129.55;148.35
+_2(4b);MISS [player] [dist] Driving Jump Shot [player] BLOCK (cnt BLK);1275;35.74;57.16;180.78;163.87;174.28;196.36;189.93;1.52;0.76;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] [dist] Fadeaway Jumper [player] BLOCK (cnt BLK);1020;24.33;36.59;48.82;32.59;42.62;32.6;28.99;39.51;46.6;60.98;73.17;71.74;58.07;83.14;78.79;93.41
+_2(4b);MISS [player] [dist] Turnaround Fadeaway Shot [player] BLOCK (cnt BLK);454;15.21;6.86;9.92;15.83;12.18;9.86;13.73;17.48;12.99;32.77;35.06;35.87;35.87;50.64;37.12;36.63
+_2(4b);MISS [player] [dist] Step Back Jump Shot [player] BLOCK (cnt BLK);412;6.08;5.34;5.34;7.45;7.61;7.58;14.49;26.6;18.33;32.01;35.06;29.75;35.87;30.23;43.94;40.29
+_2(4b);MISS [player] [dist] Driving Floating Bank Jump Shot [player] BLOCK (cnt BLK);149;NA;NA;NA;NA;NA;NA;NA;1.52;4.58;9.91;13.72;10.5;16.23;13.61;31.06;36.63
+_2(4b);MISS [player] [dist] Jump Bank Shot [player] BLOCK (cnt BLK);73;1.52;2.29;4.58;5.59;3.04;6.07;3.81;6.84;5.35;3.05;2.29;3.5;5.12;3.02;0.76;1.83
+_2(4b);MISS [player] [dist] Running Pull-Up Jump Shot [player] BLOCK (cnt BLK);58;NA;NA;NA;NA;NA;NA;NA;0.76;1.53;0.76;7.62;4.37;3.42;9.83;11.36;12.82
+_2(4b);MISS [player] [dist] Driving Bank Shot [player] BLOCK (cnt BLK);23;NA;NA;NA;2.79;NA;0.76;0.76;9.88;3.82;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] Jump Shot [player] BLOCK (cnt BLK);15;3.8;3.05;NA;NA;NA;NA;NA;0.76;NA;NA;0.76;0.87;0.85;0.76;NA;1.83
+_2(4b);MISS [player] Running Jump Shot [player] BLOCK (cnt BLK);11;3.8;4.57;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] [dist] Running Bank Shot [player] BLOCK (cnt BLK);8;NA;1.52;0.76;NA;NA;1.52;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] [dist] Turnaround Bank Shot [player] BLOCK (cnt BLK);8;NA;NA;0.76;0.93;NA;NA;0.76;2.28;NA;NA;NA;NA;NA;NA;NA;3.66
+_2(4b);MISS [player] [dist] Turnaround Fadeaway Bank Jump Shot [player] BLOCK (cnt BLK);8;NA;NA;NA;NA;NA;NA;NA;NA;NA;2.29;0.76;0.87;NA;2.27;NA;NA
+_2(4b);MISS [player] [dist] No Shot [player] BLOCK (cnt BLK);6;NA;NA;NA;NA;NA;NA;NA;NA;4.58;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] [dist] Fadeaway Bank Shot [player] BLOCK (cnt BLK);4;NA;0.76;0.76;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] Turnaround Jump Shot [player] BLOCK (cnt BLK);4;NA;1.52;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.87;NA;NA;NA;NA
+_2(4b);MISS [player] [dist] Pullup Bank Shot [player] BLOCK (cnt BLK);3;NA;NA;NA;NA;NA;NA;0.76;1.52;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] No Shot [player] BLOCK (cnt BLK);3;NA;NA;NA;NA;NA;NA;NA;NA;2.29;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] Driving Floating Bank Jump Shot [player] BLOCK (cnt BLK);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.87;NA;NA;NA;NA
+_2(4b);MISS [player] Driving Floating Jump Shot [player] BLOCK (cnt BLK);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;0.76;NA;NA
+_2(4b);MISS [player] Floating Jump Shot [player] BLOCK (cnt BLK);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;NA;0.76;NA
+_2(4b);MISS [player] [dist] Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] [dist] Step Back Bank Jump Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA
+_2(4b);MISS [player] Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_2(4b);MISS [player] Turnaround Fadeaway Shot [player] BLOCK (cnt BLK);1;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Jump Shot;469363;18910.27;19513.72;18952.71;19602.42;20873.67;22447.31;23747.52;24930.85;28008.4;26280.49;27479.42;27971.13;27075.15;26996.22;24301.52;24450.55
+_2(5);MISS [player] 3PT Jump Shot;89283;3682.89;3379.57;3530.89;3576.35;3773.21;3769.52;3945.08;3746.96;3597.4;5200.46;5717.99;5819.77;5971.82;6217.69;5663.64;5717.95
+_2(5);MISS [player] [dist] 3PT Pullup Jump Shot;48008;66.92;154.73;157.89;182.5;390.41;645.94;841.34;1267.48;1502.67;3070.12;4473.32;5106.74;5465.41;5680.27;6271.97;6012.82
+_2(5);MISS [player] [dist] 3PT Step Back Jump Shot;21904;28.9;65.55;54.92;67.97;145.36;199.39;239.51;402.74;540.11;1017.53;1712.65;2471.57;2713.92;3114.89;3129.55;3283.88
+_2(5);MISS [player] [dist] 3PT Running Jump Shot;8919;64.64;87.65;81.62;68.9;86.76;92.49;83.91;217.33;320.09;412.35;448.93;712.16;707.94;1090.7;1644.7;2014.65
+_2(5);MISS [player] [dist] 3PT Running Pull-Up Jump Shot;5595;NA;NA;NA;NA;NA;NA;NA;84.35;176.47;222.56;400.15;586.18;653.29;736.96;1056.82;1155.68
+_2(5);MISS [player] 3PT Step Back Jump Shot;2040;3.8;8.38;8.39;13.97;19.79;15.16;26.7;57.75;55;112.8;215.7;221.35;239.11;254.72;256.06;238.1
+_2(5);MISS [player] 3PT Running Jump Shot;1606;1.52;NA;0.76;0.93;0.76;NA;NA;21.28;25.21;28.2;42.68;110.24;142.61;223.73;438.64;510.99
+_2(5);MISS [player] 3PT Pullup Jump Shot;1069;3.8;12.2;13.73;5.59;21.31;49.28;61.02;33.43;26.74;64.02;76.22;64.74;105.04;116.4;137.12;102.56
+_2(5);MISS [player] [dist] 3PT Jump Bank Shot;1029;20.53;25.15;22.88;41.9;32.72;28.05;41.95;46.35;78.69;76.22;87.65;77.87;57.22;70.29;75.76;56.78
+_2(5);MISS [player] [dist] 3PT Fadeaway Jumper;922;20.53;12.2;18.31;28.86;15.98;17.44;27.46;41.03;37.43;61.74;55.64;98.86;68.32;115.65;80.3;64.1
+_2(5);MISS [player] [dist] 3PT Turnaround Jump Shot;611;9.13;8.38;9.15;16.76;12.18;18.95;16.78;34.95;28.27;43.45;48.02;51.62;48.68;49.13;58.33;62.27
+_2(5);MISS [player] 3PT Fadeaway Jumper;352;4.56;3.81;4.58;9.31;3.04;5.31;4.58;7.6;8.4;21.34;28.96;36.75;35.01;56.69;34.09;32.97
+_2(5);MISS [player] [dist] 3PT Floating Jump Shot;226;NA;2.29;0.76;0.93;3.81;6.07;5.34;15.2;22.92;16.77;19.05;16.62;9.39;12.85;15.91;65.93
+_2(5);MISS [player] [dist] 3PT Turnaround Fadeaway Shot;146;3.8;2.29;NA;0.93;3.81;2.27;3.05;3.04;7.64;4.57;15.24;9.62;18.79;18.14;15.91;12.82
+_2(5);MISS [player] [dist] 3PT Driving Floating Jump Shot;116;NA;NA;NA;NA;NA;NA;NA;6.84;2.29;13.72;11.43;13.12;2.56;15.12;19.7;12.82
+_2(5);MISS [player] 3PT Turnaround Jump Shot;108;1.52;2.29;2.29;0.93;2.28;5.31;1.53;3.8;5.35;9.15;15.24;8.75;10.25;5.29;7.58;7.33
+_2(5);MISS [player] 3PT Running Pull-Up Jump Shot;73;NA;NA;NA;NA;NA;NA;NA;1.52;1.53;1.52;4.57;10.5;3.42;7.56;19.7;16.48
+_2(5);MISS [player] [dist] 3PT Step Back Bank Jump Shot;62;NA;NA;NA;NA;NA;NA;NA;NA;0.76;3.05;3.81;7;8.54;10.58;11.36;9.16
+_2(5);MISS [player] 3PT Jump Bank Shot;62;1.52;0.76;1.53;4.66;NA;2.27;3.05;1.52;4.58;3.81;8.38;2.62;1.71;3.78;6.06;5.49
+_2(5);MISS [player] [dist] 3PT Running Bank Shot;60;3.8;5.34;4.58;10.24;6.85;10.61;6.1;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Driving Floating Bank Jump Shot;48;NA;NA;NA;NA;NA;NA;NA;3.8;2.29;3.81;7.62;1.75;2.56;9.07;4.55;3.66
+_2(5);MISS [player] [dist] 3PT Pullup Bank Shot;34;NA;0.76;1.53;0.93;1.52;1.52;3.05;8.36;8.4;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Turnaround Fadeaway Shot;34;0.76;NA;NA;NA;1.52;NA;1.53;2.28;NA;1.52;4.57;0.87;4.27;3.78;4.55;1.83
+_2(5);MISS [player] [dist] 3PT Hook Shot;21;1.52;2.29;3.05;NA;1.52;3.03;0.76;1.52;2.29;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Turnaround Fadeaway Bank Jump Shot;19;NA;NA;NA;NA;NA;NA;NA;NA;NA;4.57;2.29;NA;0.85;4.54;2.27;NA
+_2(5);MISS [player] [dist] 3PT Turnaround Bank Shot;12;NA;NA;1.53;NA;NA;NA;1.53;1.52;NA;NA;NA;NA;NA;NA;4.55;NA
+_2(5);MISS [player] [dist] 3PT Fadeaway Bank Shot;8;NA;0.76;NA;NA;NA;0.76;NA;1.52;NA;NA;NA;NA;NA;NA;0.76;5.49
+_2(5);MISS [player] 3PT Floating Jump Shot;8;NA;NA;NA;NA;0.76;NA;1.53;2.28;0.76;NA;NA;NA;0.85;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Driving Jump Shot;7;NA;NA;0.76;NA;1.52;1.52;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT No Shot;7;NA;NA;NA;NA;NA;NA;NA;NA;5.35;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Running Hook Shot;6;0.76;0.76;1.53;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Step Back Bank Jump Shot;6;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;2.27;1.52;NA
+_2(5);MISS [player] [dist] 3PT Turnaround Hook Shot;5;NA;0.76;0.76;NA;NA;1.52;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Tip Shot;4;0.76;NA;0.76;0.93;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Dunk;3;2.28;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Shot;2;NA;NA;NA;NA;NA;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Driving Floating Bank Jump Shot;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;0.85;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Driving Bank Hook Shot;1;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Driving Bank Shot;1;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Driving Hook Shot;1;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Hook Bank Shot;1;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Jump Hook Shot;1;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Layup;1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] [dist] 3PT Running Layup;1;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Jump Hook Shot;1;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Pullup Bank Shot;1;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Reverse Layup;1;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5);MISS [player] 3PT Turnaround Fadeaway Bank Jump Shot;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;NA;NA;NA
+_2(5b);MISS [player] [dist] 3PT Jump Shot [player] BLOCK (cnt BLK);5173;194.68;163.11;215.1;225.33;237.44;255.5;272.31;245.44;297.94;319.36;332.32;347.33;279.25;304.61;234.85;307.69
+_2(5b);MISS [player] 3PT Jump Shot [player] BLOCK (cnt BLK);1361;37.26;41.16;43.48;52.14;46.42;62.93;51.87;53.19;46.6;74.7;105.95;108.49;90.52;107.33;93.94;126.37
+_2(5b);MISS [player] [dist] 3PT Pullup Jump Shot [player] BLOCK (cnt BLK);637;0.76;0.76;0.76;1.86;3.81;0.76;6.1;9.12;14.51;36.59;55.64;71.74;76.86;77.1;103.03;102.56
+_2(5b);MISS [player] [dist] 3PT Step Back Jump Shot [player] BLOCK (cnt BLK);312;NA;NA;NA;0.93;2.28;3.79;2.29;3.8;5.35;9.15;15.24;38.5;35.01;48.37;56.82;58.61
+_2(5b);MISS [player] [dist] 3PT Running Jump Shot [player] BLOCK (cnt BLK);85;1.52;NA;3.05;3.72;1.52;2.27;1.53;3.8;4.58;2.29;8.38;6.12;5.12;11.34;7.58;9.16
+_2(5b);MISS [player] [dist] 3PT Running Pull-Up Jump Shot [player] BLOCK (cnt BLK);58;NA;NA;NA;NA;NA;NA;NA;NA;1.53;3.05;3.05;7;2.56;10.58;12.88;10.99
+_2(5b);MISS [player] 3PT Step Back Jump Shot [player] BLOCK (cnt BLK);32;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.76;2.29;0.87;4.27;6.05;8.33;3.66
+_2(5b);MISS [player] 3PT Pullup Jump Shot [player] BLOCK (cnt BLK);28;NA;NA;0.76;NA;NA;NA;NA;1.52;NA;3.05;0.76;3.5;1.71;4.54;3.79;5.49
+_2(5b);MISS [player] 3PT Running Jump Shot [player] BLOCK (cnt BLK);24;0.76;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;0.87;3.42;3.78;5.3;7.33
+_2(5b);MISS [player] [dist] 3PT Fadeaway Jumper [player] BLOCK (cnt BLK);19;0.76;NA;0.76;NA;NA;0.76;0.76;0.76;0.76;0.76;2.29;0.87;0.85;1.51;2.27;3.66
+_2(5b);MISS [player] [dist] 3PT Turnaround Jump Shot [player] BLOCK (cnt BLK);12;NA;0.76;0.76;NA;NA;NA;NA;0.76;NA;0.76;0.76;2.62;0.85;NA;2.27;NA
+_2(5b);MISS [player] [dist] 3PT Turnaround Fadeaway Shot [player] BLOCK (cnt BLK);8;NA;0.76;NA;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;2.27;0.76;1.83
+_2(5b);MISS [player] 3PT Turnaround Jump Shot [player] BLOCK (cnt BLK);8;NA;NA;0.76;NA;0.76;NA;0.76;0.76;0.76;NA;NA;0.87;0.85;0.76;NA;NA
+_2(5b);MISS [player] 3PT Fadeaway Jumper [player] BLOCK (cnt BLK);6;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;2.62;NA;1.51;0.76;NA
+_2(5b);MISS [player] [dist] 3PT Floating Jump Shot [player] BLOCK (cnt BLK);5;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;1.52;NA;NA;NA;NA;NA;1.83
+_2(5b);MISS [player] [dist] 3PT Driving Floating Jump Shot [player] BLOCK (cnt BLK);3;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.87;0.85;NA;NA;NA
+_2(5b);MISS [player] 3PT Turnaround Fadeaway Shot [player] BLOCK (cnt BLK);3;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;1.52;NA
+_2(5b);MISS [player] [dist] 3PT Jump Bank Shot [player] BLOCK (cnt BLK);2;NA;NA;NA;1.86;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] [dist] 3PT Step Back Bank Jump Shot [player] BLOCK (cnt BLK);2;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;0.85;NA;NA;NA
+_2(5b);MISS [player] [dist] 3PT Driving Floating Bank Jump Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_2(5b);MISS [player] [dist] 3PT Driving Jump Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] [dist] 3PT Hook Shot [player] BLOCK (cnt BLK);1;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] [dist] 3PT Tip Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] 3PT Driving Floating Jump Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] 3PT Driving Jump Shot [player] BLOCK (cnt BLK);1;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] 3PT Driving Layup [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] 3PT Hook Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] 3PT Jump Bank Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA
+_2(5b);MISS [player] 3PT Running Pull-Up Jump Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA
+_2(5b);MISS [player] 3PT Turnaround Fadeaway Bank Jump Shot [player] BLOCK (cnt BLK);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA
+_3(00c);[player] (cnt PTS);1;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_3(00w);MISS [player];1;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_3(11c);[player] Free Throw 1 of 1 (cnt PTS);66916;3426.62;3538.11;3408.09;2832.4;2885.84;3119.79;2907.7;3095.74;3431.63;3466.46;3618.14;3609.8;3460.29;3560.09;4231.82;4036.63
+_3(11w);MISS [player] Free Throw 1 of 1;23253;1185.55;1231.71;1192.22;1165.74;1056.32;1161.49;1097.64;1105.62;1160.43;1174.54;1227.13;1271.22;1139.2;1188.21;1303.79;1280.22
+_3(12c);[player] Free Throw 1 of 2 (cnt PTS);281851;15904.18;15456.55;15308.92;14138.73;13933.79;14745.26;14237.99;14423.25;14075.63;13075.46;13921.49;14009.62;13322.8;13380.2;14453.03;14210.62
+_3(12w);MISS [player] Free Throw 1 of 2;98409;5376.43;5569.36;5314.26;5150.84;5192.54;5363.91;5356.98;5250;4787.62;4567.84;4964.94;4648.29;4374.04;4513.98;4579.55;4536.63
+_3(13c);[player] Free Throw 1 of 3 (cnt PTS);8762;203.8;243.9;309.69;225.33;242.01;360.88;395.88;462.77;705.12;598.32;625;727.03;649.87;482.24;478.03;393.77
+_3(13w);MISS [player] Free Throw 1 of 3;2152;61.6;63.26;81.62;72.63;65.45;98.56;94.58;120.82;165.01;151.68;154.73;171.48;143.47;93.73;103.79;111.72
+_3(22c);[player] Free Throw 2 of 2 (cnt PTS);298766;16860.08;16376.52;16123.57;14959.96;14811.26;15598.18;15022.88;15219.6;14908.33;13891.01;14913.87;14805.77;14105.04;14314.44;15271.97;15201.47
+_3(22w);MISS [player] Free Throw 2 of 2;81209;4409.13;4628.81;4481.31;4314.71;4282.34;4488.25;4551.49;4439.21;3938.88;3769.05;3958.08;3836.4;3583.26;3566.89;3748.48;3536.63
+_3(23c);[player] Free Throw 2 of 3 (cnt PTS);9309;221.29;256.1;336.38;246.74;245.05;390.45;415.71;493.16;746.37;650.91;683.69;769.9;672.08;485.26;501.52;450.55
+_3(23w);MISS [player] Free Throw 2 of 3;1609;44.11;51.07;54.92;51.21;61.64;68.99;74.75;90.43;123.76;102.13;96.8;128.61;121.26;90.7;80.3;54.95
+_3(33c);[player] Free Throw 3 of 3 (cnt PTS);9409;228.14;259.91;345.54;258.85;248.1;398.03;427.15;505.32;763.94;633.38;675.3;768.15;695.99;489.04;503.79;437.73
+_3(33w);MISS [player] Free Throw 3 of 3;1508;37.26;47.26;45.77;39.11;60.12;61.41;64.07;76.75;105.42;118.9;105.95;130.36;96.5;86.92;78.03;67.77
+_3(40c);[player] Free Throw Technical (cnt PTS);19203;1214.45;1116.62;1302.82;1078.21;964.23;967.4;755.91;920.21;905.27;827.74;924.54;890.64;802.73;941.04;913.64;1166.67
+_3(40w);MISS [player] Free Throw Technical;4359;235.74;269.82;286.04;282.12;209.28;205.46;207.48;219.6;200.92;185.21;206.55;200.35;155.42;226.76;217.42;247.25
+_3(51c);[player] Free Throw Flagrant 1 of 2 (cnt PTS);1320;57.79;53.35;70.18;66.11;65.45;62.17;66.36;69.15;66.46;48.78;61.74;79.62;83.69;89.19;71.21;58.61
+_3(51w);MISS [player] Free Throw Flagrant 1 of 2;562;22.05;19.05;25.93;27.93;31.96;21.23;40.43;34.19;28.27;24.39;22.87;32.37;33.3;37.04;31.82;18.32
+_3(52c);[player] Free Throw Flagrant 2 of 2 (cnt PTS);1452;57.79;56.4;73.23;77.28;73.06;64.44;72.46;75.23;78.69;56.4;64.79;84.86;98.21;96.75;84.85;62.27
+_3(52w);MISS [player] Free Throw Flagrant 2 of 2;430;22.05;16.01;22.12;16.76;25.88;16.68;33.56;28.12;16.04;19.05;19.82;27.12;18.79;29.48;18.18;14.65
+_3(61c);[player] Free Throw Flagrant 1 of 1 (cnt PTS);146;3.04;2.29;6.1;1.86;2.28;3.79;1.53;3.04;3.82;8.38;4.57;17.5;9.39;12.85;27.27;16.48
+_3(71c);[player] Free Throw Clear Path 1 of 2 (cnt PTS);794;45.63;57.16;48.05;36.31;55.56;49.28;54.16;39.51;36.67;33.54;33.54;31.5;29.89;40.06;15.91;27.47
+_3(71w);MISS [player] Free Throw Clear Path 1 of 2;252;12.17;18.29;13.73;14.9;21.31;14.4;11.44;18.24;11.46;6.1;13.72;6.12;12.81;16.63;5.3;NA
+_3(72c);[player] Free Throw Clear Path 2 of 2 (cnt PTS);847;49.43;60.98;48.82;38.18;60.88;52.31;48.05;45.59;39.72;32.01;40.4;30.62;34.16;48.37;18.18;27.47
+_3(72w);MISS [player] Free Throw Clear Path 2 of 2;199;8.37;14.48;12.97;13.04;15.98;11.37;17.54;12.16;8.4;7.62;6.86;7;8.54;8.31;3.03;NA
+_3(81c);[player] Free Throw Flagrant 1 of 3 (cnt PTS);95;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.52;2.29;14.87;17.08;13.61;21.21;12.82
+_3(81w);MISS [player] Free Throw Flagrant 1 of 3;30;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;4.37;4.27;3.78;8.33;3.66
+_3(82c);[player] Free Throw Flagrant 2 of 3 (cnt PTS);109;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;1.52;16.62;20.5;15.87;25.76;14.65
+_3(82w);MISS [player] Free Throw Flagrant 2 of 3;12;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;2.62;0.85;1.51;3.79;1.83
+_3(83c);[player] Free Throw Flagrant 3 of 3 (cnt PTS);103;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;1.52;15.75;18.79;12.85;26.52;14.65
+_3(83w);MISS [player] Free Throw Flagrant 3 of 3;18;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;3.5;2.56;4.54;3.03;1.83
+_4(0p);[player] REBOUND (Off:cnt Def:cnt);1699946;82396.2;83272.87;82689.55;84256.98;84170.47;85277.48;86801.68;87414.13;86817.42;86947.41;90310.98;89420.82;88514.09;88574.45;86843.94;87261.9
+_4(0t);[team] Rebound;217812;10765.02;10570.88;11057.97;11189.94;11108.83;10905.99;11357.74;11056.99;11086.33;10970.27;11304.12;11496.06;10727.58;10967.5;11044.7;11578.75
+_4(0u);Normal Rebound;17;3.04;0.76;NA;0.93;0.76;NA;NA;NA;NA;7.62;NA;NA;NA;NA;NA;NA
+_4(0u);Unknown;13;NA;NA;NA;NA;NA;NA;NA;NA;NA;9.91;NA;NA;NA;NA;NA;NA
+_4(1t);[team] Rebound;106389;5681.37;5926.07;5665.14;5513.04;5452.82;5681.58;5703.28;5629.94;5227.65;5022.1;5460.37;5195.1;4845.43;5018.14;5054.55;5001.83
+_5(00p);[player] No Turnover (Pcnt.Tcnt);293;0.76;NA;NA;NA;NA;NA;NA;0.76;21.39;86.89;64.79;26.25;17.08;10.58;NA;NA
+_5(00p);[player] Turnover Turnover (Pcnt.Tcnt);114;NA;NA;NA;0.93;NA;NA;NA;4.56;3.82;22.1;3.81;10.5;11.96;24.94;6.82;NA
+_5(01p);[player] No Turnover (Pcnt.Tcnt) [player] STEAL (cnt STL);31;3.04;0.76;2.29;4.66;3.04;1.52;1.53;0.76;3.82;3.05;NA;NA;NA;NA;NA;NA
+_5(01p);[player] Turnover Turnover (Pcnt.Tcnt) [player] STEAL (cnt STL);6;0.76;1.52;0.76;NA;0.76;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_5(11p);[player] Bad Pass Turnover (Pcnt.Tcnt) [player] STEAL (cnt STL);186907;8720.15;8756.1;8813.88;9119.18;9433.79;9384.38;9699.47;9956.69;9867.84;9903.96;9977.9;9835.52;9709.65;9819.35;9312.88;9362.64
+_5(12p);[player] Traveling Turnover (Pcnt.Tcnt);36606;2212.17;2240.85;2063.31;1852.89;1949.77;2031.08;1619.37;1626.14;1506.49;1805.64;1789.63;2188.98;1613.15;1257.75;2191.67;1686.81
+_5(13p);[player] Foul Turnover (Pcnt.Tcnt);41588;3535.36;3721.8;3929.82;3705.77;3587.52;3790.75;3543.1;3297.11;3228.42;NA;NA;NA;NA;NA;NA;NA
+_5(13p);[player] Offensive Foul Turnover (Pcnt.Tcnt);29528;16.73;25.15;25.93;29.8;17.5;37.91;25.17;16.72;41.25;3263.72;3672.26;4087.49;3367.21;3399.09;3835.61;3571.43
+_5(14p);[player] Double Dribble Turnover (Pcnt.Tcnt);1434;79.09;81.55;60.26;72.63;60.88;54.59;61.78;91.95;67.23;89.94;71.65;87.49;86.25;61.22;74.24;58.61
+_5(15p);[player] Discontinue Dribble Turnover (Pcnt.Tcnt);1749;139.92;160.82;102.21;99.63;86.76;158.45;73.23;66.11;71.05;73.93;57.93;76.12;51.24;34.01;88.64;58.61
+_5(16p);[player] 3 Second Violation Turnover (Pcnt.Tcnt);6753;534.6;637.96;674.29;488.83;441.4;392.72;338.67;357.9;260.5;232.47;246.19;184.6;136.64;160.24;122.73;141.03
+_5(16p);[team] Turnover: 3 Second Violation (T#cnt);24;NA;3.05;3.05;NA;3.04;1.52;2.29;3.04;2.29;NA;NA;NA;NA;NA;NA;NA
+_5(17p);[player] Inbound Turnover (Pcnt.Tcnt);423;30.42;23.63;24.41;16.76;22.83;23.5;19.07;20.52;17.57;16.77;24.39;25.37;19.64;15.12;23.48;16.48
+_5(18p);[player] Backcourt Turnover (Pcnt.Tcnt);2515;91.25;88.41;94.58;90.32;105.78;81.88;128.15;109.42;135.22;144.82;155.49;167.98;166.52;176.87;174.24;141.03
+_5(18p);[team] Turnover: Backcourt (T#cnt);378;23.57;25.91;26.7;29.8;25.88;46.25;38.9;38.75;36.67;0.76;NA;NA;NA;NA;NA;NA
+_5(19p);[player] Offensive Goaltending Turnover (Pcnt.Tcnt);2407;114.83;116.62;121.28;148.98;146.88;140.26;131.96;139.06;107.72;118.9;125;117.24;109.31;111.11;91.67;108.06
+_5(20p);[player] Lane Violation Turnover (Pcnt.Tcnt);359;17.49;24.39;20.59;15.83;27.4;25.02;22.12;17.48;18.33;22.1;13.72;17.5;8.54;12.85;11.36;10.99
+_5(21p);[player] Jump Ball Violation Turnover (Pcnt.Tcnt);74;3.04;5.34;4.58;7.45;2.28;7.58;3.05;7.6;3.82;2.29;1.52;1.75;2.56;2.27;2.27;1.83
+_5(22p);[player] Kicked Ball Violation Turnover (Pcnt.Tcnt);429;22.81;13.72;23.65;22.35;28.16;21.23;19.83;21.28;28.27;19.05;21.34;21.87;15.37;19.65;23.48;31.14
+_5(23p);[player] Illegal Assist Turnover (Pcnt.Tcnt);120;3.8;3.81;6.86;12.1;3.04;3.79;4.58;7.6;5.35;4.57;2.29;7.87;2.56;10.58;12.12;9.16
+_5(24p);[player] Palming Turnover (Pcnt.Tcnt);1649;143.73;150.15;93.06;87.52;87.52;84.15;60.26;48.63;48.89;76.22;52.59;93.61;64.9;54.42;124.24;47.62
+_5(25t);[team] Turnover: Inbound (T#cnt);14;0.76;NA;3.05;0.93;0.76;1.52;1.53;1.52;0.76;NA;NA;NA;NA;NA;NA;NA
+_5(26p);[player] Double Personal Turnover (Pcnt.Tcnt);16;0.76;3.05;1.53;0.93;0.76;2.27;NA;0.76;2.29;NA;NA;NA;NA;NA;NA;NA
+_5(27p);[player] Punched Ball Turnover (Pcnt.Tcnt);20;1.52;1.52;NA;1.86;NA;0.76;1.53;0.76;0.76;0.76;1.52;0.87;NA;2.27;0.76;1.83
+_5(28p);[player] Swinging Elbows Turnover (Pcnt.Tcnt);10;0.76;0.76;0.76;0.93;0.76;0.76;NA;1.52;0.76;NA;NA;NA;0.85;NA;NA;NA
+_5(29p);[player] Basket from Below Turnover (Pcnt.Tcnt);27;NA;1.52;1.53;1.86;NA;2.27;0.76;0.76;3.06;1.52;NA;2.62;NA;3.78;1.52;NA
+_5(30p);[player] Illegal Screen Turnover (Pcnt.Tcnt);299;26.62;12.96;22.88;43.76;36.53;21.23;19.83;21.28;15.28;5.34;3.05;4.37;0.85;0.76;1.52;NA
+_5(31p);[player] Step Out of Bounds Turnover (Pcnt.Tcnt);11958;527;544.97;526.32;567.04;571.54;554.97;572.85;674.01;584.42;670.73;603.66;654.42;658.41;708.24;659.09;672.16
+_5(31p);[player] Player Out of Bounds Violation Turnover (Pcnt.Tcnt);21;NA;NA;NA;NA;NA;9.1;5.34;0.76;0.76;NA;NA;NA;NA;NA;NA;NA
+_5(31p);[player] Out Of Bounds Turnover (Pcnt.Tcnt);15;NA;NA;2.29;NA;1.52;2.27;1.53;1.52;2.29;NA;NA;NA;NA;NA;NA;NA
+_5(32p);[player] Out of Bounds Lost Ball Turnover (Pcnt.Tcnt);29932;1482.13;1400.15;1503.43;1590.32;1538.81;1559.51;1586.58;1689.21;1651.64;1556.4;1511.43;1359.58;1439.8;1499.62;1404.55;1501.83
+_5(33p);[player] Poss Lost Ball Turnover (Pcnt.Tcnt);2649;286.69;311.74;246.38;287.71;242.77;285.82;213.58;120.82;73.34;NA;NA;NA;NA;NA;NA;NA
+_5(33p);[player] Lost Ball Turnover (Pcnt.Tcnt);1057;12.93;13.72;11.44;13.04;13.7;21.99;23.65;14.44;25.97;158.54;83.08;109.36;93.94;91.46;93.18;120.88
+_5(34p);[player] Out of Bounds - Bad Pass Turnover Turnover (Pcnt.Tcnt);32921;NA;NA;NA;NA;NA;NA;NA;2616.26;2892.28;3141.77;3167.68;3172.35;3202.39;3167.04;3108.33;3195.97
+_5(34p);[player] Bad Pass Turnover (Pcnt.Tcnt);31070;2939.92;3020.58;2891.69;3256.98;3325.72;3321.46;3369.18;811.55;459.89;309.45;105.18;117.24;113.58;84.66;110.61;82.42
+_5(35p);[player] Lost Ball Turnover (Pcnt.Tcnt) [player] STEAL (cnt STL);108919;5688.21;5500.76;5663.62;6005.59;5914;5751.33;5600.31;5503.8;5350.65;5474.85;5220.27;5374.45;5309.99;5356.76;5209.09;5576.92
+_5(35p);[player] Poss Lost Ball Turnover (Pcnt.Tcnt) [player] STEAL (cnt STL);1645;101.14;107.47;134.25;162.94;153.73;142.53;152.56;163.37;164.25;NA;NA;NA;NA;NA;NA;NA
+_5(35p);[player] Out of Bounds Lost Ball Turnover (Pcnt.Tcnt) [player] STEAL (cnt STL);6;NA;0.76;0.76;0.93;NA;0.76;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA
+_5(36t);[team] Turnover: 8 Second Violation (T#cnt);379;26.62;21.34;23.65;12.1;12.18;10.61;12.97;11.4;16.04;9.91;7.62;31.5;23.06;31.75;29.55;40.29
+_5(37t);[team] Turnover: Shot Clock (T#cnt);23197;1152.09;1258.38;1263.16;1178.77;1119.48;1084.15;1203.66;1101.06;1064.17;1141.01;1060.21;1210.85;1177.63;1349.21;1263.64;1252.75
+_5(38t);[team] Turnover: 5 Second Inbound (T#cnt);351;16.73;16.77;20.59;34.45;35.77;48.52;31.27;36.47;32.85;NA;NA;NA;NA;NA;NA;NA
+_5(38t);[team] Turnover: 5 Second Violation (T#cnt);281;NA;0.76;NA;NA;NA;0.76;0.76;NA;NA;34.3;35.82;17.5;28.18;39.3;40.91;49.45
+_5(39t);Excess Timeout Turnover;13;NA;NA;NA;1.86;0.76;NA;NA;NA;NA;NA;2.29;NA;1.71;0.76;2.27;1.83
+_5(39t);[team] Turnover: (T#cnt);7;NA;NA;0.76;NA;0.76;NA;0.76;NA;3.06;NA;NA;NA;NA;NA;NA;NA
+_5(40t);[team] Turnover: Too Many Players (T#cnt);7;NA;NA;NA;NA;NA;NA;1.53;NA;0.76;0.76;NA;0.87;NA;1.51;NA;NA
+_5(41p);[player] 5 Second Violation Turnover (Pcnt.Tcnt);77;3.8;6.1;5.34;3.72;5.33;7.58;8.39;5.32;5.35;NA;0.76;2.62;2.56;0.76;1.52;1.83
+_5(43p);[player] Opposite Basket Turnover (Pcnt.Tcnt);5;NA;0.76;NA;0.93;1.52;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01c);[coach] Foul:T.FOUL ([referee]);1306;NA;NA;NA;NA;NA;NA;4.58;116.26;136.75;116.62;137.96;162.73;102.48;105.82;100;102.56
+_6(01c);[coach] Foul:T.FOUL;1141;164.26;131.86;136.54;124.77;100.46;112.96;120.52;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01c);[coach] Foul:Non-Unsportsmanlike;4;NA;NA;1.53;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01c);[coach] Foul:Non-Unsportsmanlike ([referee]);3;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;0.76;NA
+_6(01p);[player] T.FOUL (Pcnt.Tcnt) ([referee]);4638;NA;NA;NA;NA;NA;NA;25.17;322.19;351.41;401.68;427.59;428.7;431.26;544.22;512.88;441.39
+_6(01p);[player] T.FOUL (Pcnt.Tcnt);3634;405.32;317.84;473.68;449.72;445.21;395;361.56;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01p);[player] T.FOUL (Pcnt.PN) ([referee]);1481;NA;NA;NA;NA;NA;NA;6.1;129.18;116.12;135.67;167.68;147.86;122.97;154.95;131.82;111.72
+_6(01p);[player] T.FOUL (Pcnt.PN);1177;139.16;141.01;146.45;121.04;143.07;127.37;99.92;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01p);[player] HANGING.TECH.FOUL (Pcnt.Tcnt) ([referee]);72;NA;NA;NA;NA;NA;NA;NA;5.32;8.4;2.29;16.01;3.5;2.56;3.02;NA;34.8
+_6(01p);[player] HANGING.TECH.FOUL (Pcnt.Tcnt);63;12.93;13.72;2.29;6.52;6.09;3.03;4.58;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01p);[player] Taunting (Pcnt.Tcnt);44;3.8;6.1;2.29;9.31;5.33;3.03;5.34;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01p);[player] Non-Unsportsmanlike (Pcnt.Tcnt) ([referee]);39;NA;NA;NA;NA;NA;NA;NA;3.04;5.35;2.29;5.34;2.62;0.85;4.54;6.06;NA
+_6(01p);[player] Non-Unsportsmanlike Tech Foul - Flopping (Pcnt.Tcnt) ([referee]);36;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;65.93
+_6(01p);[player] Taunting (Pcnt.Tcnt) ([referee]);21;NA;NA;NA;NA;NA;NA;NA;6.08;5.35;4.57;NA;NA;NA;NA;NA;NA
+_6(01p);[player] HANGING.TECH.FOUL (Pcnt.PN);18;4.56;3.05;1.53;2.79;NA;1.52;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01p);[player] Taunting (Pcnt.PN);15;0.76;3.05;1.53;1.86;2.28;2.27;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01p);[player] HANGING.TECH.FOUL (Pcnt.PN) ([referee]);14;NA;NA;NA;NA;NA;NA;NA;1.52;3.06;NA;2.29;0.87;NA;NA;NA;7.33
+_6(01p);[player] Non-Unsportsmanlike (Pcnt.Tcnt);12;NA;3.05;NA;0.93;2.28;0.76;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01p);[player] Non-Unsportsmanlike Tech Foul - Flopping (Pcnt.PN) ([referee]);10;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;18.32
+_6(01p);[player] Non-Unsportsmanlike (Pcnt.PN) ([referee]);7;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;1.52;1.75;0.85;NA;1.52;NA
+_6(01p);[player] Taunting (Pcnt.PN) ([referee]);5;NA;NA;NA;NA;NA;NA;NA;1.52;1.53;0.76;NA;NA;NA;NA;NA;NA
+_6(01p);[player] Non-Unsportsmanlike (Pcnt.PN);4;0.76;0.76;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(01t);[team] T.FOUL;75;1.52;NA;1.53;2.79;1.52;NA;NA;2.28;3.06;16.01;2.29;0.87;5.12;3.78;17.42;NA
+_6(01t);[team] Foul;27;2.28;4.57;0.76;2.79;3.04;3.03;2.29;NA;NA;NA;NA;2.62;NA;NA;NA;NA
+_6(05p);[team] T.Foul (Def. 3 Sec [player] );5284;704.18;752.29;812.36;628.49;459.67;475.36;305.11;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(05p);[team] T.Foul (Def. 3 Sec [player] ) ([referee]);4083;NA;NA;NA;NA;NA;NA;12.97;525.08;445.38;343.75;362.8;321.08;277.54;322.75;314.39;606.23
+_6(06t);[team] Delay;334;1.52;4.57;2.29;3.72;4.57;7.58;0.76;24.32;27.5;16.01;19.05;29.75;15.37;35.53;54.55;31.14
+_6(06t);[team] Foul;114;10.65;7.62;5.34;7.45;7.61;42.46;6.86;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(08t);[team] Excess Timeout Technical;21;NA;NA;0.76;1.86;1.52;NA;0.76;NA;3.06;NA;2.29;0.87;1.71;0.76;2.27;1.83
+_6(09t);[team] Too Many Players Tech Foul;18;NA;NA;NA;NA;NA;NA;2.29;2.28;2.29;1.52;0.76;NA;0.85;3.02;NA;1.83
+_6(10a);[player] P.FOUL (Pcnt.Tcnt) ([referee]);106253;NA;NA;NA;NA;NA;NA;664.38;10038.75;9435.45;10551.83;10951.98;10281.71;9239.11;9424.04;8746.21;9199.63
+_6(10a);[player] P.FOUL (Pcnt.Tcnt);89326;10879.09;10381.86;9421.05;9542.83;10217.66;10032.6;9260.11;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(10a);[player] Personal Block Foul (Pcnt.Tcnt);2461;NA;NA;376.05;331.47;363.77;418.5;443.94;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(10a);[player] Personal Block Foul (Pcnt.Tcnt) ([referee]);1800;NA;NA;NA;NA;NA;NA;30.51;468.84;495.8;376.52;NA;NA;NA;NA;NA;NA
+_6(10a);Personal;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA
+_6(10p);[player] P.FOUL (Pcnt.PN) ([referee]);34156;NA;NA;NA;NA;NA;NA;255.53;3244.68;2974.03;3395.58;3794.97;3482.94;2807.86;2860.17;2758.33;2802.2
+_6(10p);[player] P.FOUL (Pcnt.PN);31725;4270.72;3989.33;3514.87;3190.88;3257.23;3518.57;2989.32;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(10p);[player] Personal Block Foul (Pcnt.PN);816;NA;NA;129.67;103.35;109.59;131.16;166.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(10p);[player] Personal Block Foul (Pcnt.PN) ([referee]);536;NA;NA;NA;NA;NA;NA;9.92;152.74;145.15;100.61;NA;NA;NA;NA;NA;NA
+_6(11a);[player] S.FOUL (Pcnt.Tcnt) ([referee]);156910;NA;NA;NA;NA;NA;NA;831.43;13824.47;14119.94;13498.48;14216.46;14486.44;14578.14;14531.37;16165.15;15732.6
+_6(11a);[player] S.FOUL (Pcnt.Tcnt);129261;15452.47;15689.79;15003.81;14166.67;13726.79;14045.49;12897.03;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(11a);[player] Shooting Block Foul (Pcnt.Tcnt);2980;NA;NA;392.83;444.13;431.51;512.51;568.27;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(11a);[player] Shooting Block Foul (Pcnt.Tcnt) ([referee]);2171;NA;NA;NA;NA;NA;NA;33.56;581.31;678.38;361.28;NA;NA;NA;NA;NA;NA
+_6(11a);[player] S.FOUL (Pcnt.Tcnt) (.);2;NA;NA;NA;NA;NA;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA
+_6(11a);Shooting;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA
+_6(11p);[player] S.FOUL (Pcnt.PN) ([referee]);51512;NA;NA;NA;NA;NA;NA;279.18;4705.93;4718.11;4592.23;5253.05;5134.73;4499.57;4387;4824.24;4670.33
+_6(11p);[player] S.FOUL (Pcnt.PN);43661;5471.48;5462.65;5187.64;4316.57;4406.39;4939.35;4238.75;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(11p);[player] Shooting Block Foul (Pcnt.PN);1074;NA;NA;122.81;151.77;148.4;198.64;223.49;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(11p);[player] Shooting Block Foul (Pcnt.PN) ([referee]);778;NA;NA;NA;NA;NA;NA;9.92;216.57;266.62;99.85;NA;NA;NA;NA;NA;NA
+_6(11p);[player] S.FOUL (Pcnt.PN) (.);2;NA;NA;NA;NA;NA;NA;NA;NA;1.53;NA;NA;NA;NA;NA;NA;NA
+_6(12a);[player] L.B.FOUL (Pcnt.Tcnt) ([referee]);19295;NA;NA;NA;NA;NA;NA;143.4;1793.31;1890.76;1784.3;1792.68;1755.03;1553.37;1743.01;1818.94;1917.58
+_6(12a);[player] L.B.FOUL (Pcnt.Tcnt);16516;1739.92;1812.5;1828.38;1872.44;1822.68;1964.37;1873.38;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(12p);[player] L.B.FOUL (Pcnt.PN) ([referee]);6463;NA;NA;NA;NA;NA;NA;52.63;682.37;638.66;512.2;673.02;659.67;476.52;529.1;596.21;560.44
+_6(12p);[player] L.B.FOUL (Pcnt.PN);5885;647.91;660.06;655.23;622.91;625.57;733.89;647.6;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(13a);[player] OFF.Foul (Pcnt) ([referee]);26487;NA;NA;NA;NA;NA;NA;131.96;2323.71;2137.51;2067.07;2564.79;2859.14;2330.49;2473.17;2818.18;2549.45
+_6(13a);[player] OFF.Foul (Pcnt);25261;3538.4;3728.66;2559.88;2439.48;2401.83;2687.64;2318.08;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(13a);[player] Offensive Charge Foul (Pcnt.Tcnt) ([referee]);5342;NA;NA;NA;NA;NA;NA;50.34;580.55;656.23;718.75;756.86;722.66;591.8;71.05;56.06;54.95
+_6(13a);[player] Offensive Charge Foul (Pcnt) ([referee]);4383;NA;NA;NA;NA;NA;NA;9.92;189.21;194.04;227.13;66.31;242.34;268.15;854.88;943.18;943.22
+_6(13a);[player] Offensive Charge Foul (Pcnt.Tcnt);4240;NA;NA;742.94;566.11;691.02;749.81;580.47;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(13a);[player] Offensive Charge Foul (Pcnt.PN) ([referee]);1787;NA;NA;NA;NA;NA;NA;10.68;195.29;234.53;250.76;284.3;263.34;175.92;NA;NA;NA
+_6(13a);[player] Offensive Charge Foul (Pcnt);1731;NA;NA;346.3;479.52;245.05;89.46;245.61;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(13a);[player] Offensive Charge Foul (Pcnt.PN);1562;NA;NA;291.38;228.12;242.77;275.97;192.22;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(14a);[player] IN.FOUL (Pcnt.Tcnt);266;40.3;35.82;22.12;29.8;26.64;35.63;17.54;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(14a);[player] IN.FOUL (Pcnt.Tcnt) ([referee]);154;NA;NA;NA;NA;NA;NA;4.58;46.35;39.72;26.68;NA;NA;NA;NA;NA;NA
+_6(14p);[player] IN.FOUL (Pcnt.PN);54;9.13;7.62;7.63;4.66;3.04;4.55;5.34;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(14p);[player] IN.FOUL (Pcnt.PN) ([referee]);54;NA;NA;NA;NA;NA;NA;0.76;8.36;16.81;15.24;NA;NA;NA;NA;NA;NA
+_6(15a);[player] AWAY.FROM.PLAY.FOUL (Pcnt.Tcnt) ([referee]);602;NA;NA;NA;NA;NA;NA;0.76;25.08;17.57;59.45;95.27;83.11;54.65;58.2;59.09;51.28
+_6(15a);[player] AWAY.FROM.PLAY.FOUL (Pcnt.Tcnt);250;31.18;27.44;24.41;27.93;28.92;29.57;25.93;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(15p);[player] AWAY.FROM.PLAY.FOUL (Pcnt.PN) ([referee]);298;NA;NA;NA;NA;NA;NA;0.76;21.28;19.86;25.15;41.16;39.37;20.5;25.7;25.76;34.8
+_6(15p);[player] AWAY.FROM.PLAY.FOUL (Pcnt.PN);153;23.57;15.24;16.02;14.9;10.65;15.92;22.88;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(16a);[player] PUNCH.FOUL (Pcnt.Tcnt);2;NA;NA;NA;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(16a);[player] PUNCH.FOUL (Pcnt.Tcnt) ([referee]);1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.85;NA;NA;NA
+_6(17a);[player] C.P.FOUL (Pcnt.Tcnt);425;40.3;55.64;45.77;40.04;57.08;43.21;48.82;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(17a);[player] C.P.FOUL (Pcnt.Tcnt) ([referee]);347;NA;NA;NA;NA;NA;NA;NA;44.07;33.61;32.77;28.96;30.62;34.16;44.6;14.39;20.15
+_6(17p);[player] C.P.FOUL (Pcnt.PN);159;17.49;19.82;16.02;11.17;22.83;20.47;15.26;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(17p);[player] C.P.FOUL (Pcnt.PN) ([referee]);120;NA;NA;NA;NA;NA;NA;1.53;13.68;14.51;7.62;18.29;7;8.54;12.09;6.82;7.33
+_6(18a);Foul : Double Personal - [player] (cnt PF), [player] (cnt PF);260;28.14;28.96;25.17;25.14;41.1;18.95;35.09;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(18a);Foul : Double Personal - [player] (cnt PF), [player] (cnt PF) ([referee]);208;NA;NA;NA;NA;NA;NA;3.05;39.51;25.21;22.1;9.91;14;12.81;16.63;15.15;7.33
+_6(18a);Double Personal;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA
+_6(19a);[player] FLAGRANT.FOUL.TYPE1 (Pcnt.Tcnt) ([referee]);884;NA;NA;NA;NA;NA;NA;10.68;66.11;58.82;59.45;59.45;96.24;105.89;102.8;104.55;76.92
+_6(19a);[player] FLAGRANT.FOUL.TYPE1 (Pcnt.Tcnt);480;43.35;48.02;60.26;64.25;62.4;47.76;51.11;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(19p);[player] FLAGRANT.FOUL.TYPE1 (Pcnt.PN) ([referee]);346;NA;NA;NA;NA;NA;NA;3.81;28.88;25.21;23.63;24.39;45.49;28.18;40.06;42.42;23.81
+_6(19p);[player] FLAGRANT.FOUL.TYPE1 (Pcnt.PN);225;28.14;22.87;27.46;19.55;22.83;25.02;28.99;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(20a);[player] FLAGRANT.FOUL.TYPE2 (Pcnt.Tcnt) ([referee]);90;NA;NA;NA;NA;NA;NA;2.29;9.12;7.64;5.34;5.34;4.37;12.81;12.85;9.09;3.66
+_6(20a);[player] FLAGRANT.FOUL.TYPE2 (Pcnt.Tcnt);68;7.6;3.81;10.68;7.45;7.61;9.86;6.1;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(20p);[player] FLAGRANT.FOUL.TYPE2 (Pcnt.PN);34;3.8;NA;3.81;4.66;6.09;4.55;3.81;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(20p);[player] FLAGRANT.FOUL.TYPE2 (Pcnt.PN) ([referee]);34;NA;NA;NA;NA;NA;NA;0.76;2.28;7.64;2.29;2.29;2.62;0.85;1.51;3.79;5.49
+_6(21a);[player] Personal Take Foul (Pcnt.Tcnt) ([referee]);7081;NA;NA;NA;NA;NA;NA;29.75;398.94;384.26;398.63;673.78;743.66;1187.87;1528.34;196.97;153.85
+_6(21a);[player] Personal Take Foul (Pcnt.Tcnt);1823;NA;NA;199.85;242.09;359.21;315.39;315.03;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(21p);[player] Personal Take Foul (Pcnt.PN) ([referee]);7570;NA;NA;NA;NA;NA;NA;128.15;895.9;637.89;576.98;645.58;727.91;769.43;804.99;521.21;545.79
+_6(21p);[player] Personal Take Foul (Pcnt.PN);3648;NA;NA;463.77;413.41;610.35;688.4;675.82;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(22a);[player] Transition Take Foul (Pcnt.Tcnt) ([referee]);238;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;134.09;111.72
+_6(22p);[player] Transition Take Foul (Pcnt.PN) ([referee]);60;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;34.85;25.64
+_6(4cc);[coach] Foul:DOUBLE.TECHNICAL.FOUL ([referee]);4;NA;NA;NA;NA;NA;NA;NA;0.76;NA;0.76;1.52;NA;NA;NA;NA;NA
+_6(4pc);[coach] Foul:DOUBLE.TECHNICAL.FOUL ([referee]);9;NA;NA;NA;NA;NA;NA;NA;NA;2.29;0.76;0.76;0.87;0.85;NA;0.76;1.83
+_6(4pc);[coach] Foul:DOUBLE.TECHNICAL.FOUL;4;NA;NA;0.76;NA;NA;0.76;1.53;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(4pc);Double Technical - [player], [coach] ([referee]);2;NA;NA;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;0.76;NA;NA
+_6(4pp);Double Technical - [player], [player] ([referee]);752;NA;NA;NA;NA;NA;NA;10.68;73.71;91.67;69.36;63.26;63.87;66.61;71.81;48.48;67.77
+_6(4pp);Double Technical - [player], [player];712;79.09;73.17;78.57;88.45;82.19;83.4;73.23;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_6(4pp);Double Technical;22;NA;NA;NA;NA;NA;NA;NA;NA;NA;16.01;NA;NA;NA;NA;0.76;NA
+_7(0p);[player] Violation:No Violation;4;NA;0.76;NA;0.93;0.76;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_7(1t);[team] Violation: Delay of game Violation;5847;257.03;240.09;221.97;243.02;274.73;387.41;286.8;423.25;419.4;41.92;38.11;310.59;299.74;481.48;463.64;417.58
+_7(1t);Delay Of Game;983;NA;NA;NA;NA;NA;NA;NA;NA;NA;331.55;332.32;97.99;NA;NA;NA;NA
+_7(2p);[player] Violation:Defensive Goaltending ([referee]);4922;NA;NA;NA;NA;NA;NA;17.54;468.84;425.52;451.22;465.7;451.44;459.44;402.87;490.15;527.47
+_7(2p);[player] Violation:Defensive Goaltending;4407;492.78;489.33;517.93;559.59;510.65;464.75;421.82;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_7(3p);[player] Violation:Lane;524;47.15;56.4;72.46;47.49;54.79;79.61;49.58;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_7(3p);Lane;382;NA;NA;NA;NA;NA;NA;NA;NA;NA;45.73;58.69;39.37;34.16;47.62;58.33;36.63
+_7(3p);[player] Violation:Lane ([referee]);151;NA;NA;NA;NA;NA;NA;1.53;31.91;53.48;7.62;1.52;1.75;3.42;6.05;3.03;12.82
+_7(4p);[player] Violation:Jump Ball;193;34.98;32.01;21.36;13.97;13.7;16.68;16.78;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_7(4p);[player] Violation:Jump Ball ([referee]);134;NA;NA;NA;NA;NA;NA;0.76;19;12.22;12.2;9.91;16.62;11.96;13.61;5.3;9.16
+_7(5p);[player] Violation:Kicked Ball ([referee]);8372;NA;NA;NA;NA;NA;NA;51.11;697.57;701.3;813.26;811.74;797.03;769.43;749.81;852.27;747.25
+_7(5p);[player] Violation:Kicked Ball;6361;549.05;624.24;598.78;727.19;802.13;862.02;810.83;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_7(5p);[player] Violation:Kicked Ball (.);352;NA;NA;NA;NA;NA;NA;10.68;120.06;137.51;NA;NA;NA;NA;NA;NA;NA
+_7(6p);Double Lane;54;NA;NA;NA;NA;NA;NA;NA;NA;NA;6.1;6.1;10.5;10.25;4.54;4.55;3.66
+_7(6p);[player] Violation:Double Lane;39;3.04;5.34;5.34;1.86;3.81;8.34;2.29;NA;NA;NA;NA;NA;NA;NA;NA;NA
+_7(6p);[player] Violation:Double Lane ([referee]);8;NA;NA;NA;NA;NA;NA;NA;2.28;3.82;NA;NA;NA;NA;NA;NA;NA
+_7(6p);[player] Violation:Double Lane (.);3;NA;NA;NA;NA;NA;NA;NA;2.28;NA;NA;NA;NA;NA;NA;NA;NA
+_8(0);SUB: [player] FOR [player];858252;37698.86;38307.93;40166.29;40444.13;40612.63;41101.59;43977.12;44839.67;44709.7;45080.03;46554.88;48849.52;46262.17;46712.02;46491.67;47902.93
+_9(0);[team] Timeout: Regular (Reg.cnt Short cnt);97931;4554.37;4509.91;4617.09;4587.52;4624.05;4697.5;4674.29;4670.21;4750.95;5404.73;5516.77;5569.55;5409.91;5365.84;5444.7;5428.57
+_9(0);[team] Timeout: Regular (Full cnt Short cnt);96823;4492.02;4463.41;4546.15;4594.04;4563.93;4597.42;4599.54;4613.22;4621.85;5355.18;5415.4;5551.18;5413.32;5374.91;5359.09;5410.26
+_9(0);[team] Timeout: Short (Reg.cnt Short cnt);13501;1114.83;1090.7;1177.73;1124.77;1108.07;1209.25;1205.19;1214.29;1239.88;NA;NA;NA;NA;NA;NA;NA
+_9(0);[team] Timeout: Short (Full cnt Short cnt);12774;1053.23;1027.44;1117.47;1091.25;1057.08;1175.13;1125.1;1126.9;1151.26;NA;NA;NA;NA;NA;NA;NA
+_9(0);Timeout: Regular;2307;179.47;164.63;172.39;178.77;185.69;160.73;205.19;269.76;272.73;NA;NA;NA;NA;NA;NA;NA
+_9(0);Regular;35;3.04;0.76;2.29;1.86;0.76;0.76;NA;NA;2.29;15.24;NA;NA;NA;NA;NA;NA
+_9(0);Timeout: Short;23;1.52;0.76;NA;1.86;0.76;2.27;2.29;3.8;4.58;NA;NA;NA;NA;NA;NA;NA
+_9(1);[team] Timeout: Coach Challenge (Full cnt Short cnt);457;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;70.87;73.44;77.85;87.88;130.04
+_9(1);[team] Timeout: Coach Challenge (Reg.cnt Short cnt);386;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;56.87;72.59;65;75.76;91.58
+_9(2);Timeout: Official;19178;1714.83;1732.47;1706.33;1689.01;1678.84;1680.06;1632.34;1552.43;1523.3;NA;NA;NA;NA;NA;NA;NA
+_9(2);[team] Timeout: Official (Reg.cnt Short cnt);15;3.04;1.52;3.05;1.86;NA;0.76;NA;1.52;NA;NA;NA;NA;NA;NA;NA;NA
+_9(2);[team] Timeout: Official (Full cnt Short cnt);13;0.76;0.76;0.76;0.93;3.04;0.76;0.76;1.52;0.76;NA;NA;NA;NA;NA;NA;NA
+_9(3);Timeout: No Timeout;12;1.52;0.76;1.53;0.93;NA;0.76;0.76;1.52;1.53;NA;NA;NA;NA;NA;NA;NA
+_9(3);[team] Timeout: No Timeout (Full cnt Short cnt);9;NA;3.05;NA;NA;1.52;0.76;0.76;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_9(3);[team] Timeout: No Timeout (Reg.cnt Short cnt);8;1.52;NA;NA;0.93;0.76;1.52;NA;0.76;0.76;NA;NA;NA;NA;NA;NA;NA
+_9(3);[team] Timeout: Timeout (Full cnt Short cnt);3;NA;NA;1.53;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA
+_9(3);[team] Timeout: Timeout (Reg.cnt Short cnt);1;NA;NA;NA;NA;NA;NA;0.76;NA;NA;NA;NA;NA;NA;NA;NA;NA

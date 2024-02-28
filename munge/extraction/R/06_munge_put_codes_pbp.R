@@ -1,6 +1,5 @@
 require(tidyverse)
 
-
 #' @title define_ind_variable
 #'
 #' @description This function creates a variable to identify the type of play to help us put a cod to identify them better.
@@ -89,115 +88,95 @@ pre_process_pbp_data <- function(df){
   
 }
 
-#' @title define_plays_pcod
+#' @title fix_persons
 #'
-#' @description PUT DOCUMENTATION IN THIS FUNCITON
+#' @description PUT DOCUMENTATION
 #' @param df 
 #'
 #' @return
 #' @export
 #'
 #' @examples
-define_plays_pcod <- function(df){
+fix_persons <- function(df){
   
   df %>% 
-    dplyr::mutate(pcod = paste0('p', persons, cod),
-                  pcod = ifelse(pcod == "p450_10(0)", "p454_10(0)", pcod),
-                  pcod = ifelse(pcod == "p452_10(0)", "p454_10(0)", pcod),
-                  pcod = ifelse(pcod == "p453_10(0)", "p455_10(0)", pcod),
-                  pcod = ifelse(pcod == "p542_10(0)", "p454_10(0)", pcod),
-                  pcod = ifelse(pcod == "p544_10(0)", "p454_10(0)", pcod),
-                  pcod = ifelse(pcod == "p543_10(0)", "p455_10(0)", pcod),
-                  pcod = ifelse(pcod == "p545_10(0)", "p455_10(0)", pcod),
+    dplyr::mutate(p = persons) %>% 
+    dplyr::mutate(p = ifelse(stringr::str_detect(cod, "_1\\([1-5]\\)") & location == "h", "400", p),
+                  p = ifelse(stringr::str_detect(cod, "_1\\([1-5]\\)") & location == "v", "500", p),
+                  p = ifelse(stringr::str_detect(cod, "_2\\([1-5]\\)") & location == "h", "400", p),
+                  p = ifelse(stringr::str_detect(cod, "_2\\([1-5]\\)") & location == "v", "500", p),
+                  p = ifelse(stringr::str_detect(cod, "_1\\([1-5]a\\)") & location == "h", "440", p),
+                  p = ifelse(stringr::str_detect(cod, "_1\\([1-5]a\\)") & location == "v", "550", p),
+                  p = ifelse(stringr::str_detect(cod, "_2\\([1-5]b\\)") & location == "h", "405", p),
+                  p = ifelse(stringr::str_detect(cod, "_2\\([1-5]b\\)") & location == "v", "504", p),
+                  p = ifelse(stringr::str_detect(cod, "_3") & location == "h", "400", p),
+                  p = ifelse(stringr::str_detect(cod, "_3") & location == "v", "500", p),
                   
-                  pcod = ifelse(pcod == "p450_10(1)", "p454_10(1)", pcod),
-                  pcod = ifelse(pcod == "p452_10(1)", "p454_10(1)", pcod),
-                  pcod = ifelse(pcod == "p453_10(1)", "p455_10(1)", pcod),
-                  pcod = ifelse(pcod == "p542_10(1)", "p454_10(1)", pcod),
-                  pcod = ifelse(pcod == "p544_10(1)", "p454_10(1)", pcod),
-                  pcod = ifelse(pcod == "p543_10(1)", "p455_10(1)", pcod),
-                  pcod = ifelse(pcod == "p545_10(1)", "p455_10(1)", pcod),
+                  p = ifelse(stringr::str_detect(cod, "_4\\(0p\\)") & location == "h", "400", p),
+                  p = ifelse(stringr::str_detect(cod, "_4\\(0p\\)") & location == "v", "500", p),
+                  p = ifelse(stringr::str_detect(cod, "_4\\(.t\\)") & location == "h", "200", p),
+                  p = ifelse(stringr::str_detect(cod, "_4\\(.t\\)") & location == "v", "300", p),
                   
-                  pcod = ifelse(pcod == "p450_10(2)", "p454_10(2)", pcod),      
-                  pcod = ifelse(pcod == "p452_10(2)", "p454_10(2)", pcod),
-                  pcod = ifelse(pcod == "p453_10(2)", "p455_10(2)", pcod),
-                  pcod = ifelse(pcod == "p542_10(2)", "p454_10(2)", pcod),
-                  pcod = ifelse(pcod == "p544_10(2)", "p454_10(2)", pcod),
-                  pcod = ifelse(pcod == "p543_10(2)", "p455_10(2)", pcod),
-                  pcod = ifelse(pcod == "p545_10(2)", "p455_10(2)", pcod),
+                  p = ifelse(stringr::str_detect(cod, "_5\\((00|12|13|14|15|16|17|18|19|20|21|22|23|24|26|27|28|29|30|31|32|33|34|41|43)p\\)") & location == "h", "401", p),
+                  p = ifelse(stringr::str_detect(cod, "_5\\((00|12|13|14|15|16|17|18|19|20|21|22|23|24|26|27|28|29|30|31|32|33|34|41|43)p\\)") & location == "v", "501", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_18'), stringr::str_replace(pcod, "(p[0-9]{3})(_.+?)", "p001\\2"), pcod),
+                  p = ifelse(stringr::str_detect(cod, "_5\\((01|11|35)p\\)") & location == "h", "450", p),
+                  p = ifelse(stringr::str_detect(cod, "_5\\((01|11|35)p\\)") & location == "v", "540", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p400\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.a\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p440\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_1\\(.a\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p550\\2"), pcod),
+                  p = ifelse(stringr::str_detect(cod, "_5\\((25|36|37|38|39|40)t\\)") & location == "h", "201", p),
+                  p = ifelse(stringr::str_detect(cod, "_5\\((25|36|37|38|39|40)t\\)") & location == "v", "301", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p400\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.b\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p405\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_2\\(.b\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p504\\2"), pcod),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((01)c\\)") & stringr::str_detect(p, "^6"), "601", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((01)c\\)") & stringr::str_detect(p, "^7"), "701", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((01|05)p\\)") & location == "h", "401", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((01|05)p\\)") & location == "v", "501", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((01|06|08|09)t\\)") & location == "h", "201", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((01|06|08|09)t\\)") & location == "v", "301", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((10|11|12|13|14|15|16|17|19|20|21|22)[ap]\\)") & location == "h", "451", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((10|11|12|13|14|15|16|17|19|20|21|22)[ap]\\)") & location == "v", "541", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\((18)a\\)"), "451", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\(4(cc)\\)"), "671", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\(4(pc)\\)") & p == "471", "741", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\(4(pc)\\)") & p == "561", "651", p),
+                  p = ifelse(stringr::str_detect(cod, "_6\\(4(pp)\\)"), "451", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_3\\(.\\)'), stringr::str_replace(pcod, "(p[24][0-9]{2})(_.+?)", "p400\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_3\\(.\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
+                  p = ifelse(stringr::str_detect(cod, "_7\\((0|2|3|4|5)p\\)") & location == 'h', "401", p),
+                  p = ifelse(stringr::str_detect(cod, "_7\\((0|2|3|4|5)p\\)") & location == 'v', "501", p),
+                  p = ifelse(stringr::str_detect(cod, "_7\\(1t\\)") & location == 'h', "201", p),
+                  p = ifelse(stringr::str_detect(cod, "_7\\(1t\\)") & location == 'v', "301", p),
+                  p = ifelse(stringr::str_detect(cod, "_7\\(6p\\)") & stringr::str_detect(p, "^(45|54)"), "451", p),
+                  p = ifelse(stringr::str_detect(cod, "_7\\(6p\\)") & stringr::str_detect(p, "^40"), "401", p),
+                  p = ifelse(stringr::str_detect(cod, "_7\\(6p\\)") & stringr::str_detect(p, "^50"), "501", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_4\\(0[up]'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p400\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_4\\(0[up]'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_4\\([01]t\\)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p200\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_4\\([01]t\\)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p300\\2"), pcod),
+                  p = ifelse(stringr::str_detect(cod, "_8\\(0\\)") & location == "h", "440", p),
+                  p = ifelse(stringr::str_detect(cod, "_8\\(0\\)") & location == "v", "550", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_5\\((25|36|37|38|39|40)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p200\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_5\\((25|36|37|38|39|40)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p300\\2"), pcod),
+                  p = ifelse(stringr::str_detect(cod, "_9\\(") & location == "n", "100", p),
+                  p = ifelse(stringr::str_detect(cod, "_9\\(") & location == "h", "200", p),
+                  p = ifelse(stringr::str_detect(cod, "_9\\(") & location == "v", "300", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_5\\((00|12|13|14|15|16|17|18|19|20|21|22|23|24|26|27|28|29|30|31|32|33|34|41|43)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p400\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_5\\((00|12|13|14|15|16|17|18|19|20|21|22|23|24|26|27|28|29|30|31|32|33|34|41|43)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p500\\2"), pcod),
+                  p = ifelse(cod == "_10(0)" & gram == "Jump Ball [player] vs. [player]: Tip to" & p %in% c('450'), "452", p),
+                  p = ifelse(cod == "_10(0)" & gram == "Jump Ball [player] vs. [player]: Tip to" & p %in% c('455'), "453", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_5\\((01|11|35)'), stringr::str_replace(pcod, "(p[024][0-9]{2})(_.+?)", "p450\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_5\\((01|11|35)'), stringr::str_replace(pcod, "(p[35][0-9]{2})(_.+?)", "p540\\2"), pcod),
+                  p = ifelse(cod == "_10(0)" & gram == "Jump Ball [player] vs. [player]: Tip to [player]" & p %in% c('544'), "454", p),
+                  p = ifelse(cod == "_10(0)" & gram == "Jump Ball [player] vs. [player]: Tip to [player]" & p %in% c('545'), "455", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(01c'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p601\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(01c'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p701\\2"), pcod),
+                  p = ifelse(cod == "_10(1)" & gram == "Jump Ball [player] vs. [player]: Tip to" & p %in% c('450', '542'), "452", p),
+                  p = ifelse(cod == "_10(1)" & gram == "Jump Ball [player] vs. [player]: Tip to" & p %in% c('455', '543'), "453", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|05)p'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p401\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|05)p'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p501\\2"), pcod),
+                  p = ifelse(cod == "_10(1)" & gram == "Jump Ball [player] vs. [player]: Tip to [player]" & p %in% c('544'), "454", p),
+                  p = ifelse(cod == "_10(1)" & gram == "Jump Ball [player] vs. [player]: Tip to [player]" & p %in% c('545'), "455", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|06|08|09)t'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p201\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\((01|06|08|09)t'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p301\\2"), pcod),
+                  p = ifelse(stringr::str_detect(cod, "_11") & location == "h", "401", p),
+                  p = ifelse(stringr::str_detect(cod, "_11") & location == "v", "501", p),
+                  p = ifelse(stringr::str_detect(cod, "_11") & location == "n" & stringr::str_detect(p, '^6'), "601", p),
+                  p = ifelse(stringr::str_detect(cod, "_11") & location == "n" & stringr::str_detect(p, '^7'), "701", p),
                   
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\((10|11|12|13|14|15|16|17|19|20|21|22|18)'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p451\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\((10|11|12|13|14|15|16|17|19|20|21|22)'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p541\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4cc'), stringr::str_replace(pcod, "(p[234567][0-9]{2})(_.+?)", "p671\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p4[0-9]{2})(_.+?)", "p471\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p5[0-9]{2})(_.+?)", "p561\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p6[0-9]{2})(_.+?)", "p651\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pc'), stringr::str_replace(pcod, "(p7[0-9]{2})(_.+?)", "p741\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_6\\(4pp'), stringr::str_replace(pcod, "(p[0-9]{3})(_.+?)", "p451\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_7\\((0|2|3|4|5|6)'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p401\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_7\\((0|2|3|4|5|6)'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p501\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_7\\(1'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p201\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_7\\(1'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p301\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_8\\(0'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p440\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_8\\(0'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p550\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(0'), stringr::str_replace(pcod, "(p[01][0-9]{2})(_.+?)", "p100\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(0'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p200\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(0'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(1'), stringr::str_replace(pcod, "(p[0246][0-9]{2})(_.+?)", "p200\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(1'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(2'), stringr::str_replace(pcod, "(p[01][0-9]{2})(_.+?)", "p100\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(2'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p200\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(2'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod),
-                  
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(3'), stringr::str_replace(pcod, "(p[01][0-9]{2})(_.+?)", "p100\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(3'), stringr::str_replace(pcod, "(p[246][0-9]{2})(_.+?)", "p200\\2"), pcod),
-                  pcod = ifelse(stringr::str_detect(cod, '_9\\(3'), stringr::str_replace(pcod, "(p[357][0-9]{2})(_.+?)", "p300\\2"), pcod))
+                  p = ifelse(stringr::str_detect(cod, "_12"), "000", p),
+                  p = ifelse(stringr::str_detect(cod, "_13"), "000", p),
+                  p = ifelse(stringr::str_detect(cod, "_18"), "001", p))
+  
+  
   
 }
 
@@ -334,6 +313,7 @@ define_plays_cod <- function(df){
                   cod = ifelse(tp_event == 6 & tp == '18' & p == '00r' & ind == 0, "_6(06u)", cod),
                   cod = ifelse(tp_event == 6 & tp == '25' & p == 't0r' & ind == 0, "_6(08t)", cod),
                   cod = ifelse(tp_event == 6 & tp == '30' & p == 't0r' & ind == 0, "_6(09t)", cod),
+                  cod = ifelse(tp_event == 6 & tp == '33' & p == 't0r' & ind == 0, "_6(01t)", cod),
                   cod = ifelse(tp_event == 6 & tp == '11' & p == '00r' & ind == 0, "_6(01u)", cod),
                   cod = ifelse(tp_event == 6 & tp == '16' & p == 'cpr' & ind == 0, "_6(4pc)", cod),
                   cod = ifelse(tp_event == 6 & tp == '12' & p == 'c0r' & ind == 0, "_6(01c)", cod),
@@ -364,6 +344,7 @@ define_plays_cod <- function(df){
                   cod = ifelse(tp_event == 6 & tp == '2' & p == 'ppr' & ind == 6, "_6(11a)", cod),
                   cod = ifelse(tp_event == 6 & tp == '1' & p == 'ppr' & ind == 6, "_6(10a)", cod),
                   cod = ifelse(tp_event == 6 & tp == '3' & p == 'ppr' & ind == 6, "_6(12a)", cod),
+                  cod = ifelse(tp_event == 6 & tp == '3' & p == 'p0r' & ind == 6, "_6(12a)", cod),
                   cod = ifelse(tp_event == 6 & tp == '28' & p == 'ppr' & ind == 6, "_6(21a)", cod),
                   cod = ifelse(tp_event == 6 & tp == '11' & p == 'p0r' & ind == 6, "_6(01p)", cod),
                   cod = ifelse(tp_event == 6 & tp == '26' & p == 'ppr' & ind == 6, "_6(13a)", cod),
@@ -478,8 +459,8 @@ define_plays_cod <- function(df){
                   
                   cod = ifelse(tp_event == 9 & tp == '2' & cod == "", '_9(0)', cod),
                   cod = ifelse(tp_event == 9 & tp == '4' & cod == "", '_9(2)', cod),
-                  cod = ifelse(tp_event == 9 & tp == '0' & cod == "", '_9(3)', cod)) %>% 
-    define_plays_pcod()
+                  cod = ifelse(tp_event == 9 & tp == '0' & cod == "", '_9(3)', cod))
+    
 }
 
 #' @title execute_pre_process_data
@@ -518,7 +499,7 @@ fix_plays_without_team <- function(df){
     dplyr::mutate(location = ifelse(game_id == '0021900620' & action_id ==  81 & cod == '_6(01u)', 'h', location),
                   location = ifelse(game_id == '0021900691' & action_id ==  76 & cod == '_6(01u)', 'v', location),
                   location = ifelse(game_id == '0021900703' & action_id == 290 & cod == '_6(01u)', 'h', location),
-                  cod = ifelse(cod == '_6(01u)', '_6(01t)', cod)) %>% 
+                  cod = ifelse(cod == '_6(01u)' & location != "n", '_6(01t)', cod)) %>% 
     dplyr::mutate(location = ifelse(game_id == "0021900291" & action_id ==  65 & cod == '_6(06u)', 'v', location),
                   location = ifelse(game_id == "0021900291" & action_id == 375 & cod == '_6(06u)', 'h', location),
                   location = ifelse(game_id == "0021900324" & action_id == 192 & cod == '_6(06u)', 'v', location),
@@ -544,10 +525,10 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0041900177" & action_id == 207 & cod == '_6(06u)', 'h', location),
                   location = ifelse(game_id == "0022000042" & action_id == 331 & cod == '_6(06u)', 'h', location),
                   location = ifelse(game_id == "0022000317" & action_id == 258 & cod == '_6(06u)', 'v', location),
-                  cod = ifelse(cod == '_6(06u)', '_6(06t)', cod)) %>% 
+                  cod = ifelse(cod == '_6(06u)' & location != "n", '_6(06t)', cod)) %>% 
     dplyr::mutate(location = ifelse(game_id == '0041800406' & action_id == 482 & cod == '_6(08u)', 'h', location),
                   location = ifelse(game_id == '0022000285' & action_id == 462 & cod == '_6(08u)', 'v', location),
-                  cod = ifelse(cod == '_6(08u)', '_6(08t)', cod)) %>% 
+                  cod = ifelse(cod == '_6(08u)' & location != "n", '_6(08t)', cod)) %>% 
     dplyr::mutate(location = ifelse(game_id == "0021800001" & action_id == 344 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800002" & action_id == 502 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800003" & action_id == 255 & cod == '_7(1u)', "v", location),
@@ -559,6 +540,8 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0021800035" & action_id == 364 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800037" & action_id == 427 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800038" & action_id == 147 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021800041" & action_id == 245 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021800041" & action_id == 246 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800045" & action_id == 248 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800048" & action_id == 387 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800058" & action_id == 173 & cod == '_7(1u)', "h", location),
@@ -747,6 +730,8 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0021800568" & action_id == 219 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800571" & action_id == 472 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800573" & action_id == 295 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021800574" & action_id == 465 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021800574" & action_id == 468 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800576" & action_id == 153 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800582" & action_id == 415 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800583" & action_id ==  78 & cod == '_7(1u)', "h", location),
@@ -827,6 +812,8 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0021800785" & action_id == 234 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800785" & action_id == 260 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800795" & action_id == 419 & cod == '_7(1u)', "v", location),
+                  location = ifelse(game_id == "0021800802" & action_id == 382 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021800802" & action_id == 383 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800806" & action_id ==  78 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800806" & action_id == 220 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800809" & action_id == 312 & cod == '_7(1u)', "v", location),
@@ -837,6 +824,8 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0021800819" & action_id == 217 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800819" & action_id == 381 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800820" & action_id == 108 & cod == '_7(1u)', "v", location),
+                  location = ifelse(game_id == "0021800823" & action_id == 373 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021800823" & action_id == 374 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800826" & action_id == 139 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021800830" & action_id == 332 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021800832" & action_id == 492 & cod == '_7(1u)', "h", location),
@@ -964,6 +953,7 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0041800115" & action_id ==  35 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0041800165" & action_id == 269 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0041800213" & action_id ==  79 & cod == '_7(1u)', "v", location),
+                  location = ifelse(game_id == "0041800213" & action_id == 265 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0041800223" & action_id ==  75 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0041800225" & action_id == 367 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0041800226" & action_id ==  25 & cod == '_7(1u)', "v", location),
@@ -998,6 +988,8 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0021900065" & action_id == 160 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900065" & action_id == 260 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900070" & action_id == 144 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021900073" & action_id == 473 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021900073" & action_id == 474 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900078" & action_id == 240 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900081" & action_id ==  72 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900081" & action_id == 276 & cod == '_7(1u)', "h", location),
@@ -1052,6 +1044,8 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0021900273" & action_id == 252 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900273" & action_id == 355 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900276" & action_id == 171 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021900282" & action_id == 248 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021900282" & action_id == 249 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900283" & action_id == 334 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900285" & action_id ==  18 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900289" & action_id ==  92 & cod == '_7(1u)', "v", location),
@@ -1076,19 +1070,21 @@ fix_plays_without_team <- function(df){
                   location = ifelse(game_id == "0021900339" & action_id == 467 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900340" & action_id == 153 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900341" & action_id == 135 & cod == '_7(1u)', "v", location),
+                  location = ifelse(game_id == "0021900341" & action_id == 246 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900342" & action_id ==  67 & cod == '_7(1u)', "h", location),
+                  location = ifelse(game_id == "0021900342" & action_id == 315 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900344" & action_id == 261 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900344" & action_id == 344 & cod == '_7(1u)', "v", location),
                   location = ifelse(game_id == "0021900345" & action_id == 431 & cod == '_7(1u)', "h", location),
                   location = ifelse(game_id == "0021900351" & action_id == 307 & cod == '_7(1u)', "v", location),
-                  cod = ifelse(cod == '_7(1u)', '_7(1t)', cod)) %>% 
+                  cod = ifelse(cod == '_7(1u)' & location != "n", '_7(1t)', cod)) %>% 
     dplyr::mutate(location = ifelse(game_id == "0042100171" & action_id == 364, "v", location),
-                  cod = ifelse(cod == '_5(40u)', '_5(40t)', cod)) %>% 
+                  cod = ifelse(cod == '_5(40u)' & location != "n", '_5(40t)', cod)) %>% 
     dplyr::mutate(location = ifelse(game_id == "0022000285" & action_id == 463, "v", location),
                   location = ifelse(game_id == "0022000215" & action_id == 512, "v", location),
                   location = ifelse(game_id == "0022101135" & action_id == 465, "v", location),
                   location = ifelse(game_id == "0022200323" & action_id == 538, "v", location),
-                  cod = ifelse(cod == '_5(39u)', '_5(39t)', cod))
+                  cod = ifelse(cod == '_5(39u)' & location != "n", '_5(39t)', cod))
   
 }
 
@@ -2173,8 +2169,40 @@ put_grammar_in_pbp <- function(df){
                      ind_dot, ind_charge, ind_tcnt, ind_double, ind_trace, ind_fouls, ind_vio, 
                      ind_violation, ind_full, ind_reg, ind_reg2, ind_short, ind_short2, ind_time,
                      ind_timeout, ind_CC, ind_tipto_, ind_jumpball, ind_other, ind_2ndtech, ind_type1,
-                     ind_type2, ind_ejection, ind_1st, ind_2nd, ind_3rd, ind_4th, ind_OT, ind_period))
+                     ind_type2, ind_ejection, ind_1st, ind_2nd, ind_3rd, ind_4th, ind_OT, ind_period)) %>% 
+    dplyr::mutate(shot = NA_character_,
+                  shot = ifelse(stringr::str_detect(cod, "_1\\([1-5]\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = T), stringr::str_replace(gram, "(\\[player\\]\\s+)(.+)(\\s+\\(cnt PTS\\))", "\\2"), shot),
+                  shot = ifelse(stringr::str_detect(cod, "_1\\([1-5]\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = F), stringr::str_replace(gram, "(\\[player\\]\\s+\\[dist\\]\\s+)(.+)(\\s+\\(cnt PTS\\))", "\\2"), shot),
+                  shot = ifelse(stringr::str_detect(cod, "_1\\([1-5]a\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = T), stringr::str_replace(gram, "(\\[player\\]\\s+)(.+)(\\s+\\(cnt PTS\\)\\s+\\(\\[player\\] cnt AST\\))", "\\2"), shot),
+                  shot = ifelse(stringr::str_detect(cod, "_1\\([1-5]a\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = F), stringr::str_replace(gram, "(\\[player\\]\\s+\\[dist\\]\\s+)(.+)(\\s+\\(cnt PTS\\)\\s+\\(\\[player\\] cnt AST\\))", "\\2"), shot),
+                  shot = ifelse(stringr::str_detect(cod, "_2\\([1-5]\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = T), stringr::str_replace(gram, "(MISS \\[player\\]\\s+)(.+)", "\\2"), shot),
+                  shot = ifelse(stringr::str_detect(cod, "_2\\([1-5]\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = F), stringr::str_replace(gram, "(MISS \\[player\\]\\s+\\[dist\\]\\s+)(.+)", "\\2"), shot),
+                  shot = ifelse(stringr::str_detect(cod, "_2\\([1-5]b\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = T), stringr::str_replace(gram, "(MISS \\[player\\]\\s+)(.+)(\\s+\\[player\\] BLOCK \\(cnt BLK\\))", "\\2"), shot),
+                  shot = ifelse(stringr::str_detect(cod, "_2\\([1-5]b\\)") & stringr::str_detect(gram, "\\[dist\\]", neg = F), stringr::str_replace(gram, "(MISS \\[player\\]\\s+\\[dist\\]\\s+)(.+)(\\s+\\[player\\] BLOCK \\(cnt BLK\\))", "\\2"), shot)) %>% 
+    dplyr::mutate(gram = ifelse(cod %in% c("_1(1)", "_1(1a)", "_2(1)", "_2(1b)"), stringr::str_replace(gram, shot, "[DUNK SHOT]"), gram),
+                  gram = ifelse(cod %in% c("_1(2)", "_1(2a)", "_2(2)", "_2(2b)"), stringr::str_replace(gram, shot, "[HOOK SHOT]"), gram),
+                  gram = ifelse(cod %in% c("_1(3)", "_1(3a)", "_2(3)", "_2(3b)"), stringr::str_replace(gram, shot, "[LAYUP SHOT]"), gram),
+                  gram = ifelse(cod %in% c("_1(4)", "_1(4a)", "_2(4)", "_2(4b)"), stringr::str_replace(gram, shot, "[JUMP SHOT]"), gram),
+                  gram = ifelse(cod %in% c("_1(5)", "_1(5a)", "_2(5)", "_2(5b)"), stringr::str_replace(gram, shot, "[3PT JUMP SHOT]"), gram))
   
+  
+}
+
+
+fix_fouls <- function(df){
+  
+  df %>% 
+    dplyr::mutate(limit = ifelse(period <= 4 & cntfouls1 <= 4, "a", NA_character_), 
+                  limit = ifelse(period <= 4 & cntfouls2 <= 1, "a", limit), 
+                  limit = ifelse(period <= 4 & cntfouls1 > 4, "p", limit), 
+                  limit = ifelse(period <= 4 & cntfouls2 > 1, "p", limit), 
+                  limit = ifelse(period > 4 & cntfouls1 <= 3, "a", limit), 
+                  limit = ifelse(period > 4 & cntfouls2 <= 1, "a", limit), 
+                  limit = ifelse(period > 4 & cntfouls1 > 3, "p", limit), 
+                  limit = ifelse(period > 4 & cntfouls2 > 1, "p", limit)) %>% 
+    dplyr::mutate(pcod = ifelse(stringr::str_detect(pcod, "p[0-9]{3}_6\\([12].p\\)") & limit == "a", stringr::str_replace(pcod, "(p[0-9]{3}_6\\([12].)(p\\))", "\\1a)"), pcod),
+                  pcod = ifelse(stringr::str_detect(pcod, "p[0-9]{3}_6\\([12].a\\)") & limit == "p", stringr::str_replace(pcod, "(p[0-9]{3}_6\\([12].)(a\\))", "\\1p)"), pcod)) %>% 
+    dplyr::select(-limit)
   
 }
 
@@ -2236,8 +2264,10 @@ pbp <- pbptotal %>%
   dplyr::group_split(season) %>% 
   furrr::future_map(.x = ., .f = build_df_pbp_plays, .progress = TRUE) %>% 
   furrr::future_map(.x = ., .f = put_grammar_in_pbp, .progress = TRUE) %>% 
+  furrr::future_map(.x = ., .f = fix_persons, .progress = TRUE) %>% 
   dplyr::bind_rows() %>% 
-  dplyr::select(-c(p, ind, tp))
+  dplyr::mutate(pcod = paste0('p', p, cod)) %>% 
+  dplyr::select(-c(ind, tp))
 
 future::plan(future::sequential())
 
@@ -2254,7 +2284,8 @@ pbp <- pbp %>%
                 cntfouls2 = cumsum(cntfouls2)) %>% 
   dplyr::ungroup() %>% 
   dplyr::mutate(cntfouls1 = ifelse(cod %in% fouls_count, cntfouls1, 0),
-                cntfouls2 = ifelse(cod %in% fouls_count, cntfouls2, 0))
+                cntfouls2 = ifelse(cod %in% fouls_count, cntfouls2, 0)) %>% 
+  fix_fouls()
 
 
 save(pbp, file = paste0(FOLDER_PROCESSED_DATA, "pbp.RData"))

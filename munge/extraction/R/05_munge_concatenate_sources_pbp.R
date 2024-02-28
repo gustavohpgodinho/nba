@@ -12,12 +12,22 @@ require(tidyverse)
 #' @examples
 concatenate_pbp_sources <- function(df_api, df_crawler){
   
+  
+  games_ <- dplyr::intersect(
+    df_api %>% 
+      dplyr::distinct(GAME_ID) %>% 
+      dplyr::pull(), 
+    df_crawler %>% 
+      dplyr::distinct(game_id) %>% 
+      dplyr::pull())
+  
   df_api %>% 
     dplyr::left_join(df_crawler, 
                      by = c("SEASON" = "season", 
                             "GAME_ID" = "game_id", 
                             "EVENTNUM" = 'actionNumber', 
                             'PERIOD' = 'period')) %>% 
+    dplyr::filter(GAME_ID %in% games_) %>% 
     dplyr::select(SEASON, GAME_ID, EVENTNUM, actionId, EVENTMSGTYPE, 
                   actionType, EVENTMSGACTIONTYPE, subType, PERIOD, 
                   clock, description, persons, location, shotDistance, 

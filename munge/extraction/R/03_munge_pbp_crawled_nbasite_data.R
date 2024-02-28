@@ -20,6 +20,7 @@ transform_pbp_text_file_into_dataframe <- function(df){
   
   df$text %>% 
     stringr::str_replace_all(., pattern = "\\,\\s+", replacement = "[;]") %>% 
+    stringr::str_replace_all(., pattern = "\\[(.*?)\\]", replacement = function(match)str_replace_all(match, ",", ";")) %>% 
     stringr::str_split(string = ., pattern = ",") %>% 
     unlist() %>% 
     data.frame(key = ., stringsAsFactors = FALSE) %>% 
@@ -117,13 +118,15 @@ build_pbp_dataframe_by_season <- function(season, games, path_pbp_by_games_file)
       xx <- get(xx)
       
       xx <- xx %>% 
-        dplyr::mutate(game_id = df$GAME_ID[1])
+        dplyr::mutate(game_id = df$GAME_ID[1]) %>% 
+        dplyr::mutate(num_columns = length(xx))
       
       return(xx)
       
     }, .progress = 'time') %>% 
     dplyr::bind_rows() %>% 
     dplyr::mutate_all(.funs = function(x) ifelse(x == "", NA_character_, x)) %>% 
+    dplyr::filter(num_columns <= 23) %>% 
     dplyr::group_by(game_id, actionNumber) %>% 
     dplyr::mutate(n = dplyr::n()) %>% 
     dplyr::ungroup() %>% 
@@ -297,9 +300,10 @@ save_pbp_game_data_file(path_pbp_crawled_games = FOLDER_SAVE_PBP_RDATA, path_pbp
 # Part 2: Group pbp data by season
 season_list <- games_nba %>% 
   dplyr::distinct(SEASON) %>% 
-  dplyr::pull(SEASON) 
+  dplyr::pull(SEASON)
 
 future::plan(future::multisession(), workers = future::availableCores())
+
 
 list_pbp <- furrr::future_map(
   .x = season_list, 
@@ -310,15 +314,19 @@ list_pbp <- furrr::future_map(
 
 future::plan(future::sequential())
 
+season_list <- stringr::str_replace_all(season_list, '\\-', "_")
 
 # Save individual seasons
 pbpc_files <- purrr::map2(.x = list_pbp, .y = season_list, ~ {
   
-  pbpc_season <- .x
   
-  save(pbpc_season, file = sprintf("%spbpc_%s.RData", FOLDER_SAVE_PBP_SEASON_FILES, .y))
+  file_name <- paste0('pbpc_', .y)
   
-  rm(pbpc_season)
+  assign(file_name, .x)
+  
+  save(list = file_name, file = sprintf("%spbpc_%s.RData", FOLDER_SAVE_PBP_SEASON_FILES, .y))
+  
+  rm(file_name)
   
 })
 
